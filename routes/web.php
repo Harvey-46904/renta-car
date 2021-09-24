@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('clientes',"ClientesController@store");
+
+
+Route::get('dashboard', function () {
+    return view('dashboards.index');
+});
+
+Route::get('registro', function () {
+    return view('dashboards.registro_clientes');
+});
