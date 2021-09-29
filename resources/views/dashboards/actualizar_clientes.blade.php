@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            CREAR CLIENTE
+                            ACTUALIZAR INFORMACIÓN CLIENTE
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
+                            <button type="button" class="btn btn-primary m-t-15 waves-effect">ACTUALIZAR INFORMACIÓN</button>
                         </form>
                     </div>
                 </div>

@@ -26,3 +26,7 @@ Route::get('dashboard', function () {
 Route::get('registro', function () {
     return view('dashboards.registro_clientes');
 });
+
+Route::get('actualizar', function () {
+    return view('dashboards.actualizar_clientes');
+});
