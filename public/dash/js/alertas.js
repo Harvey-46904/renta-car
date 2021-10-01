@@ -1,17 +1,17 @@
 $("#btn_eliminar" ).click(function() {
      
         Swal.fire({
-            title: 'Do you want to save the changes?',
+            title: 'Está seguro que desea eliminar?',
             showDenyButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Save',
-            denyButtonText: `Don't save`,
+            confirmButtonText: 'Sí',
+            denyButtonText: `No`,
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-            Swal.fire('Saved!', '', 'success')
+            Swal.fire('El usuario se ha eliminado', '', 'success')
             } else if (result.isDenied) {
-            Swal.fire('Changes are not saved', '', 'info')
+            Swal.fire('No se generaron cambios', '', 'info')
             }
         })
   });

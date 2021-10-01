@@ -35,8 +35,18 @@
                                         <td>Cra. 3 #20-20</td>
                                         <td>3180987654</td>
                                         <td>HARVEY RIASCOS</td>
-                                        <td>12987654</td>
-                                        <td><button type="button" class="btn btn-danger" id="btn_eliminar">eliminar</button></td>
+                                        <td>12987654 <a href="{{ url('/dashboards.actualizar_clientes') }}">
+                                        test
+                                  </a> </td>
+                                        <td>
+                                        <button type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float">
+                                    <i class="material-icons">mode_edit</i>
+                                    
+                                </button>
+
+                                <button type="button" class="btn bg-red btn-circle waves-effect waves-circle waves-float" id="btn_eliminar">
+                                    <i class="material-icons">delete</i>
+                                </button></td>
                                     </tr>
                                 </tbody>
                             </table>
