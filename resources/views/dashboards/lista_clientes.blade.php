@@ -22,6 +22,7 @@
                                         <th>TELÉFONO</th>
                                         <th>NOMBRE CONDUCTOR ADICIONAL</th>
                                         <th>DOCUMENTO CONDUCTOR ADICIONAL</th>
+                                        <th>OPCIONES</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,6 +36,7 @@
                                         <td>3180987654</td>
                                         <td>HARVEY RIASCOS</td>
                                         <td>12987654</td>
+                                        <td><button type="button" class="btn btn-danger" id="btn_eliminar">eliminar</button></td>
                                     </tr>
                                 </tbody>
                             </table>

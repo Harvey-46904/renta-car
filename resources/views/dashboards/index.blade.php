@@ -28,6 +28,8 @@
     <!-- Custom Css -->
     <link href="dash/css/style.css" rel="stylesheet">
 
+    <link href="dash/css/sweetalert2.min.css" rel="stylesheet">
+
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="dash/css/themes/all-themes.css" rel="stylesheet" />
 </head>
@@ -838,7 +840,9 @@
     <!-- Custom Js -->
     <script src="dash/js/admin.js"></script>
     <script src="dash/js/pages/index.js"></script>
-
+    <script src="dash/js/sweetalert2.all.min.js"></script>
+    
+    <script src="dash/js/alertas.js"></script>
     <!-- Demo Js -->
     <script src="dash/js/demo.js"></script>
 </body>
