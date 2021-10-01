@@ -15,41 +15,27 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>FIRST NAME</th>
-                                        <th>LAST NAME</th>
-                                        <th>USERNAME</th>
+                                        <th>TIPO DOCUMENTO</th>
+                                        <th>NÚMERO DOCUMENTO</th>
+                                        <th>NOMBRES</th>
+                                        <th>APELLIDOS</th>
+                                        <th>DIRECCIÓN</th>
+                                        <th>TELÉFONO</th>
+                                        <th>NOMBRE CONDUCTOR ADICIONAL</th>
+                                        <th>DOCUMENTO CONDUCTOR ADICIONAL</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Larry</td>
-                                        <td>Jellybean</td>
-                                        <td>@lajelly</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Larry</td>
-                                        <td>Kikat</td>
-                                        <td>@lakitkat</td>
+                                        <td>CC</td>
+                                        <td>1085123456</td>
+                                        <td>JUAN SEBASTIÁN</td>
+                                        <td>DELGADO ARTURO</td>
+                                        <td>Cra. 3 #20-20</td>
+                                        <td>3180987654</td>
+                                        <td>HARVEY RIASCOS</td>
+                                        <td>12987654</td>
                                     </tr>
                                 </tbody>
                             </table>
