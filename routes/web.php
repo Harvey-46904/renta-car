@@ -30,3 +30,7 @@ Route::get('registro', function () {
 Route::get('actualizar', function () {
     return view('dashboards.actualizar_clientes');
 });
+
+Route::get('lista', function () {
+    return view('dashboards.lista_clientes');
+});
