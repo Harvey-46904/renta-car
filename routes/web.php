@@ -34,3 +34,11 @@ Route::get('actualizar', function () {
 Route::get('lista', function () {
     return view('dashboards.lista_clientes');
 });
+
+Route::get('crear_vehiculos', function () {
+    return view('dashboards.crear_vehiculos');
+});
+
+Route::get('actualizar_vehiculos', function () {
+    return view('dashboards.actualizar_vehiculos');
+});
