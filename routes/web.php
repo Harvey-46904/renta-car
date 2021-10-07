@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// metodos de vista
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,17 +25,17 @@ Route::get('dashboard', function () {
     return view('dashboards.index');
 });
 
-Route::get('registro', function () {
+Route::get('crear_cliente', function () {
     return view('dashboards.registro_clientes');
 });
 
-Route::get('actualizar', function () {
+Route::get('actualizar_cliente', function () {
     return view('dashboards.actualizar_clientes');
 });
 
-Route::get('lista', function () {
-    return view('dashboards.lista_clientes');
-});
+Route::get('listar_cliente',"ClientesController@index" );
+
+
 
 Route::get('crear_vehiculos', function () {
     return view('dashboards.crear_vehiculos');
@@ -46,3 +48,7 @@ Route::get('actualizar_vehiculos', function () {
 Route::get('lista_vehiculos', function () {
     return view('dashboards.lista_vehiculos');
 });
+
+//metodos de envio en este caso post
+
+Route::post('crear_clientes','ClientesController@store')->name('post_cliente');

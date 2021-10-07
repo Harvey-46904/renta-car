@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\clientes;
 use Illuminate\Http\Request;
-
+use DB;
 class ClientesController extends Controller
 {
     /**
@@ -14,7 +14,11 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        //
+        $clientes=DB::table('clientes')
+        ->select()
+        ->get();
+        return view('dashboards.lista_clientes',compact("clientes"));
+       
     }
 
     /**
@@ -35,7 +39,17 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-      return view("salud.saludo");
+        $crear_clientes=new clientes;
+        $crear_clientes->tipo_documento=$request->tipo_documento;
+        $crear_clientes->numero_documento= $request->numero_documento;
+        $crear_clientes->nombres= $request->nombres;
+        $crear_clientes->apellidos= $request->apellidos;
+        $crear_clientes->direccion= $request->direccion;
+        $crear_clientes->telefono= $request->telefono;
+        $crear_clientes->conductor_adicional= $request->conductor_adicional;
+        $crear_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
+        $crear_clientes->save();
+      return response(["data"=>"usuario guardado"]);
     }
 
     /**

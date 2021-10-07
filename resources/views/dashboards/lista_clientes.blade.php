@@ -8,6 +8,8 @@
                     <div class="header">
                         <h2>
                             LISTA CLIENTES
+
+                            
                         </h2>
                         <div class="body table-responsive">
                             <table class="table table-striped">
@@ -26,16 +28,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($clientes as $cliente)
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>CC</td>
-                                        <td>1085123456</td>
-                                        <td>JUAN SEBASTIÁN</td>
-                                        <td>DELGADO ARTURO</td>
-                                        <td>Cra. 3 #20-20</td>
-                                        <td>3180987654</td>
-                                        <td>HARVEY RIASCOS</td>
-                                        <td>12987654</td>
+                                        <th scope="row">{{ $cliente->id}}</th>
+                                        <td>{{ $cliente->tipo_documento}}</td>
+                                        <td>{{ $cliente->numero_documento}}</td>
+                                        <td>{{ $cliente->nombres}}</td>
+                                        <td>{{ $cliente->apellidos}}</td>
+                                        <td>{{ $cliente->direccion}}</td>
+                                        <td>{{ $cliente->telefono}}</td>
+                                        <td>{{ $cliente->conductor_adicional}}</td>
+                                        <td>{{ $cliente->documento_conductor_adicional}}</td>
                                         <td>
                                             <div class="container">
                                                 <div class="row">
@@ -51,6 +54,7 @@
                                             </div>
                                 </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

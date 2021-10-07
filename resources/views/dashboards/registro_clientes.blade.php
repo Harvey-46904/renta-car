@@ -23,8 +23,8 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form>
-
+                        <form action="{{route('post_cliente')}}" method="POST">
+                            @csrf
                             <label for="tipo_documento">Tipo de Documento</label>
                             <div class="form-group">
                                 <div class="form-line">
@@ -70,11 +70,11 @@
                             <label for="conductor_adicional">Numero Documento Conductor Adicional</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="conductor_adicional" name="conductor_adicional" class="form-control">
+                                    <input type="text" id="documento_conductor_adicional" name="documento_conductor_adicional" class="form-control">
                                 </div>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
                         </form>
                     </div>
                 </div>
