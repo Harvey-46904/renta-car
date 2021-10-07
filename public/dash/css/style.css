@@ -7519,7 +7519,7 @@ fieldset[disabled] .form-control {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "Roboto", sans-serif;
-  background: #fdfdfd;
+  background: #292929;
   width: 300px;
   overflow: hidden;
   display: inline-block;
@@ -7616,7 +7616,7 @@ fieldset[disabled] .form-control {
       .sidebar .menu .list li.active > :first-child span {
         font-weight: bold; }
       .sidebar .menu .list .header {
-        background: #eee;
+        background: #292929;
         font-size: 12px;
         font-weight: 600;
         padding: 8px 16px; }
@@ -7677,7 +7677,7 @@ fieldset[disabled] .form-control {
           right: 15px; }
         .sidebar .menu .list a span {
           margin: 7px 0 7px 12px;
-          color: #333;
+          color: #fff;
           font-weight: bold;
           font-size: 14px;
           overflow: hidden; }
@@ -7715,7 +7715,7 @@ fieldset[disabled] .form-control {
   position: fixed;
   right: -300px;
   top: 70px;
-  background: #fdfdfd;
+  background: #292929;
   z-index: 11 !important;
   -webkit-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
