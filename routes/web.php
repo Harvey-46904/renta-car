@@ -28,12 +28,11 @@ Route::get('dashboard', function () {
 Route::get('crear_cliente', function () {
     return view('dashboards.registro_clientes');
 });
+Route::get('cliente_actual', "ClientesController@cliente_actual")->name("cliente_actual");
 
-Route::get('actualizar_cliente', function () {
-    return view('dashboards.actualizar_clientes');
-});
+Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualizar_cliente");
 
-Route::get('listar_cliente',"ClientesController@index" );
+Route::get('listar_cliente',"ClientesController@index")->name("listar_cliente");
 
 
 
@@ -57,3 +56,7 @@ Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
 //metodoos de eliminar
 
 Route::delete('clientes_eliminar/{id}', "ClientesController@destroy")->name("eliminar_cliente");
+
+//metodos de actualizar
+
+Route::post('actualizar_cliente_unico/{id}', "ClientesController@update")->name('actualizar_cliente_unico');

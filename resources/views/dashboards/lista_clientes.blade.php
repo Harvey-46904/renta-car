@@ -11,6 +11,14 @@
                 <span><b>El cliente se creo correctamente</span>
             </div>
             @endif
+            @if (Session::get('correcto1'))
+            <div class="alert alert-success">
+                <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+                <span><b>El cliente se actualizo correctamente</span>
+            </div>
+            @endif
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -51,10 +59,10 @@
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col-md-2">
-                                                    <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="{{ url('actualizar_cliente') }}">
+                                                    <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="{{ route('actualizar_cliente',$cliente->id) }}">
                                     <i class="material-icons">mode_edit</i>
                                 </a>
-                                <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" >
+                                <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" onclick="getid({{$cliente->id }})" >
                                     <i class="material-icons">delete</i>
                                 </a>
                                                     </div>

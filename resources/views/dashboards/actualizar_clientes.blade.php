@@ -2,6 +2,9 @@
 @section('registro_clientes')
 <section class="content">
     <div class="container-fluid">
+        <?php $cliente = Session::get('cliente');
+        
+        ?>
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
@@ -23,58 +26,58 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form>
-
+                        <form action="{{route('actualizar_cliente_unico',$cliente->id)}}" method="POST">
+                            @csrf
                             <label for="tipo_documento">Tipo de Documento</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="tipo_documento" name="tipo_documento" class="form-control" placeholder="CC">
+                                    <input type="text" id="tipo_documento" value="{{$cliente->tipo_documento}}"  name="tipo_documento" class="form-control" placeholder="CC">
                                 </div>
                             </div>
                             <label for="numero_documento">Número de Documento</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="numero_documento" name="numero_documento" class="form-control">
+                                    <input type="text" id="numero_documento" value="{{$cliente->numero_documento}}" name="numero_documento" class="form-control" >
                                 </div>
                             </div>
                             <label for="nombres">Nombres</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="nombres" name="nombres" class="form-control">
+                                    <input type="text" id="nombres" value="{{$cliente->nombres}}" name="nombres" class="form-control">
                                 </div>
                             </div>
                             <label for="apellidos">Apellidos</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="apellidos" name="apellidos" class="form-control">
+                                    <input type="text" id="apellidos"  value="{{$cliente->apellidos}}" name="apellidos" class="form-control">
                                 </div>
                             </div>
                             <label for="direccion">Dirección</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="direccion" name="direccion" class="form-control">
+                                    <input type="text" id="direccion" value="{{$cliente->direccion}}" name="direccion" class="form-control">
                                 </div>
                             </div>
                             <label for="telefono">Teléfono/Celular</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="telefono" name="telefono" class="form-control">
+                                    <input type="text" id="telefono" value="{{$cliente->telefono}}" name="telefono" class="form-control">
                                 </div>
                             </div>
                             <label for="conductor_adicional">Nombre Conductor Adicional</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="conductor_adicional" name="conductor_adicional" class="form-control">
+                                    <input type="text" id="conductor_adicional"  value="{{$cliente->conductor_adicional}}" name="conductor_adicional" class="form-control">
                                 </div>
                             </div>
                             <label for="conductor_adicional">Numero Documento Conductor Adicional</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="conductor_adicional" name="conductor_adicional" class="form-control">
+                                    <input type="text" id="documento_conductor_adicional"   value="{{$cliente->documento_conductor_adicional}}" name="documento_conductor_adicional" class="form-control">
                                 </div>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">ACTUALIZAR INFORMACIÓN</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">ACTUALIZAR INFORMACIÓN</button>
                         </form>
                     </div>
                 </div>

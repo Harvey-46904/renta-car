@@ -6,6 +6,7 @@ use App\Models\clientes;
 use Illuminate\Http\Request;
 use DB;
 use Redirect;
+use Session;
 class ClientesController extends Controller
 {
     /**
@@ -60,9 +61,21 @@ class ClientesController extends Controller
      * @param  \App\Models\clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function show(clientes $clientes)
+    public function show($id)
     {
-        //
+        $list_view=clientes::findOrFail($id);
+        if(!empty($list_view)){
+            return Redirect()->route("cliente_actual")->with(["cliente"=>$list_view]);
+        }else{
+            return response(["s"=>"gsa"]);
+        }
+    }
+    public function cliente_actual(){
+        if(!empty(Session::get('cliente'))){
+            return view('dashboards.actualizar_clientes');
+        }else{
+            return Redirect()->route("listar_cliente");
+        }
     }
 
     /**
@@ -83,9 +96,20 @@ class ClientesController extends Controller
      * @param  \App\Models\clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, clientes $clientes)
+    public function update(Request $request,$id)
     {
-        //
+        $actualizar_clientes=clientes::findOrFail($id);
+        $actualizar_clientes->tipo_documento=$request->tipo_documento;
+        $actualizar_clientes->numero_documento= $request->numero_documento;
+        $actualizar_clientes->nombres= $request->nombres;
+        $actualizar_clientes->apellidos= $request->apellidos;
+        $actualizar_clientes->direccion= $request->direccion;
+        $actualizar_clientes->telefono= $request->telefono;
+        $actualizar_clientes->conductor_adicional= $request->conductor_adicional;
+        $actualizar_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
+        $actualizar_clientes->save();
+        return Redirect::to('/listar_cliente')->with('correcto1', 'El cliente se creo correctamente');
+        
     }
 
     /**
