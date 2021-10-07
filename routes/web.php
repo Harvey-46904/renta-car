@@ -42,3 +42,7 @@ Route::get('crear_vehiculos', function () {
 Route::get('actualizar_vehiculos', function () {
     return view('dashboards.actualizar_vehiculos');
 });
+
+Route::get('lista_vehiculos', function () {
+    return view('dashboards.lista_vehiculos');
+});
