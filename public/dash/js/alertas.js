@@ -1,4 +1,4 @@
-$("#btn_eliminar" ).click(function() {
+$(".btn_eliminar" ).click(function() {
      
         Swal.fire({
             title: 'Está seguro que desea eliminar?',
@@ -15,3 +15,4 @@ $("#btn_eliminar" ).click(function() {
             }
         })
   });
+  

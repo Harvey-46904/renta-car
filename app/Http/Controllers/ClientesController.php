@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\clientes;
 use Illuminate\Http\Request;
 use DB;
+use Redirect;
 class ClientesController extends Controller
 {
     /**
@@ -49,6 +50,7 @@ class ClientesController extends Controller
         $crear_clientes->conductor_adicional= $request->conductor_adicional;
         $crear_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
         $crear_clientes->save();
+        return Redirect::to('/listar_cliente')->with('correcto', 'El cliente se creo correctamente');
       return response(["data"=>"usuario guardado"]);
     }
 
@@ -92,8 +94,8 @@ class ClientesController extends Controller
      * @param  \App\Models\clientes  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(clientes $clientes)
+    public function destroy($id)
     {
-        //
+        response(["data"=>$id]);
     }
 }

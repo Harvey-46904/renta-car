@@ -52,3 +52,8 @@ Route::get('lista_vehiculos', function () {
 //metodos de envio en este caso post
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
+
+
+//metodoos de eliminar
+
+Route::delete('clientes_eliminar/{id}', "ClientesController@destroy")->name("eliminar_cliente");
