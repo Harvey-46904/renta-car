@@ -51,7 +51,7 @@
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col-md-2">
-                                                    <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="{{ url('actualizar') }}">
+                                                    <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="{{ url('actualizar_cliente') }}">
                                     <i class="material-icons">mode_edit</i>
                                 </a>
                                 <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" >
