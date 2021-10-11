@@ -28,17 +28,21 @@ Route::get('dashboard', function () {
 Route::get('crear_cliente', function () {
     return view('dashboards.registro_clientes');
 });
+
+Route::get('crear_estado/{id}',"EstadoVehiculoController@registrar_estado");
+
+
 Route::get('cliente_actual', "ClientesController@cliente_actual")->name("cliente_actual");
 
 Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualizar_cliente");
 
 Route::get('listar_cliente',"ClientesController@index")->name("listar_cliente");
 
-
+Route::get('listar_vehiculo',"VehiculosController@index")->name("listar_vehiculo");
 
 Route::get('crear_vehiculos', function () {
     return view('dashboards.crear_vehiculos');
-});
+})->name("crear_vehiculo");
 
 Route::get('actualizar_vehiculos', function () {
     return view('dashboards.actualizar_vehiculos');
@@ -51,7 +55,7 @@ Route::get('lista_vehiculos', function () {
 //metodos de envio en este caso post
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
-
+Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 
 //metodoos de eliminar
 

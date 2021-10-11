@@ -14,24 +14,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="dash/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{!! asset('dash/plugins/bootstrap/css/bootstrap.css') !!}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="dash/plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="{!! asset('dash/plugins/node-waves/waves.css') !!}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="dash/plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="{!! asset('dash/plugins/animate-css/animate.css') !!}" rel="stylesheet" />
 
     <!-- Morris Chart Css-->
-    <link href="dash/plugins/morrisjs/morris.css" rel="stylesheet" />
+    <link href="{!! asset('dash/plugins/morrisjs/morris.css') !!}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="dash/css/style.css" rel="stylesheet">
+    <link href="{!! asset('dash/css/style.css') !!}" rel="stylesheet">
 
-    <link href="dash/css/sweetalert2.min.css" rel="stylesheet">
+    <link href="{!! asset('dash/css/sweetalert2.min.css') !!}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="dash/css/themes/all-themes.css" rel="stylesheet" />
+    <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
 </head>
 
 <body class="theme-red">
@@ -278,7 +278,7 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="dash/images/user.png" width="48" height="48" alt="User" />
+                    <img src="{!! asset('dash/images/user.png') !!}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
@@ -329,10 +329,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/medias/image-gallery.html">Registro Vehiculos</a>
+                                <a href="{{route('crear_vehiculo')}}">Registro Vehiculos</a>
                             </li>
                             <li>
-                                <a href="pages/medias/carousel.html">Listar Vehiculos</a>
+                                <a href="{{route('listar_vehiculo')}}">Listar Vehiculos</a>
                             </li>
                         </ul>
                     </li>
@@ -542,48 +542,48 @@
     <!-- FIN DE AQUI VAMOS A COLOCAR LAS VISTAS CORRESPONDIENTES-->
 
     <!-- Jquery Core Js -->
-    <script src="dash/plugins/jquery/jquery.min.js"></script>
+    <script src="{!! asset('dash/plugins/jquery/jquery.min.js ') !!}"></script>
 
     <!-- Bootstrap Core Js -->
-    <script src="dash/plugins/bootstrap/js/bootstrap.js"></script>
+    <script src="{!! asset('dash/plugins/bootstrap/js/bootstrap.js ') !!}"></script>
 
     <!-- Select Plugin Js -->
-    <script src="dash/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="{!! asset('dash/plugins/bootstrap-select/js/bootstrap-select.js') !!}"></script>
 
     <!-- Slimscroll Plugin Js -->
-    <script src="dash/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="{!! asset('dash/plugins/jquery-slimscroll/jquery.slimscroll.js') !!}"></script>
 
     <!-- Waves Effect Plugin Js -->
-    <script src="dash/plugins/node-waves/waves.js"></script>
+    <script src="{!! asset('dash/plugins/node-waves/waves.js') !!}"></script>
 
     <!-- Jquery CountTo Plugin Js -->
-    <script src="dash/plugins/jquery-countto/jquery.countTo.js"></script>
+    <script src="{!! asset('dash/plugins/jquery-countto/jquery.countTo.js') !!}"></script>
 
     <!-- Morris Plugin Js -->
-    <script src="dash/plugins/raphael/raphael.min.js"></script>
-    <script src="dash/plugins/morrisjs/morris.js"></script>
+    <script src="{!! asset('dash/plugins/raphael/raphael.min.js') !!}"></script>
+    <script src="{!! asset('dash/plugins/morrisjs/morris.js') !!}"></script>
 
     <!-- ChartJs -->
-    <script src="dash/plugins/chartjs/Chart.bundle.js"></script>
+    <script src="{!! asset('dash/plugins/chartjs/Chart.bundle.js') !!}"></script>
 
     <!-- Flot Charts Plugin Js -->
-    <script src="dash/plugins/flot-charts/jquery.flot.js"></script>
-    <script src="dash/plugins/flot-charts/jquery.flot.resize.js"></script>
-    <script src="dash/plugins/flot-charts/jquery.flot.pie.js"></script>
-    <script src="dash/plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="dash/plugins/flot-charts/jquery.flot.time.js"></script>
+    <script src="{!! asset('dash/plugins/flot-charts/jquery.flot.js') !!}"></script>
+    <script src="{!! asset('dash/plugins/flot-charts/jquery.flot.resize.js') !!}"></script>
+    <script src="{!! asset('dash/plugins/flot-charts/jquery.flot.pie.js') !!}"></script>
+    <script src="{!! asset('dash/plugins/flot-charts/jquery.flot.categories.js') !!}"></script>
+    <script src="{!! asset('dash/plugins/flot-charts/jquery.flot.time.js') !!}"></script>
 
     <!-- Sparkline Chart Plugin Js -->
-    <script src="dash/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+    <script src="{!! asset('dash/plugins/jquery-sparkline/jquery.sparkline.js') !!}"></script>
 
     <!-- Custom Js -->
-    <script src="dash/js/admin.js"></script>
-    <script src="dash/js/pages/index.js"></script>
-    <script src="dash/js/sweetalert2.all.min.js"></script>
+    <script src="{!! asset('dash/js/admin.js') !!}"></script>
+    <script src="{!! asset('dash/js/pages/index.js') !!}"></script>
+    <script src="{!! asset('dash/js/sweetalert2.all.min.js') !!}"></script>
     
-    <script src="dash/js/alertas.js"></script>
+    <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->
-    <script src="dash/js/demo.js"></script>
+    <script src="{!! asset('dash/js/demo.js') !!}"></script>
 </body>
 
 </html>

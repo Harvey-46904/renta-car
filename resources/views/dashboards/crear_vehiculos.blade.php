@@ -23,8 +23,8 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form>
-
+                        <form method="POST" action="{{route('post_vehiculo')}}">
+                            @csrf
                             <label for="nombre_vehiculo">Nombre Vehículo</label>
                             <div class="form-group">
                                 <div class="form-line">
@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                             <br>
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
                         </form>
                     </div>
                 </div>

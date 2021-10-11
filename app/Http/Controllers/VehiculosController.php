@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\vehiculos;
 use Illuminate\Http\Request;
-
+use DB;
+use Carbon\Carbon;
+use Redirect;
 class VehiculosController extends Controller
 {
     /**
@@ -14,7 +16,11 @@ class VehiculosController extends Controller
      */
     public function index()
     {
-        //
+        $vehiculos=DB::table('clientes')
+        ->select()
+        ->get();
+        return view('dashboards.lista_vehiculos',compact("vehiculos"));
+       
     }
 
     /**
@@ -35,7 +41,23 @@ class VehiculosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+     // return response(["data"=>$request->vigencia_tecnomecanica]);
+        $crear_vehiculo=new vehiculos;
+        $crear_vehiculo->nombre_vehiculo= $request->nombre_vehiculo;
+        $crear_vehiculo->placa= $request->placa;
+        $crear_vehiculo->marca= $request->marca;
+        $crear_vehiculo->modelo=  $request->modelo;
+        $crear_vehiculo->color= $request->color;
+        $crear_vehiculo->vigencia_soat=$request->vigencia_soat;
+        $crear_vehiculo->vigencia_tecnomecanica= $request->vigencia_tecnomecanica;
+        $crear_vehiculo->precio_alquiler=$request->precio_alquiler;
+        $crear_vehiculo->precio_lavado=$request->precio_lavado;
+        $crear_vehiculo->disponibilidad=$request->disponibilidad;
+        $crear_vehiculo->save();
+        
+     
+        return Redirect::to('/crear_estado'.'/'.$crear_vehiculo->id)->with('correcto', 'El vehiculo se creo correctamente');
     }
 
     /**
