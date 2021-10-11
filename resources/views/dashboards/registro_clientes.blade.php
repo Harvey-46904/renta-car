@@ -31,6 +31,17 @@
                                     <input type="text" id="tipo_documento" name="tipo_documento" class="form-control" placeholder="CC">
                                 </div>
                             </div>
+                            <label for="tipo_documento">Tipo de Documento</label>
+                            <div class="form-group">
+                            <select class="form-control show-tick">
+                                        <option value="">-- Please select --</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                            </div>
                             <label for="numero_documento">Número de Documento</label>
                             <div class="form-group">
                                 <div class="form-line">
