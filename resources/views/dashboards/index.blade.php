@@ -329,17 +329,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-<<<<<<< HEAD
                                 <a href="{{route('crear_vehiculo')}}">Registro Vehiculos</a>
                             </li>
                             <li>
                                 <a href="{{route('listar_vehiculo')}}">Listar Vehiculos</a>
-=======
-                                <a href="{{url('crear_vehiculos')}}">Registro Vehiculos</a>
-                            </li>
-                            <li>
-                                <a href="{{url('lista_vehiculos')}}">Listar Vehiculos</a>
->>>>>>> b4e8043823c9b2ca6b1b61c397dd1a8bd4fe4903
                             </li>
                         </ul>
                     </li>
