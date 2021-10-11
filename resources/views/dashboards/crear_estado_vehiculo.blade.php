@@ -71,18 +71,21 @@
                         </div>
                     </div>
                     <div class="body">
-                        <form >
-                            hi
+                        <form method="POST" action="{{route('post_estado')}}" >
+                           <h2>gasdflkasñl</h2>
                             @csrf
-                            <div>
-                            <div class="demo-switch">
-                                <div class="switch">
-                                    <label>OFF<input type="checkbox" checked><span class="lever"></span>ON</label>
-                                </div>
-                                <div class="switch">
-                                    <label>DISABLED<input type="checkbox" disabled><span class="lever"></span></label>
-                                </div>
+                            <label for="apellidos">pregunta</label>
+                            <div class="form-group">
+                                
+                                   
+                                        <div class="switch">
+                                            <label>No<input type="checkbox" checked name="prueba"><span class="lever"></span>Si</label>
+                                        </div>
+                                   
+                                
                             </div>
+                            <div>
+                            
 		</div>
           
                             <br>
