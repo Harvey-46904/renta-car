@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\estado_vehiculo;
 use App\Models\vehiculos;
 use Illuminate\Http\Request;
-
+use DB;
 class EstadoVehiculoController extends Controller
 {
     /**
@@ -84,7 +84,8 @@ class EstadoVehiculoController extends Controller
         //
     }
     function registrar_estado ($id) {
-        $vehiculo=vehiculos::findOrFail($id);
+      
+        $vehiculo=DB::table('vehiculos')->select()->where("id_vehiculo","=",$id)->first();
         return view('dashboards.crear_estado_vehiculo',compact("vehiculo"));
     }
 }
