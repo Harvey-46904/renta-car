@@ -6,7 +6,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                     
+                        {{print_r($vehiculo)}}
                         <h2>
                             ESTADO DEL VEHICULO
                         </h2>
@@ -27,32 +27,28 @@
                             <div class="row">
                                 <div class="col-md-12 bg-danger text-center">VEHICULO</div>
                             </div>
-                            <div class="row py-5">
-                                <div class="col-md-6 text-center">
-
-                                    <img src="{{url('/storage/',$vehiculo->foto_vehiculo)}}" class=" img-thumbnail" width="300px" height="300px">
-
-                                </div>
+                            <div class="row">
+                                <div class="col-md-6">foto</div>
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-md-6"><b>Nombre:</b> {{$vehiculo->nombre_vehiculo}}   </div>
-                                        <div class="col-md-6"><b>Placa:</b> {{$vehiculo->placa}}   </div>
+                                        <div class="col-md-6">a</div>
+                                        <div class="col-md-6">b</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6"><b>Marca:</b> {{$vehiculo->marca}}   </div>
-                                        <div class="col-md-6"><b>Modelo:</b> {{$vehiculo->modelo}}   </div>
+                                        <div class="col-md-6">a</div>
+                                        <div class="col-md-6">b</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6"><b>Color:</b> {{$vehiculo->color}}   </div>
-                                        <div class="col-md-6"><b>Estado</b> {{$vehiculo->disponibilidad}}   </div>
+                                        <div class="col-md-6">a</div>
+                                        <div class="col-md-6">b</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6"><b>Seguro Soat:</b> {{$vehiculo->vigencia_soat}}   </div>
-                                        <div class="col-md-6"><b>Tecnomecanica:</b> {{$vehiculo->vigencia_tecnomecanica}}   </div>
+                                        <div class="col-md-6">a</div>
+                                        <div class="col-md-6">b</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6"><b>Precio Lavado:</b> ${{$vehiculo->precio_lavado}}   </div>
-                                        <div class="col-md-6"><b>Precio Alquiler:</b> ${{$vehiculo->precio_alquiler}}   </div>
+                                        <div class="col-md-6">a</div>
+                                        <div class="col-md-6">b</div>
                                     </div>
                                 </div>
                             </div>
@@ -60,207 +56,20 @@
                     </div>
                     <div class="body">
                         <form >
+                            hi
                             @csrf
-                            <h1>hola</h1>
-
-                            <div id="app-cover">
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-1">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-2">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-3">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-4">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-5">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"><span></span></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-6">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-7">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-8">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-9">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-10">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span>YES</span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-11">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-12">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-13">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-14">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-15">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-16">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs"></div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-17">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button b2" id="button-18">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+                            <div>
+                        <div class="input_wrapper bg-success">
+                            <input type="checkbox" class="switch_4">
+                            <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z"/>
+                            </svg>
+                            <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+		</div>
+          
                             <br>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
                         </form>
