@@ -15,6 +15,7 @@
 
     <!-- Bootstrap Core Css -->
     <link href="{!! asset('dash/plugins/bootstrap/css/bootstrap.css') !!}" rel="stylesheet">
+    <link href="{!! asset('dash/plugins/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
     <link href="{!! asset('dash/plugins/node-waves/waves.css') !!}" rel="stylesheet" />
@@ -27,11 +28,13 @@
 
     <!-- Custom Css -->
     <link href="{!! asset('dash/css/style.css') !!}" rel="stylesheet">
+    <link href="{!! asset('dash/css/style_toggle.css') !!}" rel="stylesheet">
 
     <link href="{!! asset('dash/css/sweetalert2.min.css') !!}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
+    
 </head>
 
 <body class="theme-red">
