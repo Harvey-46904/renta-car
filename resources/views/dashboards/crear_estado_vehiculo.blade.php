@@ -6,7 +6,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        {{print_r($vehiculo)}}
+                      
                         <h2>
                             ESTADO DEL VEHICULO
                         </h2>
@@ -28,27 +28,43 @@
                                 <div class="col-md-12 bg-danger text-center">VEHICULO</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">foto</div>
+                                <div class="col-md-6 text-center">
+
+                                    <img src="{{url('/storage/',$vehiculo->foto_vehiculo)}}" class=" img-thumbnail" width="300px" height="300px">
+
+                                </div>
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-md-6">a</div>
-                                        <div class="col-md-6">b</div>
+                                        <div class="col-md-6"><b>Nombre:</b> {{$vehiculo->nombre_vehiculo}}   </div>
+                                        <div class="col-md-6"><b>Placa:</b> {{$vehiculo->placa}}   </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">a</div>
-                                        <div class="col-md-6">b</div>
+                                        <div class="col-md-6"><b>Marca:</b> {{$vehiculo->marca}}   </div>
+                                        <div class="col-md-6"><b>Modelo:</b> {{$vehiculo->modelo}}   </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">a</div>
-                                        <div class="col-md-6">b</div>
+                                        <div class="col-md-6"><b>Color:</b> {{$vehiculo->color}}   </div>
+                                        <div class="col-md-6"><b>Estado</b> {{$vehiculo->disponibilidad}}   </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">a</div>
-                                        <div class="col-md-6">b</div>
+                                        <div class="col-md-6"><b>Seguro Soat:</b> {{$vehiculo->vigencia_soat}}   </div>
+                                        <div class="col-md-6"><b>Tecnomecanica:</b> {{$vehiculo->vigencia_tecnomecanica}}   </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">a</div>
-                                        <div class="col-md-6">b</div>
+                                        <div class="col-md-6"><b>Precio Lavado:</b> ${{$vehiculo->precio_lavado}}   </div>
+                                        <div class="col-md-6"><b>Precio Alquiler:</b> ${{$vehiculo->precio_alquiler}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="">
+                                                <i class="material-icons">mode_edit</i>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" onclick="getid({{$vehiculo->id_vehiculo }})" >
+                                                <i class="material-icons">delete</i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
