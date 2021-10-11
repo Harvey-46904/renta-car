@@ -329,10 +329,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/medias/image-gallery.html">Registro Vehiculos</a>
+                                <a href="{{url('crear_vehiculos')}}">Registro Vehiculos</a>
                             </li>
                             <li>
-                                <a href="pages/medias/carousel.html">Listar Vehiculos</a>
+                                <a href="{{url('lista_vehiculos')}}">Listar Vehiculos</a>
                             </li>
                         </ul>
                     </li>
@@ -343,10 +343,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/medias/image-gallery.html">Registrar Recervas</a>
+                                <a href="pages/medias/image-gallery.html">Registrar Reserva</a>
                             </li>
                             <li>
-                                <a href="pages/medias/carousel.html">Listar Recervas</a>
+                                <a href="pages/medias/carousel.html">Listar Reservas</a>
                             </li>
                         </ul>
                     </li>
