@@ -23,7 +23,7 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form action="{{route('post_cliente')}}" method="POST">
+                        <form action="{{route('post_cliente')}}" method="POST" >
                             @csrf
                             <label for="tipo_documento">Tipo de Documento</label>
                             <div class="form-group">
