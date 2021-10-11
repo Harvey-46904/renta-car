@@ -8,56 +8,64 @@
                     <div class="header">
                         <h2>
                             LISTA VEHÍCULOS
+
+                          
                         </h2>
-                        <div class="body table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>NOMBRE VEHÍCULO</th>
-                                        <th>PLACA VEHÍCULO</th>
-                                        <th>MARCA VEHÍCULO</th>
-                                        <th>MODELO VEHÍCULO</th>
-                                        <th>COLOR VEHÍCULO</th>
-                                        <th>VIGENCIA SOAT</th>
-                                        <th>VIGENCIA TECNOMECÁNICA</th>
-                                        <th>VALOR ALQUILER VEHÍCULO</th>
-                                        <th>PRECIO LAVADO VEHÍCULO</th>
-                                        <th>DISPONIBILIDAD VEHÍCULO</th>
-                                        <th>OPCIONES</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Vehículo 1</td>
-                                        <td>ABC 123</td>
-                                        <td>CHEVROLET</td>
-                                        <td>2010</td>
-                                        <td>NEGRO</td>
-                                        <td>22/06/2022</td>
-                                        <td>25/06/2022</td>
-                                        <td>190.000</td>
-                                        <td>35.000</td>
-                                        <td>DISPONIBLE</td>
-                                        <td>
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-2">
-                                                    <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="{{ url('actualizar_vehiculos') }}">
-                                    <i class="material-icons">mode_edit</i>
-                                </a>
-                                <a type="button" class="btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" id="btn_eliminar">
-                                    <i class="material-icons">delete</i>
-                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+
+                        @foreach ($vehiculos as $vehiculo)
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col-md-12 bg-danger text-center">VEHICULO</div>
+                            </div>
+                            <div class="row py-5">
+                                <div class="col-md-6 text-center">
+
+                                    <img src="{{url('/storage/',$vehiculo->foto_vehiculo)}}" class=" img-thumbnail" width="300px" height="300px">
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6"><b>Nombre:</b> {{$vehiculo->nombre_vehiculo}}   </div>
+                                        <div class="col-md-6"><b>Placa:</b> {{$vehiculo->placa}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><b>Marca:</b> {{$vehiculo->marca}}   </div>
+                                        <div class="col-md-6"><b>Modelo:</b> {{$vehiculo->modelo}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><b>Color:</b> {{$vehiculo->color}}   </div>
+                                        <div class="col-md-6"><b>Estado</b> {{$vehiculo->disponibilidad}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><b>Seguro Soat:</b> {{$vehiculo->vigencia_soat}}   </div>
+                                        <div class="col-md-6"><b>Tecnomecanica:</b> {{$vehiculo->vigencia_tecnomecanica}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><b>Precio Lavado:</b> ${{$vehiculo->precio_lavado}}   </div>
+                                        <div class="col-md-6"><b>Precio Alquiler:</b> ${{$vehiculo->precio_alquiler}}   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="">
+                                                <i class="material-icons">mode_edit</i>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" onclick="getid({{$vehiculo->id_vehiculo }})" >
+                                                <i class="material-icons">delete</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        @endforeach
+
+
+                        
+
+                       
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

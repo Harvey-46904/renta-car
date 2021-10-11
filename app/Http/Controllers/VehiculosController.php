@@ -16,7 +16,8 @@ class VehiculosController extends Controller
      */
     public function index()
     {
-        $vehiculos=DB::table('clientes')
+        
+        $vehiculos=DB::table('vehiculos')
         ->select()
         ->get();
         return view('dashboards.lista_vehiculos',compact("vehiculos"));

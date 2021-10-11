@@ -88,7 +88,7 @@
 
                             <label for="disponibilidad">Cargar Foto de Vehiculo</label>
                             <div class="form-group">
-                                <input accept="image/*" type="file" name="imagen" >
+                                <input accept="image/*"   class="form-control-file" type="file" name="imagen" >
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>

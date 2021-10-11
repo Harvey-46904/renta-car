@@ -48,9 +48,7 @@ Route::get('actualizar_vehiculos', function () {
     return view('dashboards.actualizar_vehiculos');
 });
 
-Route::get('lista_vehiculos', function () {
-    return view('dashboards.lista_vehiculos');
-});
+Route::get('lista_vehiculos',"VehiculosController@index");
 
 //metodos de envio en este caso post
 
