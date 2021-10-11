@@ -25,6 +25,7 @@ class CreateVehiculosTable extends Migration
             $table->string('precio_alquiler');
             $table->string('precio_lavado');
             $table->string('disponibilidad');
+            $table->string('foto_vehiculo');
             $table->timestamps();
         });
     }

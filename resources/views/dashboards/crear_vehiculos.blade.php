@@ -23,7 +23,7 @@
                         </ul>
                     </div>
                     <div class="body">
-                        <form method="POST" action="{{route('post_vehiculo')}}">
+                        <form method="POST" action="{{route('post_vehiculo')}}" accept-charset="UTF-8" enctype="multipart/form-data">
                             @csrf
                             <label for="nombre_vehiculo">Nombre Vehículo</label>
                             <div class="form-group">
@@ -84,6 +84,11 @@
                                 <div class="form-line">
                                     <input type="text" id="disponibilidad" name="disponibilidad" class="form-control">
                                 </div>
+                            </div>
+
+                            <label for="disponibilidad">Cargar Foto de Vehiculo</label>
+                            <div class="form-group">
+                                <input accept="image/*" type="file" name="imagen" >
                             </div>
                             <br>
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>

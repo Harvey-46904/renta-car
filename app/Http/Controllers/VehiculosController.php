@@ -41,7 +41,14 @@ class VehiculosController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $ldate = date('Y-m-d-H_i_s');
+      
+
+        $file = $request->file('imagen');
+        $nombre = $file->getClientOriginalName();
+        \Storage::disk('local')->put($ldate.$nombre,  \File::get($file));
+
+
      // return response(["data"=>$request->vigencia_tecnomecanica]);
         $crear_vehiculo=new vehiculos;
         $crear_vehiculo->nombre_vehiculo= $request->nombre_vehiculo;
@@ -54,6 +61,8 @@ class VehiculosController extends Controller
         $crear_vehiculo->precio_alquiler=$request->precio_alquiler;
         $crear_vehiculo->precio_lavado=$request->precio_lavado;
         $crear_vehiculo->disponibilidad=$request->disponibilidad;
+        $crear_vehiculo->foto_vehiculo=$ldate.$nombre;
+        
         $crear_vehiculo->save();
         
      

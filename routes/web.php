@@ -64,3 +64,21 @@ Route::delete('clientes_eliminar/{id}', "ClientesController@destroy")->name("eli
 //metodos de actualizar
 
 Route::post('actualizar_cliente_unico/{id}', "ClientesController@update")->name('actualizar_cliente_unico');
+
+
+
+
+//descargar imagenes
+
+Route::get('storage/{archivo}', function ($nombre) {
+    $public_path = public_path();
+    $url = $public_path.'/storage/'.$nombre;// depende de root en el archivo filesystems.php.
+    //verificamos si el archivo existe y lo retornamos
+    if (\Storage::exists($nombre))
+    {
+        return response()->download($url);
+    }
+    //si no se encuentra lanzamos un error 404.
+    abort(404);
+  
+  });
