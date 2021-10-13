@@ -216,7 +216,7 @@
 
 <div class="form-group">
     <label for="exampleFormControlTextarea1">Observaciones</label>
-    <textarea class="form-control" id="observaciones" name="observaciones" rows="3" placeholder="Digite aquí las observaciones del vehículo"></textarea>
+    <textarea class="form-control border border-secondary" id="observaciones" name="observaciones" rows="3" placeholder="Digite aquí las observaciones del vehículo"></textarea>
 </div>
 
 

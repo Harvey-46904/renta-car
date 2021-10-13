@@ -44,7 +44,7 @@
                                         <div class="col-md-6"><b>Precio Lavado:</b> ${{$vehiculo->precio_lavado}}   </div>
                                         <div class="col-md-6"><b>Precio Alquiler:</b> ${{$vehiculo->precio_alquiler}}   </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row bg-info">
                                         <div class="col-md-6">
                                             <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="">
                                                 <i class="material-icons">mode_edit</i>
