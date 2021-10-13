@@ -6,16 +6,14 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <h2>
+                        <h2 class="pb-2">
                             LISTA VEHÍCULOS
-
-                          
                         </h2>
 
                         @foreach ($vehiculos as $vehiculo)
                         <div class="container-fluid ">
                             <div class="row">
-                                <div class="col-md-12 bg-danger text-center">VEHICULO</div>
+                                <div class="col-md-12 bg-danger text-center text-light">VEHICULO</div>
                             </div>
                             <div class="row py-5">
                                 <div class="col-md-6 text-center">
@@ -44,13 +42,18 @@
                                         <div class="col-md-6"><b>Precio Lavado:</b> ${{$vehiculo->precio_lavado}}   </div>
                                         <div class="col-md-6"><b>Precio Alquiler:</b> ${{$vehiculo->precio_alquiler}}   </div>
                                     </div>
-                                    <div class="row bg-info">
-                                        <div class="col-md-6">
+                                    <br>
+                                    <div class="row pb-1">
+                                    <div class="col-md-12 bg-dark text-center text-light">OPCIONES</div>
+                                    </div>
+                                    
+                                    <div class="row text-center justify-content-center">
+                                        <div class="col-md-2">
                                             <a type="button" class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline" href="">
                                                 <i class="material-icons">mode_edit</i>
                                             </a>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-2">
                                             <a type="button" class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline" onclick="getid({{$vehiculo->id_vehiculo }})" >
                                                 <i class="material-icons">delete</i>
                                             </a>
