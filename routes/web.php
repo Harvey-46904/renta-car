@@ -48,6 +48,16 @@ Route::get('actualizar_vehiculos', function () {
     return view('dashboards.actualizar_vehiculos');
 });
 
+//vista crear reserva
+Route::get('crear_reserva', function () {
+    return view('dashboards.crear_reserva');
+});
+
+//VISTA LISTAR RESERVA
+Route::get('listar_reservas', function () {
+    return view('dashboards.listar_reservas');
+});
+
 Route::get('lista_vehiculos',"VehiculosController@index");
 
 //metodos de envio en este caso post

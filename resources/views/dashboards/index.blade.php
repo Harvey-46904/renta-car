@@ -306,7 +306,7 @@
                 <ul class="list">
                     <li class="header">MENU DE NAVEGACION</li>
                     <li class="active">
-                        <a href="index.html">
+                        <a href="{{url('dashboard')}}">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
@@ -346,10 +346,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/medias/image-gallery.html">Registrar Reserva</a>
+                                <a href="{{url('crear_reserva')}}">Crear Reserva</a>
                             </li>
                             <li>
-                                <a href="pages/medias/carousel.html">Listar Reservas</a>
+                                <a href="{{url('listar_reservas')}}">Listar Reserva</a>
                             </li>
                         </ul>
                     </li>
