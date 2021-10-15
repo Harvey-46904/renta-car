@@ -3,13 +3,13 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-14 col-md-14 col-sm-14 col-xs-14">
+            <div class="col-lg-18 col-md-18 col-sm-18 col-xs-18">
                 <div class="card">
                     <div class="header">
                       
-                        <h4>
+                        <h8>
                             ESTADO DEL VEHICULO
-                        </h4>
+                        </h8>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -25,7 +25,7 @@
                         <hr>
                         <div class="container-fluid ">
                             <div class="row">
-                                <div class="col-md-14 bg-danger text-center">VEHICULO</div>
+                                <div class="col-md-18 bg-danger text-center">VEHICULO</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 text-center">
@@ -74,120 +74,121 @@
                         <form method="POST" action="{{route('post_estado')}}" >
                             @csrf
                             <form>
+
   <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Documentos al día</label>
+    <label class="col-md-8 text-center text-center col-form-label">Documentos al día</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="documento_dia" id="documento_dia"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Luces Exteriores</label>
+    <label class="col-sm-8 text-center  col-form-label">Luces Exteriores</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Luces_exteriores" id="Luces_exteriores"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Luz Interior</label>
+    <label class="col-sm-8 text-center col-form-label">Luz Interior</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Luz_interior" id="Luz_interior"><span class="lever" ></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Limpia Parabrisas</label>
+    <label class="col-sm-8 text-center col-form-label">Limpia Parabrisas</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Limpia_brisas" id="Limpia_brisas"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Pito</label>
+    <label class="col-sm-8 text-center col-form-label">Pito</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Pito" id="Pito"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Espejos Internos-Externos</label>
+    <label class="col-sm-8 text-center col-form-label">Espejos Internos-Externos</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Espejos_externos_internos" id="Espejos_externos_internos"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Radio</label>
+    <label class="col-sm-8 text-center col-form-label">Radio</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Radio" id="Radio"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Llanta de repuesto</label>
+    <label class="col-sm-8 text-center col-form-label">Llanta de repuesto</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Llanta_repuesto" id="Llanta_repuesto"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Gato</label>
+    <label class="col-sm-8 text-center col-form-label">Gato</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Gato" id="Gato"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Cruceta</label>
+    <label class="col-sm-8 text-center col-form-label">Cruceta</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Cruceta" id="Cruceta"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Equipo de carreteras</label>
+    <label class="col-sm-8 text-center col-form-label">Equipo de carreteras</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Equipo_carretera" id="Equipo_carretera"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Emblemas</label>
+    <label class="col-sm-8 text-center col-form-label">Emblemas</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Emblemas" id="Emblemas"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Antena</label>
+    <label class="col-sm-8 text-center col-form-label">Antena</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Antena" id="Antena"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Copas</label>
+    <label class="col-sm-8 text-center col-form-label">Copas</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Copas" id="Copas"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Kilometraje</label>
+    <label class="col-sm-8 text-center col-form-label">Kilometraje</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="Kilometraje" id="Kilometraje"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Mantenimiento</label>
+    <label class="col-sm-8 text-center col-form-label">Mantenimiento</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="mantenimiento" id="mantenimiento"><span class="lever"></span>Si</label>
     </div>
 </div>
 
 <div class="form-group row">
-    <label class="col-sm-4 col-form-label">Lavado</label>
+    <label class="col-sm-8 text-center col-form-label">Lavado</label>
     <div class="switch">
         <label>No<input type="checkbox" checked name="lavado" id="lavado"><span class="lever"></span>Si</label>
     </div>
@@ -216,7 +217,7 @@
 
 <div class="form-group">
     <label for="exampleFormControlTextarea1">Observaciones</label>
-    <textarea class="form-control border border-secondary" id="observaciones" name="observaciones" rows="3" placeholder="Digite aquí las observaciones del vehículo"></textarea>
+    <textarea class="form-control" id="observaciones" name="observaciones" rows="3" placeholder="Digite aquí las observaciones del vehículo"></textarea>
 </div>
 
 
