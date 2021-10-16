@@ -47,7 +47,7 @@ class VehiculosController extends Controller
 
         $file = $request->file('imagen');
         $nombre = $file->getClientOriginalName();
-        \Storage::disk('local')->put($ldate.$nombre,  \File::get($file));
+        \Storage::disk('local')->put("/vehiculo/".$ldate.$nombre,  \File::get($file));
 
 
      // return response(["data"=>$request->vigencia_tecnomecanica]);

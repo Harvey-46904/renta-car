@@ -64,7 +64,7 @@ Route::get('lista_vehiculos',"VehiculosController@index");
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
-Route::post('crear_estado','EstadoVehiculoController@store')->name('post_estado');
+Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
 
 //metodoos de eliminar
 
