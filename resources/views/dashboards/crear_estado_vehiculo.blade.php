@@ -31,7 +31,7 @@
                                 <div class="row">
                                     <div class="col-md-6 text-center">
 
-                                        <img src="{{ url('/storage/', $vehiculo->foto_vehiculo) }}" class=" img-thumbnail"
+                                        <img src="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}" class=" img-thumbnail"
                                             width="300px" height="300px">
 
                                     </div>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="body">
-                            <form method="POST" action="{{ route('post_estado', 3) }}" accept-charset="UTF-8"
+                            <form method="POST" action="{{ route('post_estado', $vehiculo->id_vehiculo) }}" accept-charset="UTF-8"
                                 enctype="multipart/form-data">
                                 @csrf
 
