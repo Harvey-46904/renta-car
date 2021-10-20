@@ -122,4 +122,18 @@ class ClientesController extends Controller
     {
         response(["data"=>$id]);
     }
+
+    public function obtener_nombre($id){
+
+        $clientes=DB::table('clientes')
+        ->select()
+        ->where("numero_documento","=",$id)
+        ->first();
+
+        if(!empty($clientes)){
+            return response(["data"=>$clientes]);
+        }else{
+            return response(["data"=>"error"]);
+        }
+    }
 }

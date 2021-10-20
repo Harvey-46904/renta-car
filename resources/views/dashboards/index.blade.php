@@ -10,7 +10,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
@@ -34,7 +35,7 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
-    
+
 </head>
 
 <body class="theme-red">
@@ -61,19 +62,19 @@
     <!-- Top Bar -->
 
     <nav class="navbar ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{url('dashboard')}}">RENTACAR PASTO</a>
-    </div>
-    <!--
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url('dashboard') }}">RENTACAR PASTO</a>
+            </div>
+            <!--
     <ul class="nav navbar-nav navbar-right">
     <a href="javascript:void(0);" class="">
         <i class="material-icons">account_circle</i>
     </a>
     </ul>
     -->
-  </div>
-</nav>
+        </div>
+    </nav>
     <!-- #Top Bar -->
     <section>
         <!-- Left Sidebar -->
@@ -84,10 +85,12 @@
                     <img src="{!! asset('dash/images/user.png') !!}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John
+                        Doe</div>
                     <div class="email">john.doe@example.com</div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
                             <li role="separator" class="divider"></li>
@@ -106,7 +109,7 @@
                 <ul class="list">
                     <li class="header">MENU DE NAVEGACION</li>
                     <li class="active">
-                        <a href="{{url('dashboard')}}">
+                        <a href="{{ url('dashboard') }}">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
@@ -118,10 +121,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{url('crear_cliente')}}">Registro Clientes</a>
+                                <a href="{{ url('crear_cliente') }}">Registro Clientes</a>
                             </li>
                             <li>
-                                <a href="{{url('listar_cliente')}}">Listar Clientes</a>
+                                <a href="{{ url('listar_cliente') }}">Listar Clientes</a>
                             </li>
                         </ul>
                     </li>
@@ -132,10 +135,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{route('crear_vehiculo')}}">Registro Vehiculos</a>
+                                <a href="{{ route('crear_vehiculo') }}">Registro Vehiculos</a>
                             </li>
                             <li>
-                                <a href="{{route('listar_vehiculo')}}">Listar Vehiculos</a>
+                                <a href="{{ route('listar_vehiculo') }}">Listar Vehiculos</a>
                             </li>
                         </ul>
                     </li>
@@ -146,10 +149,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{url('crear_reserva')}}">Crear Reserva</a>
+                                <a href="{{ url('crear_reserva') }}">Crear Reserva</a>
                             </li>
                             <li>
-                                <a href="{{url('listar_reservas')}}">Listar Reserva</a>
+                                <a href="{{ url('listar_reservas') }}">Listar Reserva</a>
                             </li>
                         </ul>
                     </li>
@@ -167,18 +170,18 @@
                             </li>
                         </ul>
                     </li>
-                  
-                   
-                   
-                    
-                  
-                   
-                   
-                  
-                   
-                   
-                   
-                   
+
+
+
+
+
+
+
+
+
+
+
+
                 </ul>
             </div>
             <!-- #Menu -->
@@ -383,10 +386,11 @@
     <script src="{!! asset('dash/js/admin.js') !!}"></script>
     <script src="{!! asset('dash/js/pages/index.js') !!}"></script>
     <script src="{!! asset('dash/js/sweetalert2.all.min.js') !!}"></script>
-    
+
     <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->
     <script src="{!! asset('dash/js/demo.js') !!}"></script>
+    <script src="{!! asset('dash/js/script.js') !!}"></script>
 </body>
 
 </html>
