@@ -29,10 +29,10 @@
     <!-- Custom Css -->
     <link href="{!! asset('dash/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('dash/css/style_toggle.css') !!}" rel="stylesheet">
+    <link href="{!! asset('dash/css/style-navbar.css') !!}" rel="stylesheet">
 
     <!-- Firma digital Css -->
     <link href="{!! asset('dash/firma_digital/style.css') !!}" rel="stylesheet">
-
     <link href="{!! asset('dash/css/sweetalert2.min.css') !!}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
@@ -61,24 +61,28 @@
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
-    <!-- Top Bar -->
 
-    <nav class="navbar ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{url('dashboard')}}">RENTACAR PASTO</a>
+<nav class="navbar">
+    <div> <a class="navbar-brand" href="{{url('dashboard')}}"><b>RENTACAR PASTO</b></a> </div>
+    <div class="icon" id="bell"> <img src="{!! asset('dash/images/bell.png')!!}"> </div>
+    <div class="notifications" id="box">
+        <h2>Notifications - <span>2</span></h2>
+        <div class="notifications-item"> <img src="{!! asset('dash/images/pic.jpg')!!}" alt="img">
+            <div class="text">
+                <h4>Samso aliao</h4>
+                <p>Samso Nagaro Like your home work</p>
+            </div>
+        </div>
+        <div class="notifications-item"> <img src="https://img.icons8.com/flat_round/64/000000/vote-badge.png" alt="img">
+            <div class="text">
+                <h4>John Silvester</h4>
+                <p>+20 vista badge earned</p>
+            </div>
+        </div>
     </div>
-
-
-    <!--
-    <ul class="nav navbar-nav navbar-right">
-    <a href="javascript:void(0);" class="">
-        <i class="material-icons">account_circle</i>
-    </a>
-    </ul>
-    -->
-  </div>
 </nav>
+</nav>
+
     <!-- #Top Bar -->
     <section>
         <!-- Left Sidebar -->
@@ -188,149 +192,6 @@
             <!-- #Footer -->
         </aside>
         <!-- #END# Left Sidebar -->
-        <!-- Right Sidebar -->
-        <aside id="rightsidebar" class="right-sidebar">
-            <ul class="nav nav-tabs tab-nav-right" role="tablist">
-                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
-                <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
-                    <ul class="demo-choose-skin">
-                        <li data-theme="red" class="active">
-                            <div class="red"></div>
-                            <span>Red</span>
-                        </li>
-                        <li data-theme="pink">
-                            <div class="pink"></div>
-                            <span>Pink</span>
-                        </li>
-                        <li data-theme="purple">
-                            <div class="purple"></div>
-                            <span>Purple</span>
-                        </li>
-                        <li data-theme="deep-purple">
-                            <div class="deep-purple"></div>
-                            <span>Deep Purple</span>
-                        </li>
-                        <li data-theme="indigo">
-                            <div class="indigo"></div>
-                            <span>Indigo</span>
-                        </li>
-                        <li data-theme="blue">
-                            <div class="blue"></div>
-                            <span>Blue</span>
-                        </li>
-                        <li data-theme="light-blue">
-                            <div class="light-blue"></div>
-                            <span>Light Blue</span>
-                        </li>
-                        <li data-theme="cyan">
-                            <div class="cyan"></div>
-                            <span>Cyan</span>
-                        </li>
-                        <li data-theme="teal">
-                            <div class="teal"></div>
-                            <span>Teal</span>
-                        </li>
-                        <li data-theme="green">
-                            <div class="green"></div>
-                            <span>Green</span>
-                        </li>
-                        <li data-theme="light-green">
-                            <div class="light-green"></div>
-                            <span>Light Green</span>
-                        </li>
-                        <li data-theme="lime">
-                            <div class="lime"></div>
-                            <span>Lime</span>
-                        </li>
-                        <li data-theme="yellow">
-                            <div class="yellow"></div>
-                            <span>Yellow</span>
-                        </li>
-                        <li data-theme="amber">
-                            <div class="amber"></div>
-                            <span>Amber</span>
-                        </li>
-                        <li data-theme="orange">
-                            <div class="orange"></div>
-                            <span>Orange</span>
-                        </li>
-                        <li data-theme="deep-orange">
-                            <div class="deep-orange"></div>
-                            <span>Deep Orange</span>
-                        </li>
-                        <li data-theme="brown">
-                            <div class="brown"></div>
-                            <span>Brown</span>
-                        </li>
-                        <li data-theme="grey">
-                            <div class="grey"></div>
-                            <span>Grey</span>
-                        </li>
-                        <li data-theme="blue-grey">
-                            <div class="blue-grey"></div>
-                            <span>Blue Grey</span>
-                        </li>
-                        <li data-theme="black">
-                            <div class="black"></div>
-                            <span>Black</span>
-                        </li>
-                    </ul>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="settings">
-                    <div class="demo-settings">
-                        <p>GENERAL SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Report Panel Usage</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Email Redirect</span>
-                                <div class="switch">
-                                    <label><input type="checkbox"><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>SYSTEM SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Notifications</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Auto Updates</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>ACCOUNT SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Offline</span>
-                                <div class="switch">
-                                    <label><input type="checkbox"><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Location Permission</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <!-- #END# Right Sidebar -->
     </section>
 
     <!-- AQUI VAMOS A COLOCAR LAS VISTAS CORRESPONDIENTES SAHR-->
@@ -343,6 +204,11 @@
 
     <!-- Bootstrap Core Js -->
     <script src="{!! asset('dash/plugins/bootstrap/js/bootstrap.js ') !!}"></script>
+
+    <!--Librerias
+    <script src="{!! asset('dash/plugins/bootstrap/js/jquery-3.2.1.slim.min.js ') !!}"></script>-->
+    <script src="{!! asset('dash/plugins/bootstrap/js/popper.min.js ') !!}"></script>
+    <script src="{!! asset('dash/plugins/bootstrap/js/bootstrap.min.js ') !!}"></script>
 
     <!-- Select Plugin Js -->
     <script src="{!! asset('dash/plugins/bootstrap-select/js/bootstrap-select.js') !!}"></script>
@@ -377,6 +243,9 @@
     <script src="{!! asset('dash/js/admin.js') !!}"></script>
     <script src="{!! asset('dash/js/pages/index.js') !!}"></script>
     <script src="{!! asset('dash/js/sweetalert2.all.min.js') !!}"></script>
+    <script src="{!! asset('dash/js/code-navbar.js') !!}"></script>
+    <script src="{!! asset('dash/js/bootstrap.bundle.min.js') !!}"></script>
+    
 
     <!-- Firmas Digitales Js -->
     <script src="{!! asset('dash/firma_digital/script.js') !!}"></script>
