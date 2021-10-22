@@ -58,6 +58,11 @@ Route::get('listar_reservas', function () {
     return view('dashboards.listar_reservas');
 });
 
+//vista registrar contrato
+Route::get('registrar_contrato', function () {
+    return view('dashboards.registrar_contrato');
+});
+
 Route::get('lista_vehiculos',"VehiculosController@index");
 
 //metodos de envio en este caso post

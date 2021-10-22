@@ -30,6 +30,9 @@
     <link href="{!! asset('dash/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('dash/css/style_toggle.css') !!}" rel="stylesheet">
 
+    <!-- Firma digital Css -->
+    <link href="{!! asset('dash/firma_digital/style.css') !!}" rel="stylesheet">
+
     <link href="{!! asset('dash/css/sweetalert2.min.css') !!}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
@@ -65,6 +68,8 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{{url('dashboard')}}">RENTACAR PASTO</a>
     </div>
+
+
     <!--
     <ul class="nav navbar-nav navbar-right">
     <a href="javascript:void(0);" class="">
@@ -160,25 +165,14 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/medias/image-gallery.html">Registrar Contrato</a>
+                                <a href="{{url('registrar_contrato')}}">Registrar Contrato</a>
                             </li>
                             <li>
                                 <a href="pages/medias/carousel.html">Listar Contrato</a>
                             </li>
                         </ul>
                     </li>
-                  
-                   
-                   
-                    
-                  
-                   
-                   
-                  
-                   
-                   
-                   
-                   
+                     
                 </ul>
             </div>
             <!-- #Menu -->
@@ -383,7 +377,11 @@
     <script src="{!! asset('dash/js/admin.js') !!}"></script>
     <script src="{!! asset('dash/js/pages/index.js') !!}"></script>
     <script src="{!! asset('dash/js/sweetalert2.all.min.js') !!}"></script>
-    
+
+    <!-- Firmas Digitales Js -->
+    <script src="{!! asset('dash/firma_digital/script.js') !!}"></script>
+    <script src="{!! asset('dash/firma_digital/script2.js') !!}"></script>
+
     <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->
     <script src="{!! asset('dash/js/demo.js') !!}"></script>
