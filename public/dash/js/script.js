@@ -1,4 +1,10 @@
 ﻿
+window.onload=function() {
+   $(".dropdown-toggle").hide();
+   $(".lugar").hide();
+}
+
+
 
 $('#cedula_usuario').keyup(function() {
     var texto = $("#cedula_usuario").val();
@@ -28,3 +34,35 @@ $('#cedula_usuario').keyup(function() {
     $("#direccion").val(direccion);
     $("#telefono").val(telefono);
    }
+
+  $('#gridCheck2').change(function () {
+    alert('lavada');
+});
+$('#gridCheck1').change(function () {
+   var comprobador= $('#gridCheck1').is(':checked')
+    if(comprobador){
+        $(".lugar").show();
+    }
+    else{
+        $(".lugar").hide();
+    }
+   
+});
+
+//cambios calendario
+
+$("#desde").change(
+    function(){
+       fecha_desde= $("#desde").val();
+        console.log(fecha_desde);
+        $("#hasta").prop("min",fecha_desde)
+    }
+)
+$("#hasta").change(
+    function (){
+        fecha_desde= moment($("#desde").val());
+        fecha_hasta=moment($("#hasta").val());
+        diferencia=fecha_hasta.diff(fecha_desde,'days')
+        console.log(diferencia +"Dias ");
+    }
+)

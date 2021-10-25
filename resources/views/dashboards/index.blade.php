@@ -36,7 +36,15 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
 
-</head>
+    <style>
+        .myDiv {
+            border: 1px solid #333;
+            width: 100px;
+            height: 100px;
+            -webkit-box-shadow: 10px 0px 5px -2px #888;
+        }
+
+    </style>
 
 <body class="theme-red">
     <!-- Page Loader -->
@@ -390,7 +398,9 @@
     <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->
     <script src="{!! asset('dash/js/demo.js') !!}"></script>
+    <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
     <script src="{!! asset('dash/js/script.js') !!}"></script>
+
 </body>
 
 </html>

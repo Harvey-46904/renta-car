@@ -29,7 +29,8 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-md-6"><label for="nombre_vehiculo">No Documento</label>
+                                    <div class="col-md-6">
+                                        <label for="nombre_vehiculo">No Documento</label>
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input type="text" id="cedula_usuario" name="cedula_usuario"
@@ -42,8 +43,84 @@
                                                     class="form-control bg-warning" placeholder="Cliente No Encontrado">
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="nombre_vehiculo">Desde</label>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date" id="desde" name="desde">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"> <label for="nombre_vehiculo">Hasta</label>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date" id="hasta" name="hasta">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Seleccione Vehiculo</label>
+                                            <select class="form-control" id="vehiculo" name="vehiculo">
+                                                @foreach ($vehiculos as $vehiculo)
+                                                    <option id="{{ $vehiculo->id_vehiculo }}">
+                                                        {{ $vehiculo->nombre_vehiculo }} {{ $vehiculo->marca }}
+
+                                                        {{ $vehiculo->modelo }}
+                                                        {{ $vehiculo->color }}
+                                                    </option>
+                                                @endforeach
+
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-3">Transporte Aeropuerto</div>
+                                            <div class="col-sm-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                                    <label class="form-check-label" for="gridCheck1">
+                                                        ¿Desea ser recogido en Aeropuerto?
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset class="form-group lugar">
+                                            <div class="row">
+                                                <legend class="col-form-label col-sm-3 pt-0">Lugar</legend>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            id="gridRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="gridRadios1">
+                                                            Pasto
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            id="gridRadios2" value="option2">
+                                                        <label class="form-check-label" for="gridRadios2">
+                                                            Ipiales
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <div class="form-group row">
+                                            <div class="col-md-3">Lavado Vehiculo:</div>
+                                            <div class="col-sm-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                                    <label class="form-check-label" for="gridCheck2">
+                                                        ¿Desea Lavado de Vehiculo?
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
-                                    <div class="col-md-6 text-center border border-secondary py-2">
+                                    <div class="col-md-6 text-center border border-secondary py-2 ">
 
                                         <h3 class="text-center">Ticket de Reserva</h3>
                                         <hr>

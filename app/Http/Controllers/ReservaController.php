@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\reserva;
 use Illuminate\Http\Request;
-
+use DB;
 class ReservaController extends Controller
 {
     /**
@@ -14,7 +14,11 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+
+        $vehiculos=DB::table('vehiculos')
+        ->select()
+        ->get();
+        return view('dashboards.crear_reserva',compact("vehiculos"));
     }
 
     /**
