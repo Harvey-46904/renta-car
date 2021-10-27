@@ -122,7 +122,9 @@
                                     </div>
                                     <div class="col-md-6 text-center border border-secondary py-2 ">
 
-                                        <h3 class="text-center">Ticket de Reserva</h3>
+                                        <h4 class="text-center">Ticket de Reserva</h4>
+                                        <hr>
+                                        <h4 class="text-center">Cliente</h4>
                                         <hr>
                                         <div class="row justify-content-center">
                                             <div class="col-md-5">
@@ -182,6 +184,59 @@
                                                     <div class="form-line">
                                                         <input type="text" id="telefono" name="telefono"
                                                             class="form-control bg-light" placeholder="" value="" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center">Vehiculo</h4>
+                                        <hr>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-5">
+                                                <label for="nombre_vehiculo">Dirección</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="direccion" name="direccion"
+                                                            class="form-control bg-light " placeholder="" value="" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <label for="nombre_vehiculo">Telefono</label>
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="telefono" name="telefono"
+                                                            class="form-control bg-light" placeholder="" value="" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="text-center">Informacion Alquiler</h4>
+                                        <hr>
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-md-4 ">
+                                                <h5><b>Dias</b></h5>
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <label for="fechas">desde</label>
+                                                        <input type="text" id="dias" name="dias"
+                                                            class="form-control bg-light" placeholder="" value="0" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4">
+                                                <h5><b>Transporte:<h5 id="lugar">Pasto</h5> </b></h5>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="transporte" name="transporte"
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
                                                     </div>
                                                 </div>
                                             </div>
