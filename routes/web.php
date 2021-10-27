@@ -22,7 +22,7 @@ Route::get('clientes',"ClientesController@store");
 
 
 Route::get('dashboard', function () {
-    return view('dashboards.index');
+    return view('dashboards.inicio');
 });
 
 Route::get('crear_cliente', function () {
