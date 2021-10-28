@@ -86,7 +86,7 @@ $("#hasta").change(
         fecha_desde= moment($("#desde").val());
         fecha_hasta=moment($("#hasta").val());
         diferencia=fecha_hasta.diff(fecha_desde,'days')
-        $("#dias").val(diferencia)
+        $("#dias").val(diferencia-1)
         $("#des").text($("#desde").val())
         $("#has").text($("#hasta").val())
     }
@@ -103,8 +103,12 @@ $("select#vehiculo").change(
             console.log("error");
             }else{
                 vehiculo_solo=data.data;
-                
-               
+                $("#precio_alquiler").val(vehiculo_solo.precio_alquiler)
+                $("#name_car").val(vehiculo_solo.marca)
+                var dias=  $("#dias").val();
+                var reserva=vehiculo_solo.precio_alquiler;
+                var total_reserva=((reserva*dias)*30)/100
+                $("#reserva").val(total_reserva);
             }
           });
     }

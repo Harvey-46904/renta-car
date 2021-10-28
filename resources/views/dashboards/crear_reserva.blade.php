@@ -193,19 +193,19 @@
                                         <hr>
                                         <div class="row justify-content-center">
                                             <div class="col-md-5">
-                                                <label for="nombre_vehiculo">Dirección</label>
+                                                <label for="nombre_vehiculo">Vehiculo</label>
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="direccion" name="direccion"
+                                                        <input type="text" id="name_car" name="name_car"
                                                             class="form-control bg-light " placeholder="" value="" disabled>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
-                                                <label for="nombre_vehiculo">Telefono</label>
+                                                <label for="nombre_vehiculo">Precio Alquiler</label>
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="telefono" name="telefono"
+                                                        <input type="text" id="precio_alquiler" name="precio_alquiler"
                                                             class="form-control bg-light" placeholder="" value="" disabled>
                                                     </div>
                                                 </div>
@@ -251,6 +251,34 @@
                                                 <div class="form-group">
                                                     <div class="form-line">
                                                         <input type="text" id="lava" name="lava"
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-3">
+                                                <h5><b>Valor Reserva</b></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="reserva" name="reserva"
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-3">
+                                                <h5><b>Saldo</b></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="saldo" name="saldo"
                                                             class="form-control bg-light" placeholder="" value="0"
                                                             disabled>
                                                     </div>
