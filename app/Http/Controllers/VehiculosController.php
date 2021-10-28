@@ -114,4 +114,17 @@ class VehiculosController extends Controller
     {
         //
     }
+
+    public function obtener_carro($id){
+        $carro=DB::table('vehiculos')
+        ->select()
+        ->where("id_vehiculo","=",$id)
+        ->first();
+
+        if(!empty($carro)){
+            return response(["data"=>$carro]);
+        }else{
+            return response(["data"=>"error"]);
+        }
+    }
 }

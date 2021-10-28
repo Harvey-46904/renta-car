@@ -60,10 +60,11 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Seleccione Vehiculo</label>
                                             <select class="form-control" id="vehiculo" name="vehiculo">
+                                                <option id="defecto">Seleccione Un Vehiculo</option>
                                                 @foreach ($vehiculos as $vehiculo)
+
                                                     <option id="{{ $vehiculo->id_vehiculo }}">
                                                         {{ $vehiculo->nombre_vehiculo }} {{ $vehiculo->marca }}
-
                                                         {{ $vehiculo->modelo }}
                                                         {{ $vehiculo->color }}
                                                     </option>
@@ -89,7 +90,7 @@
                                                 <div class="col-sm-9">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="gridRadios"
-                                                            id="gridRadios1" value="option1" checked>
+                                                            id="gridRadios1" value="option1">
                                                         <label class="form-check-label" for="gridRadios1">
                                                             Pasto
                                                         </label>
@@ -214,13 +215,14 @@
                                         <h4 class="text-center">Informacion Alquiler</h4>
                                         <hr>
                                         <div class="row justify-content-center align-items-center">
-                                            <div class="col-md-4 ">
-                                                <h5><b>Dias</b></h5>
+                                            <div class="col-md-3 ">
+                                                <h5><b>Dias Totales</b></h5>
                                             </div>
-                                            <div class="col-md-6 ">
+                                            <div class="col-md-7 ">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <label for="fechas">desde</label>
+                                                        <label for="fechas"><b>Desde: </b><label id="des">21</label>
+                                                            <b>Hasta </b><label id="has">21</label> </label>
                                                         <input type="text" id="dias" name="dias"
                                                             class="form-control bg-light" placeholder="" value="0" disabled>
                                                     </div>
@@ -228,13 +230,27 @@
                                             </div>
                                         </div>
                                         <div class="row justify-content-center">
-                                            <div class="col-md-4">
-                                                <h5><b>Transporte:<h5 id="lugar">Pasto</h5> </b></h5>
+                                            <div class="col-md-3">
+                                                <h5><b>Transporte<h5 id="ubicacion"></h5> </b></h5>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
                                                         <input type="text" id="transporte" name="transporte"
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-3">
+                                                <h5><b>Lavado</b></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="lava" name="lava"
                                                             class="form-control bg-light" placeholder="" value="0"
                                                             disabled>
                                                     </div>

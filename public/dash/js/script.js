@@ -4,11 +4,10 @@ window.onload=function() {
    $(".lugar").hide();
 }
 
-
+let vehiculo_solo;
 
 $('#cedula_usuario').keyup(function() {
-    var texto = $("#cedula_usuario").val();
-    
+    var texto = $("#cedula_usuario").val(); 
     $.get( "obtener_nombre/"+texto, function( data ) {
        
         if(data.data =="error"){
@@ -36,18 +35,42 @@ $('#cedula_usuario').keyup(function() {
    }
 
   $('#gridCheck2').change(function () {
-    alert('lavada');
-});
+   
+    var comprobador= $('#gridCheck2').is(':checked')
+    if(comprobador){
+        $("#lava").val(vehiculo_solo.precio_lavado)
+    }
+    else{
+        $("#lava").val(0)
+    }
+    });
 $('#gridCheck1').change(function () {
    var comprobador= $('#gridCheck1').is(':checked')
     if(comprobador){
         $(".lugar").show();
     }
     else{
+        $("#ubicacion").text("")
+        $("#transporte").val(0)
         $(".lugar").hide();
+        $('#gridRadios1').prop("checked", false);
+        $('#gridRadios2').prop("checked", false);
     }
-   
 });
+$('#gridRadios1').change(
+    function(){
+        $("#ubicacion").text("Pasto")
+        $("#transporte").val(35000)
+    }
+)
+$('#gridRadios2').change(
+    function(){
+        $("#ubicacion").text("Ipiales")
+        $("#transporte").val(120000)
+    }
+)
+
+
 
 //cambios calendario
 
@@ -63,6 +86,27 @@ $("#hasta").change(
         fecha_desde= moment($("#desde").val());
         fecha_hasta=moment($("#hasta").val());
         diferencia=fecha_hasta.diff(fecha_desde,'days')
-        console.log(diferencia +"Dias ");
+        $("#dias").val(diferencia)
+        $("#des").text($("#desde").val())
+        $("#has").text($("#hasta").val())
+    }
+)
+//obtener info del vehiculo 
+
+$("select#vehiculo").change(
+    function(){
+     var valor=$(this)[0].selectedIndex;
+    if(valor!=0){
+        $.get( "obtener_carro/"+valor, function( data ) {
+       
+            if(data.data =="error"){
+            console.log("error");
+            }else{
+                vehiculo_solo=data.data;
+                
+               
+            }
+          });
+    }
     }
 )
