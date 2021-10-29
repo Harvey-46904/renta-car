@@ -84,6 +84,21 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="form-group row form_person">
+                                            <div class="col-md-3">Número Personas</div>
+                                            <div class="col-sm-9">
+
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="number" id="personas" name="personas"
+                                                            class="form-control">
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
                                         <fieldset class="form-group lugar">
                                             <div class="row">
                                                 <legend class="col-form-label col-sm-3 pt-0">Lugar</legend>
@@ -191,7 +206,7 @@
                                         </div>
                                         <h4 class="text-center">Vehiculo</h4>
                                         <hr>
-                                        <div class="row justify-content-center">
+                                        <div class="row justify-content-center ">
                                             <div class="col-md-5">
                                                 <label for="nombre_vehiculo">Vehiculo</label>
                                                 <div class="form-group">
@@ -221,10 +236,25 @@
                                             <div class="col-md-7 ">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <label for="fechas"><b>Desde: </b><label id="des">21</label>
-                                                            <b>Hasta </b><label id="has">21</label> </label>
+                                                        <label for="fechas"><b>Desde: </b><label id="des">...</label>
+                                                            <b>Hasta </b><label id="has">...</label> </label>
                                                         <input type="text" id="dias" name="dias"
-                                                            class="form-control bg-light" placeholder="" value="0" disabled>
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-3">
+                                                <h5><b>Total Vehiculo</b></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" id="t_vehiculo" name="t_vehiculo"
+                                                            class="form-control bg-light" placeholder="" value="0"
+                                                            disabled>
                                                     </div>
                                                 </div>
                                             </div>
