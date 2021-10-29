@@ -20,9 +20,12 @@ Route::get('/', function () {
 });
 Route::get('clientes',"ClientesController@store");
 
-
 Route::get('dashboard', function () {
     return view('dashboards.inicio');
+});
+
+Route::get('login', function () {
+    return view('dashboards.login');
 });
 
 Route::get('crear_cliente', function () {
