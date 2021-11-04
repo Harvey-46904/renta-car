@@ -56,6 +56,15 @@ Route::get('crear_reserva', function () {
     return view('dashboards.crear_reserva');
 });
 
+
+//VISTAS PAGINA WEB
+
+//vista base
+Route::get('index123', function () {
+    return view('webpage.index123');
+});
+
+
 //VISTA LISTAR RESERVA
 Route::get('listar_reservas', function () {
     return view('dashboards.listar_reservas');
