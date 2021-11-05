@@ -1,8 +1,7 @@
 @extends('webpage.index123')
-@section('')
+@section('prueba')
 <!-- Service Area Start -->
 <section class="gauto-service-area section_70">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -81,4 +80,4 @@
         </div>
     </section>
     <!-- Service Area End -->
-    @endsection
+@endsection

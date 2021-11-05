@@ -112,6 +112,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="gallery.html">GALERÍA</a></li>
+                                <li><a href="gallery.html">SOBRE NOSOTROS</a></li>
                                 <li><a href="#">pages</a>
                                     <ul>
                                         <li><a href="blog.html">blog</a></li>
@@ -140,7 +141,7 @@
     <!-- Mainmenu Area End -->
 
     <!--inicio cuerpo de sitios-personalizado-->
-    
+    @yield('prueba')
     <!--final cuerpo de sitios-personalizado-->
 
     <!-- Footer Area Start -->
