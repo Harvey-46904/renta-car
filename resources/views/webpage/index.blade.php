@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang="es-ES">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,11 +46,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="header-top-left">
-                        <p><i class="fa fa-phone"></i> Contáctanos: 3227795422</p>
+                        <p><i class="fa fa-phone"></i><a   onclick=" window.open('https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0', '_blank');">  Contáctanos: 3227795422</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="header-top-right"><a href="#"><i class="fa fa-key"></i> Iniciar Sesión</a>
+                    <div class="header-top-right"><a href="{{ route('login')}}"><i class="fa fa-key"></i> Iniciar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="site-logo"><a href="index.html"><img src="{!! asset('webpage/img/logo.png')!!}" alt="gauto" /></a></div>
+                    <div class="site-logo"><a href="index.html"><img src="{!! asset('webpage/img/logo.png')!!}" alt="rentacar" style="border-radius: 20px;"/></a></div>
                 </div>
                 <div class="col-lg-6 col-sm-9">
                     <div class="header-promo">
@@ -75,8 +75,8 @@
                         <div class="single-header-promo">
                             <div class="header-promo-icon"><img src="{!! asset('webpage/img/clock.png')!!}" alt="clock" /></div>
                             <div class="header-promo-info">
-                                <h3>Monday to Friday</h3>
-                                <p>9:00am - 6:00pm</p>
+                                <h3>Lunes a Domingo</h3>
+                                <p>7:00am - 8:00pm</p>
                             </div>
                         </div>
                     </div>
@@ -99,29 +99,10 @@
                         <nav>
                             <ul id="gauto_navigation">
                                 <li class="active"><a href="index.html">INICIO</a></li>
-                                <li><a href="#">SERVICIOS</a>
-                                    <ul>
-                                        <li><a href="service.html">All services</a></li>
-                                        <li><a href="single-service.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">VEHÍCULOS</a>
-                                    <ul>
-                                        <li><a href="car-listing.html">car listing</a></li>
-                                        <li><a href="car-booking.html">car booking</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="{{ route('servicios')}}">SERVICIOS</a></li>
+                                <li><a href="{{ route('vehiculos')}}">VEHÍCULOS</a></li>
                                 <li><a href="gallery.html">GALERÍA</a></li>
-                                <li><a href="gallery.html">SOBRE NOSOTROS</a></li>
-                                <li><a href="#">pages</a>
-                                    <ul>
-                                        <li><a href="blog.html">blog</a></li>
-                                        <li><a href="single-blog.html">single blog</a></li>
-                                        <li><a href="404.html">404 not found</a></li>
-                                        <li><a href="login.html">login</a></li>
-                                        <li><a href="register.html">register</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="{{ route('info')}}">SOBRE NOSOTROS</a></li>
                                 <li><a href="contact.html">contact</a></li>
                                 <li><a href="about.html">about</a></li>
                             </ul>
@@ -141,7 +122,7 @@
     <!-- Mainmenu Area End -->
 
     <!--inicio cuerpo de sitios-personalizado-->
-    @yield('prueba')
+    @yield('content')
     <!--final cuerpo de sitios-personalizado-->
 
     <!-- Footer Area Start -->
@@ -149,14 +130,12 @@
         <div class="footer-top-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="single-footer">
-                            <div class="footer-logo"><a href="#"><img src="{!! asset('webpage/img/footer-logo.png')!!}"
+                            <div class="footer-logo"><a href="#"><img src="{!! asset('webpage/img/logo.png')!!}"
                                         alt="footer-logo" /></a></div>
-                            <p>sed do eiusmod tempor incididunt ut labore et dolore magna as aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco.</p>
                             <div class="footer-address">
-                                <h3>Head office</h3>
+                                <h3>RENTACAR PASTO</h3>
                                 <p>125 Big fella St. Road, <span>New York, Hi 5654775</span></p>
                                 <ul>
                                     <li>Phone: 326487652</li>
@@ -166,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="single-footer quick_links">
                             <h3>Quick Links</h3>
                             <ul class="quick-links">
@@ -196,17 +175,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="copyright">
-                            <p>Design With <i class="fa fa-heart"></i>from <a href="http://www.bootstrapmb.com/"
-                                    title="bootstrapmb">Themescare</a></p>
+                            <p>COPYRIGHT © 2021 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-social">
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href=""><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

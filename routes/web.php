@@ -26,7 +26,7 @@ Route::get('dashboard', function () {
 
 Route::get('login', function () {
     return view('dashboards.login');
-});
+})->name("login");
 
 Route::get('crear_cliente', function () {
     return view('dashboards.registro_clientes');
@@ -60,17 +60,26 @@ Route::get('crear_reserva', function () {
 //VISTAS PAGINA WEB
 
 //vista base
-Route::get('Rentacar-index', function () {
-    return view('webpage.index123');
+Route::get('rentacar-index', function () {
+    return view('webpage.index');
 });
 
 Route::get('site1', function () {
     return view('webpage.base-completa');
 });
 
-Route::get('Rentacar-servicios', function () {
+Route::get('rentacar-servicios', function () {
     return view('webpage.servicios');
-});
+})->name("servicios");
+
+
+Route::get('rentacar-vehiculos', function () {
+    return view('webpage.vehiculos');
+})->name("vehiculos");
+
+Route::get('rentacar-info', function () {
+    return view('webpage.info');
+})->name("info");
 
 
 //VISTA LISTAR RESERVA
