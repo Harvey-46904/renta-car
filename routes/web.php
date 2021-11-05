@@ -60,8 +60,16 @@ Route::get('crear_reserva', function () {
 //VISTAS PAGINA WEB
 
 //vista base
-Route::get('index123', function () {
+Route::get('Rentacar-index', function () {
     return view('webpage.index123');
+});
+
+Route::get('site1', function () {
+    return view('webpage.base-completa');
+});
+
+Route::get('Rentacar-servicios', function () {
+    return view('webpage.servicios');
 });
 
 
