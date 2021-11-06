@@ -64,6 +64,10 @@ Route::get('rentacar-index', function () {
     return view('webpage.index');
 });
 
+Route::get('rentacar-inicio', function () {
+    return view('webpage.inicio');
+})->name("inicio");
+
 Route::get('site1', function () {
     return view('webpage.base-completa');
 });
@@ -81,6 +85,13 @@ Route::get('rentacar-info', function () {
     return view('webpage.info');
 })->name("info");
 
+Route::get('rentacar-gallery', function () {
+    return view('webpage.gallery');
+})->name("gallery");
+
+Route::get('rentacar-contact', function () {
+    return view('webpage.contact');
+})->name("contact");
 
 //VISTA LISTAR RESERVA
 Route::get('listar_reservas', function () {

@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="header-top-left">
-                        <p><i class="fa fa-phone"></i><a   onclick=" window.open('https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0', '_blank');">  Contáctanos: 3227795422</a></p>
+                        <p><i class="fa fa-phone"></i><a onclick=" window.open('https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0', '_blank');">  Contáctanos: 3227795422</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -101,10 +101,9 @@
                                 <li class="active"><a href="index.html">INICIO</a></li>
                                 <li><a href="{{ route('servicios')}}">SERVICIOS</a></li>
                                 <li><a href="{{ route('vehiculos')}}">VEHÍCULOS</a></li>
-                                <li><a href="gallery.html">GALERÍA</a></li>
+                                <li><a href="{{ route('gallery')}}">GALERÍA</a></li>
                                 <li><a href="{{ route('info')}}">SOBRE NOSOTROS</a></li>
-                                <li><a href="contact.html">contact</a></li>
-                                <li><a href="about.html">about</a></li>
+                                <li><a href="{{ route('contact')}}">CONTÁCTANOS</a></li>
                             </ul>
                         </nav>
                     </div>
