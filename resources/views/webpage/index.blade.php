@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="site-logo"><a href="index.html"><img src="{!! asset('webpage/img/logo.png')!!}" alt="rentacar" style="border-radius: 20px;"/></a></div>
+                    <div class="site-logo"><a href="{{ route('inicio')}}"><img src="{!! asset('webpage/img/logo.png')!!}" alt="rentacar" style="border-radius: 20px;"/></a></div>
                 </div>
                 <div class="col-lg-6 col-sm-9">
                     <div class="header-promo">
@@ -98,7 +98,7 @@
                     <div class="mainmenu">
                         <nav>
                             <ul id="gauto_navigation">
-                                <li class="active"><a href="index.html">INICIO</a></li>
+                                <li class="active"><a href="{{ route('inicio')}}">INICIO</a></li>
                                 <li><a href="{{ route('servicios')}}">SERVICIOS</a></li>
                                 <li><a href="{{ route('vehiculos')}}">VEHÍCULOS</a></li>
                                 <li><a href="{{ route('gallery')}}">GALERÍA</a></li>

@@ -10,9 +10,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                        <p>for rent $65 per day</p>
-                                        <h2>Reserved Now & Get <span>50% Off</span></h2><a href="#"
-                                            class="gauto-btn">Reserve Now!</a>
+                                        <p>Autos desde $350 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2> 
                                     </div>
                                 </div>
                             </div>
@@ -27,9 +26,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                        <p>for rent $70 per day</p>
-                                        <h2>Reserved Now & Get <span>50% Off</span></h2><a href="#"
-                                            class="gauto-btn">Reserve Now!</a>
+                                    <p>Autos desde $150 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
                             </div>
@@ -38,94 +36,36 @@
                 </div>
             </div>
         </div>
-    </section><!-- Slider Area End -->
-    <!-- Find Area Start -->
-    <section class="gauto-find-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="find-box">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="find-text">
-                                    <h3>Search Your Best Cars here.</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="find-form">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p><input type="text" placeholder="From Address" /></p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p><input type="text" placeholder="To Address" /></p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p><select>
-                                                        <option data-display="Select">AC Car</option>
-                                                        <option>Non-AC Car</option>
-                                                    </select></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p><input id="reservation_date" name="reservation_date"
-                                                        placeholder="Journey Date" data-select="datepicker" type="text">
-                                                </p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p class="input-group clockpicker" data-placement="bottom"
-                                                    data-align="top" data-autoclose="true"><input type="text"
-                                                        class="form-control" placeholder="Journey Time" /></p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p><button type="submit" class="gauto-theme-btn">Find Car</button></p>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- Find Area End -->
+    </section>
+    <!-- Slider Area End -->
     <!-- About Area Start -->
     <section class="gauto-about-area section_70">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-left">
-                        <h4>about us</h4>
-                        <h2>Welcome to gauto</h2>
-                        <p>Horem Ipsum passages, and more recently with desktop publishing software like aldus pageMaker
-                            including versions of all the Rorem Ipsum generators</p>
+                        <h4>RENTACAR PASTO</h4>
+                        <h2>¡Bienvenido!</h2>
+                        <p>Tenemos diferentes modelos y gamas de autos para cada necesidad, estamos prestos para brindarte el mejor servicio de la ciudad.</p>
                         <div class="about-list">
                             <ul>
-                                <li><i class="fa fa-check"></i>We are a trusted name</li>
-                                <li><i class="fa fa-check"></i>we deal in have all brands</li>
-                                <li><i class="fa fa-check"></i>have a larger stock of vehicles</li>
-                                <li><i class="fa fa-check"></i>we are at worldwide locations</li>
+                                <li><i class="fa fa-check"></i>Alquiler de Vehículos</li>
+                                <li><i class="fa fa-check"></i>Transporte al Aeropuerto</li>
+                                <li><i class="fa fa-check"></i>Servicio de Recogida</li>
+                                <li><i class="fa fa-check"></i>Entrega a Domicilio</li>
+                                <li><i class="fa fa-check"></i>Cómodos Precios</li>
+                                <li><i class="fa fa-check"></i>Servicio de Conductor</li>
                             </ul>
-                        </div>
-                        <div class="about-signature">
-                            <div class="signature-left"><img src="assets/img/signature.png" alt="signature" /></div>
-                            <div class="signature-right">
-                                <h3>Robertho Garcia</h3>
-                                <p>President</p>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-right"><img src="assets/img/about.png" alt="car" /></div>
+                    <div class="about-right"><img src="{!! asset('webpage/img/car-red.jpg')!!}"  style="border-radius: 20px;" /></div>
                 </div>
             </div>
         </div>
     </section><!-- About Area End -->
-    <!-- Service Area Start -->
+   <!-- Service Area Start -->
 <section class="gauto-service-area section_70">
         <div class="container">
             <div class="row">
@@ -180,25 +120,16 @@
                             </div>
                         </div>
                         <div class="single-service"><span class="service-number">05</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/hotel-transport.png')!!}"
+                            <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
                                     alt="wedding trasport" /></div>
                             <div class="service-text"><a href="#">
-                                    <h3>Whole City Tour</h3>
+                                    <h3>Entrega A Domicilio</h3>
                                 </a>
                                 <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
                                     adipiscing elit.</p>
                             </div>
                         </div>
-                        <div class="single-service"><span class="service-number">06</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/luggege-transport.png')!!}"
-                                    alt="wedding trasport" /></div>
-                            <div class="service-text"><a href="#">
-                                    <h3>Baggage transport</h3>
-                                </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -211,12 +142,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="promo-box-left"><img src="assets/img/toyota-offer-2.png" alt="promo car" /></div>
+                    <div class="promo-box-left"><img src="{!! asset('webpage/img/logo.png')!!}" width="220" height="200" /></div>
                 </div>
                 <div class="col-md-6">
                     <div class="promo-box-right">
-                        <h3>Do You Want To Earn With Us? So Don't be Late.</h3><a href="#" class="gauto-btn">Become a
-                            drive</a>
+                        <h3>Trabaja como conductor</h3>
                     </div>
                 </div>
             </div>
@@ -364,30 +294,4 @@
             </div>
         </div>
     </section><!-- Offers Area End -->
-    
-    <!-- Call Area Start -->
-    <section class="gauto-call-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="call-box">
-                        <div class="call-box-inner">
-                            <h2>With Over <span>150+</span>Partners Locations</h2>
-                            <p>Labore dolore magna aliqua ipsum veniam quis nostrud exercitation voluptate velit cillum
-                                dolore feu fugiat nulla excepteur sint occaecat sed ipsum cupidatat proident culpa
-                                exercitation ullamco laboris aliquik.</p>
-                            <div class="call-number">
-                                <div class="call-icon"><i class="fa fa-phone"></i></div>
-                                <div class="call-text">
-                                    <p>need any help?</p>
-                                    <h4><a href="#">(431) 529 2093</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-    </section><!-- Call Area End -->
 @endsection

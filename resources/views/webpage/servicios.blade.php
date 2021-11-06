@@ -55,25 +55,16 @@
                             </div>
                         </div>
                         <div class="single-service"><span class="service-number">05</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/hotel-transport.png')!!}"
+                            <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
                                     alt="wedding trasport" /></div>
                             <div class="service-text"><a href="#">
-                                    <h3>Whole City Tour</h3>
+                                    <h3>Entrega A Domicilio</h3>
                                 </a>
                                 <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
                                     adipiscing elit.</p>
                             </div>
                         </div>
-                        <div class="single-service"><span class="service-number">06</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/luggege-transport.png')!!}"
-                                    alt="wedding trasport" /></div>
-                            <div class="service-text"><a href="#">
-                                    <h3>Baggage transport</h3>
-                                </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
