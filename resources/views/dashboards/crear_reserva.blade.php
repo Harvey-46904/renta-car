@@ -25,7 +25,7 @@
                         </div>
                         <div class="body">
 
-                            <form method="POST" action="{{ route('post_vehiculo') }}" accept-charset="UTF-8"
+                            <form method="POST" action="{{ route('post_reserva') }}" accept-charset="UTF-8"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
@@ -63,7 +63,7 @@
                                                 <option id="defecto">Seleccione Un Vehiculo</option>
                                                 @foreach ($vehiculos as $vehiculo)
 
-                                                    <option id="{{ $vehiculo->id_vehiculo }}">
+                                                    <option value="{{ $vehiculo->id_vehiculo }}">
                                                         {{ $vehiculo->nombre_vehiculo }} {{ $vehiculo->marca }}
                                                         {{ $vehiculo->modelo }}
                                                         {{ $vehiculo->color }}
@@ -105,14 +105,14 @@
                                                 <div class="col-sm-9">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="gridRadios"
-                                                            id="gridRadios1" value="option1">
+                                                            id="gridRadios1" value="Pasto">
                                                         <label class="form-check-label" for="gridRadios1">
                                                             Pasto
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                                            id="gridRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="gridRadios1"
+                                                            id="gridRadios2" value="Ipiales">
                                                         <label class="form-check-label" for="gridRadios2">
                                                             Ipiales
                                                         </label>
@@ -126,7 +126,8 @@
                                             <div class="col-md-3">Lavado Vehiculo:</div>
                                             <div class="col-sm-9">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck2"
+                                                        name="lavados">
                                                     <label class="form-check-label" for="gridCheck2">
                                                         ¿Desea Lavado de Vehiculo?
                                                     </label>

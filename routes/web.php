@@ -66,6 +66,9 @@ Route::get('obtener_carro/{id}',"VehiculosController@obtener_carro")->name("obte
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
+Route::post('crear_reserva','ReservaController@store')->name('post_reserva');
+
+
 
 //metodoos de eliminar
 

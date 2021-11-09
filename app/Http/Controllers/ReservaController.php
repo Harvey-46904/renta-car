@@ -39,7 +39,8 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $todo=$request->all();
+        return response(["data"=>$todo]);
     }
 
     /**
