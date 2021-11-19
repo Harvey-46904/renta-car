@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LOGIN - RENTACAR PASTO</title>
     <link href="{!! asset('dash/css/style-login.css') !!}" rel="stylesheet">
+	<link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
 </head>
 
 <body>

@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="{!! asset('webpage/css/style.css') !!}" />
     <!--Responsive css-->
     <link rel="stylesheet" href="{!! asset('webpage/css/responsive.css') !!}" />
+    <!--Icon webpage-->
+    <link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
 </head>
 
 <body>

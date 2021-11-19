@@ -37,6 +37,9 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{!! asset('dash/css/themes/all-themes.css') !!}" rel="stylesheet" />
+
+    <!--Icon webpage-->
+    <link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
     
 </head>
 

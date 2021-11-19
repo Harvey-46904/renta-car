@@ -38,6 +38,59 @@
         </div>
     </section>
     <!-- Slider Area End -->
+     <!-- Find Area Start -->
+     <section class="gauto-find-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="find-box">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="find-text">
+                                    <h3>Encuentre los mejores autos aquí.</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="find-form">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p><input type="text" placeholder="From Address" /></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><input type="text" placeholder="To Address" /></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><select>
+                                                        <option data-display="Select">AC Car</option>
+                                                        <option>Non-AC Car</option>
+                                                    </select></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p><input id="reservation_date" name="reservation_date"
+                                                        placeholder="Fecha Reserva" data-select="datepicker" type="text">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="input-group clockpicker" data-placement="bottom"
+                                                    data-align="top" data-autoclose="true"><input type="text"
+                                                        class="form-control" placeholder="Hora Reserva" /></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p><button type="submit" class="gauto-theme-btn">BUSCAR</button></p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Find Area End -->
     <!-- About Area Start -->
     <section class="gauto-about-area section_70">
         <div class="container">
@@ -186,8 +239,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -204,8 +257,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -222,8 +275,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -242,8 +295,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -260,8 +313,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -277,8 +330,8 @@
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                        href="#" class="offer-btn-2">Details</a></div>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
