@@ -148,7 +148,7 @@
                                                 <label for="nombre_vehiculo">Id Cliente</label>
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="id" name="id" class="form-control bg-light "
+                                                        <input type="text" id="id_cliente" name="id_cliente" class="form-control bg-light "
                                                             placeholder="" value="" disabled>
                                                     </div>
                                                 </div>

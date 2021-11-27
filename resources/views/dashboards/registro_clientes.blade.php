@@ -25,23 +25,19 @@
                     <div class="body">
                         <form action="{{route('post_cliente')}}" method="POST" >
                             @csrf
+                            
                             <label for="tipo_documento">Tipo de Documento</label>
                             <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" id="tipo_documento" name="tipo_documento" class="form-control" placeholder="CC">
-                                </div>
-                            </div>
-                            <label for="tipo_documento">Tipo de Documento</label>
-                            <div class="form-group">
-                            <select class="form-control show-tick">
-                                        <option value="">-- Please select --</option>
-                                        <option value="10">10</option>
-                                        <option value="20">20</option>
-                                        <option value="30">30</option>
-                                        <option value="40">40</option>
-                                        <option value="50">50</option>
+                            <select class="form-control show-tick" id="tipo_documento" name="tipo_documento">
+                                <option value="">Seleccione...</option>
+                                <option value="Cédula de ciudadanía" >Cédula de ciudadanía</option>
+                                <option value="Registro Civil" >Registro Civil</option>
+                                <option value="Pasaporte" >Pasaporte</option>
+                                <option value="Documento Extranjero" >Documento Extranjero</option>
                                     </select>
                             </div>
+                           
+
                             <label for="numero_documento">Número de Documento</label>
                             <div class="form-group">
                                 <div class="form-line">

@@ -41,6 +41,16 @@ class ReservaController extends Controller
     {
         $todo=$request->all();
         return response(["data"=>$todo]);
+/*
+        $reservas=new reserva;
+        $reservas->vehiculo_id
+        $reservas->cliente_id
+        $reservas->dias_reserva
+        $reservas->transporte
+        $reservas->lavado
+        $reservas->valor_reserva
+        $reservas->saldo
+*/
     }
 
     /**

@@ -27,7 +27,7 @@ $('#cedula_usuario').keyup(function() {
    });
 
    function asignar_datos_cliente(id,cedula,nombre,apellidos,direccion,telefono){
-    $("#id").val(id); 
+    $("#id_cliente").val(id); 
     $("#documento").val(cedula);
     $("#nombres").val(nombre);
     $("#apellidos ").val(apellidos);
@@ -107,8 +107,11 @@ $('#gridRadios2').change(
 $("#desde").change(
     function(){
        fecha_desde= $("#desde").val();
-        console.log(fecha_desde);
-        $("#hasta").prop("min",fecha_desde)
+       fechs=new Date(fecha_desde)
+       fechs.setDate(fechs.getDate()+2)
+       var formattedDate = moment(fechs).format('YYYY-MM-DD');
+        
+        $("#hasta").prop("min",formattedDate)
     }
 )
 $("#hasta").change(
@@ -116,7 +119,7 @@ $("#hasta").change(
         fecha_desde= moment($("#desde").val());
         fecha_hasta=moment($("#hasta").val());
         diferencia=fecha_hasta.diff(fecha_desde,'days')
-        $("#dias").val(diferencia-1)
+        $("#dias").val(diferencia)
        
         $("#des").text($("#desde").val())
         $("#has").text($("#hasta").val())
