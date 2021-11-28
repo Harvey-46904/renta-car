@@ -52,9 +52,7 @@ Route::get('actualizar_vehiculos', function () {
 });
 
 //vista crear reserva
-Route::get('crear_reserva', function () {
-    return view('dashboards.crear_reserva');
-});
+Route::get('crear_reserva', "ReservaController@index");
 
 
 //VISTAS PAGINA WEB
@@ -105,11 +103,17 @@ Route::get('registrar_contrato', function () {
 
 Route::get('lista_vehiculos',"VehiculosController@index");
 
+
+Route::get('obtener_nombre/{id}',"ClientesController@obtener_nombre")->name("obtener_nombre");
+Route::get('obtener_carro/{id}',"VehiculosController@obtener_carro")->name("obtener_carro");
 //metodos de envio en este caso post
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
+Route::post('crear_reserva','ReservaController@store')->name('post_reserva');
+
+
 
 //metodoos de eliminar
 

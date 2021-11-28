@@ -63,7 +63,10 @@ class ClientesController extends Controller
      */
     public function show($id)
     {
-        $list_view=clientes::findOrFail($id);
+        $list_view=DB::table('clientes')
+        ->select()
+        ->where("id_cliente","=",$id)
+        ->first();
         if(!empty($list_view)){
             return Redirect()->route("cliente_actual")->with(["cliente"=>$list_view]);
         }else{
@@ -98,7 +101,8 @@ class ClientesController extends Controller
      */
     public function update(Request $request,$id)
     {
-        $actualizar_clientes=clientes::findOrFail($id);
+       
+        $actualizar_clientes=clientes::findOrFail([$id],["id_cliente"]);
         $actualizar_clientes->tipo_documento=$request->tipo_documento;
         $actualizar_clientes->numero_documento= $request->numero_documento;
         $actualizar_clientes->nombres= $request->nombres;
@@ -121,5 +125,19 @@ class ClientesController extends Controller
     public function destroy($id)
     {
         response(["data"=>$id]);
+    }
+
+    public function obtener_nombre($id){
+
+        $clientes=DB::table('clientes')
+        ->select()
+        ->where("numero_documento","=",$id)
+        ->first();
+
+        if(!empty($clientes)){
+            return response(["data"=>$clientes]);
+        }else{
+            return response(["data"=>"error"]);
+        }
     }
 }

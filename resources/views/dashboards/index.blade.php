@@ -10,7 +10,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
@@ -106,7 +107,8 @@
                     <img src="{!! asset('dash/images/user.png') !!}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John
+                        Doe</div>
                     <div class="email">john.doe@example.com</div>
                 </div>
             </div>
@@ -116,7 +118,7 @@
                 <ul class="list">
                     <li class="header">MENU DE NAVEGACION</li>
                     <li class="active">
-                        <a href="{{url('dashboard')}}">
+                        <a href="{{ url('dashboard') }}">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
@@ -128,10 +130,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{url('crear_cliente')}}">Registro Clientes</a>
+                                <a href="{{ url('crear_cliente') }}">Registro Clientes</a>
                             </li>
                             <li>
-                                <a href="{{url('listar_cliente')}}">Listar Clientes</a>
+                                <a href="{{ url('listar_cliente') }}">Listar Clientes</a>
                             </li>
                         </ul>
                     </li>
@@ -142,10 +144,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{route('crear_vehiculo')}}">Registro Vehiculos</a>
+                                <a href="{{ route('crear_vehiculo') }}">Registro Vehiculos</a>
                             </li>
                             <li>
-                                <a href="{{route('listar_vehiculo')}}">Listar Vehiculos</a>
+                                <a href="{{ route('listar_vehiculo') }}">Listar Vehiculos</a>
                             </li>
                         </ul>
                     </li>
@@ -156,10 +158,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{url('crear_reserva')}}">Crear Reserva</a>
+                                <a href="{{ url('crear_reserva') }}">Crear Reserva</a>
                             </li>
                             <li>
-                                <a href="{{url('listar_reservas')}}">Listar Reserva</a>
+                                <a href="{{ url('listar_reservas') }}">Listar Reserva</a>
                             </li>
                         </ul>
                     </li>
@@ -255,6 +257,9 @@
     <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->
     <script src="{!! asset('dash/js/demo.js') !!}"></script>
+    <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
+    <script src="{!! asset('dash/js/script.js') !!}"></script>
+
 </body>
 
 </html>
