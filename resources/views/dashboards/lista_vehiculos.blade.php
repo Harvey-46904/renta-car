@@ -3,6 +3,15 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row clearfix">
+                @if (Session::get('correcto'))
+                    <div class="alert alert-success">
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
+                            aria-label="Close">
+                            <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+                        <span><b>El vehículo se creo correctamente</span>
+                    </div>
+                @endif
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">

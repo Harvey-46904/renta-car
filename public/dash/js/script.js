@@ -8,7 +8,12 @@ window.onload=function() {
 let vehiculo_solo;
 
 $('#cedula_usuario').keyup(function() {
-    var texto = $("#cedula_usuario").val(); 
+    var texto = $("#cedula_usuario").val();
+    var tam=texto.length;
+    if(tam>=6){
+
+    
+
     $.get( "obtener_nombre/"+texto, function( data ) {
        
         if(data.data =="error"){
@@ -16,7 +21,8 @@ $('#cedula_usuario').keyup(function() {
             $("#mensaje").removeClass("bg-info")
             $("#mensaje").addClass("bg-warning")
         }else{
-            $("#mensaje").val("Cliente Encontrado");
+            var nombre_completo=data.data.nombres+" "+data.data.apellidos;
+            $("#mensaje").val(nombre_completo);
           
             asignar_datos_cliente(data.data.id_cliente,data.data.numero_documento,data.data.nombres,data.data.apellidos,data.data.direccion,data.data.telefono)
             $("#mensaje").removeClass("bg-warning")
@@ -24,6 +30,8 @@ $('#cedula_usuario').keyup(function() {
            
         }
       });
+    }
+
    });
 
    function asignar_datos_cliente(id,cedula,nombre,apellidos,direccion,telefono){
@@ -131,12 +139,15 @@ $("#hasta").change(
 $("select#vehiculo").change(
     function(){
      var valor=$(this)[0].selectedIndex;
+     borrar_datos_ticket_carro()
     if(valor!=0){
         $.get( "obtener_carro/"+valor, function( data ) {
        
             if(data.data =="error"){
             console.log("error");
             }else{
+                $("#trans").show()
+                $("#lav").show()
                 vehiculo_solo=data.data;
                 $("#precio_alquiler").val(vehiculo_solo.precio_alquiler)
                 $("#name_car").val(vehiculo_solo.marca)
@@ -150,8 +161,33 @@ $("select#vehiculo").change(
             }
           });
     }
+    else{
+      borrar_datos_ticket_carro();
+    }
     }
 )
+
+function borrar_datos_ticket_carro(){
+    $("#trans").hide()
+    $("#lav").hide() 
+        $("#personas").val("")
+        $("#ubicacion").text("")
+        $("#transporte").val(0)
+        $(".lugar").hide();
+        $(".form_person").hide();
+        $('#gridRadios1').prop("checked", false);
+        $('#gridRadios2').prop("checked", false);
+        $("#lava").val(0)
+        $("#precio_alquiler").val(0)
+        $("#name_car").val("Seleccione un vehículo")
+        $("#t_vehiculo").val(0)
+        $("#reserva").val(0)
+        
+        $('#gridCheck2').prop("checked", false);
+        $('#gridCheck1').prop("checked", false);
+        asignar_saldo()
+    console.log("no hay carro");
+}
 
 function asignar_saldo(){
     var total_vehiculo =parseInt($("#t_vehiculo").val())
@@ -160,4 +196,8 @@ function asignar_saldo(){
     var total_reserva =parseInt($("#reserva").val())
     var saldo=(total_vehiculo+total_transporte+total_lavado)-total_reserva
     $("#saldo").val(saldo)
+}
+
+function saludar(d){
+    alert("hola yo soy "+d)
 }

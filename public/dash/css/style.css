@@ -1999,6 +1999,13 @@
 .col-pink {
   color: #E91E63 !important; }
 
+.bg-verde{
+  background-color: #aee3ba;
+}
+.bg-rojo{
+  background-color: #c23442;
+}
+
 .col-purple {
   color: #9C27B0 !important; }
 
@@ -2055,6 +2062,10 @@
 
 .col-white {
   color: #ffffff !important; }
+
+  .no_salto{
+    white-space:nowrap;
+  }
 
 /* Custom Animate ============================== */
 @-ms-keyframes spin {

@@ -92,9 +92,7 @@ Route::get('rentacar-contact', function () {
 })->name("contact");
 
 //VISTA LISTAR RESERVA
-Route::get('listar_reservas', function () {
-    return view('dashboards.listar_reservas');
-});
+Route::get('listar_reservas', "ReservaController@listar_reserva");
 
 //vista registrar contrato
 Route::get('registrar_contrato', function () {

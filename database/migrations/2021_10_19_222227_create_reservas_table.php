@@ -23,6 +23,8 @@ class CreateReservasTable extends Migration
             $table->dateTime('fecha_fin');
             $table->integer('dias_reserva');
             $table->boolean('transporte');
+            $table->integer('personas');
+            $table->string('lugar');
             $table->boolean('lavado');
             $table->integer('valor_reserva');
             $table->integer('saldo');

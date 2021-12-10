@@ -6,6 +6,8 @@ use App\Models\estado_vehiculo;
 use App\Models\vehiculos;
 use Illuminate\Http\Request;
 use DB;
+use Redirect;
+use Session;
 class EstadoVehiculoController extends Controller
 {
     /**
@@ -101,6 +103,7 @@ class EstadoVehiculoController extends Controller
         $crear_estado->Foto_trasera=$ldate.$nombre_t;
         $crear_estado->observaciones= $request->observaciones;
         $crear_estado->save();
+        return Redirect::to('/listar_vehiculo')->with('correcto', 'El vehículo se creo correctamente');
         return response(["datas"=>"datos agregados correctamente"]);
     }
 
