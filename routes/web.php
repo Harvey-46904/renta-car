@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // metodos de vista
 
-Route::get('/', function () {
+Route::get('/s', function () {
     return view('welcome');
 });
 Route::get('clientes',"ClientesController@store");
@@ -24,7 +24,7 @@ Route::get('dashboard', function () {
     return view('dashboards.inicio');
 });
 
-Route::get('login', function () {
+Route::get('logins', function () {
     return view('dashboards.login');
 })->name("login");
 
@@ -62,7 +62,7 @@ Route::get('rentacar-index', function () {
     return view('webpage.index');
 });
 
-Route::get('rentacar-inicio', function () {
+Route::get('/', function () {
     return view('webpage.inicio');
 })->name("inicio");
 
@@ -70,24 +70,24 @@ Route::get('site1', function () {
     return view('webpage.base-completa');
 });
 
-Route::get('rentacar-servicios', function () {
+Route::get('servicios', function () {
     return view('webpage.servicios');
 })->name("servicios");
 
 
-Route::get('rentacar-vehiculos', function () {
+Route::get('vehiculos', function () {
     return view('webpage.vehiculos');
 })->name("vehiculos");
 
-Route::get('rentacar-info', function () {
+Route::get('informacion', function () {
     return view('webpage.info');
 })->name("info");
 
-Route::get('rentacar-gallery', function () {
+Route::get('galeria', function () {
     return view('webpage.gallery');
 })->name("gallery");
 
-Route::get('rentacar-contact', function () {
+Route::get('contacto', function () {
     return view('webpage.contact');
 })->name("contact");
 
@@ -138,3 +138,10 @@ Route::get('storage/{archivo}', function ($nombre) {
     abort(404);
   
   });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

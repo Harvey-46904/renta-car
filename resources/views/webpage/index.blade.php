@@ -52,7 +52,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <!-- 
                     <div class="header-top-right"><a href="{{ route('login')}}"><i class="fa fa-key"></i> Iniciar Sesión</a>
+                   -->
                     </div>
                 </div>
             </div>
@@ -137,11 +139,11 @@
                                         alt="footer-logo" /></a></div>
                             <div class="footer-address">
                                 <h3>RENTACAR PASTO</h3>
-                                <p>125 Big fella St. Road, <span>New York, Hi 5654775</span></p>
+                                <p>Carrera 22b #11 sur 61</p>
                                 <ul>
-                                    <li>Phone: 326487652</li>
-                                    <li>Email: example@mail.com</li>
-                                    <li>Office Time: 9AM- 4PM</li>
+                                    <li>Telefono: 3227795422</li>
+                                    <li>Email: Rentacarpasto@gmail.com</li>
+                                    <li>Horarios: 7AM a 7PM</li>
                                 </ul>
                             </div>
                         </div>
@@ -150,15 +152,15 @@
                         <div class="single-footer quick_links">
                             <h3>Quick Links</h3>
                             <ul class="quick-links">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Case Studies</a></li>
-                                <li><a href="#">Contact us</a></li>
+                                <li><a href="{{ route('inicio')}}">inicio</a></li>
+                                <li><a href="{{ route('servicios')}}">servicios</a></li>
+                                <li><a href="{{ route('vehiculos')}}">vehiculos</a></li>
+                                <li><a href="{{ route('gallery')}}">galeria</a></li>
                             </ul>
                             <ul class="quick-links">
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">latest News</a></li>
+                                <li><a href="{{ route('info')}}">información</a></li>
+                                <li><a href="{{ route('contact')}}">contactos</a></li>
+                                
                             </ul>
                         </div>
                         <div class="single-footer newsletter_box">

@@ -32,16 +32,18 @@
                                     <div class="single-offers">
                                         <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-picanto.png')!!}" alt="offer 1" /></a></div>
                                         <div class="offer-text"><a href="#">
-                                                <h3>KIA Picanto</h3>
+                                                <h3>Sandero</h3>
                                             </a>
-                                            <h4>$75.00<span>/ Day</span></h4>
+                                            <h4>$190.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
+<!--
                                             <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
                                                     href="#" class="offer-btn-2">Details</a></div>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -50,16 +52,15 @@
                                         <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
                                                     alt="offer 1" /></a></div>
                                         <div class="offer-text"><a href="#">
-                                                <h3>Chevrolet Spark Gt</h3>
+                                                <h3>Chevrolet tracker</h3>
                                             </a>
-                                            <h4>$45.00<span>/ Day</span></h4>
+                                            <h4>$280.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
-                                            <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                    href="#" class="offer-btn-2">Details</a></div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -69,16 +70,15 @@
                                     <div class="single-offers">
                                         <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-logan.png')!!}" alt="offer 1" /></a></div>
                                         <div class="offer-text"><a href="#">
-                                                <h3>Renault Logan</h3>
+                                                <h3>Hyundai Tucson</h3>
                                             </a>
-                                            <h4>$50.00<span>/ Day</span></h4>
+                                            <h4>$300.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
-                                            <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                    href="#" class="offer-btn-2">Details</a></div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -87,16 +87,15 @@
                                         <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
                                                     alt="offer 1" /></a></div>
                                         <div class="offer-text"><a href="#">
-                                                <h3>Renault Stepway</h3>
+                                                <h3>Chevrolet Beat</h3>
                                             </a>
-                                            <h4>$55.00<span>/ Day</span></h4>
+                                            <h4>$180.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
-                                            <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                    href="#" class="offer-btn-2">Details</a></div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -108,14 +107,13 @@
                                         <div class="offer-text"><a href="#">
                                                 <h3>Renault Duster</h3>
                                             </a>
-                                            <h4>$50.00<span>/ Day</span></h4>
+                                            <h4>$300.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
-                                            <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                    href="#" class="offer-btn-2">Details</a></div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -123,16 +121,15 @@
                                     <div class="single-offers">
                                         <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
                                         <div class="offer-text"><a href="#">
-                                                <h3>Ford Ecosport</h3>
+                                                <h3>Renault Sandero</h3>
                                             </a>
-                                            <h4>$45.00<span>/ Day</span></h4>
+                                            <h4>$190.000<span>/ Día</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-car"></i>Model:2017</li>
                                                 <li><i class="fa fa-cogs"></i>Automatic</li>
                                                 <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                             </ul>
-                                            <div class="offer-action"><a href="#" class="offer-btn-1">Rent Car</a><a
-                                                    href="#" class="offer-btn-2">Details</a></div>
+                                            
                                         </div>
                                     </div>
                                 </div>

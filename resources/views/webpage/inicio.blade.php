@@ -10,7 +10,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                        <p>Autos desde $350 por día</p>
+                                        <p>Autos desde $180.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2> 
                                     </div>
                                 </div>
@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150 por día</p>
+                                    <p>Autos desde $180 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -55,14 +55,14 @@
                                     <form>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <p><input type="text" placeholder="From Address" /></p>
+                                                <p><input type="text" placeholder="Lugar de entrega" /></p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><input type="text" placeholder="To Address" /></p>
+                                                <p><input type="text" placeholder="Ciudad de recogida" /></p>
                                             </div>
                                             <div class="col-md-4">
                                                 <p><select>
-                                                        <option data-display="Select">AC Car</option>
+                                                        <option data-display="Vehiculo">AC Car</option>
                                                         <option>Non-AC Car</option>
                                                     </select></p>
                                             </div>
@@ -231,16 +231,15 @@
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-picanto.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Kia Picanto</h3>
+                                                    <h3>Sandero </h3>
                                                 </a>
-                                                <h4>$50.00<span>/ Day</span></h4>
+                                                <h4>$190.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -249,16 +248,17 @@
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Spark GT</h3>
+                                                    <h3>Chevrolet Tracker</h3>
                                                 </a>
-                                                <h4>$75.00<span>/ Day</span></h4>
+                                                <h4>$280.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
+                                                <!--
                                                 <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                                        href="#" class="offer-btn-2">Detalles</a></div>-->
                                             </div>
                                         </div>
                                     </div>
@@ -267,16 +267,15 @@
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-logan.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Renault Logan</h3>
+                                                    <h3>Hyundai Tucson</h3>
                                                 </a>
-                                                <h4>$45.00<span>/ Day</span></h4>
+                                                <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                              
                                             </div>
                                         </div>
                                     </div>
@@ -287,16 +286,15 @@
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Sandero Stepway</h3>
+                                                    <h3>Chevrolet Beat</h3>
                                                 </a>
-                                                <h4>$50.00<span>/ Day</span></h4>
+                                                <h4>$180.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -307,14 +305,13 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Renault Duster</h3>
                                                 </a>
-                                                <h4>$75.00<span>/ Day</span></h4>
+                                                <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -322,16 +319,15 @@
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Ford Ecosport</h3>
+                                                    <h3>Renault Sandero</h3>
                                                 </a>
-                                                <h4>$55.00<span>/ Day</span></h4>
+                                                <h4>$190.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Model:2017</li>
                                                     <li><i class="fa fa-cogs"></i>Automatic</li>
                                                     <li><i class="fa fa-dashboard"></i>20kmpl</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>
+                                               
                                             </div>
                                         </div>
                                     </div>
