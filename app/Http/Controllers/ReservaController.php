@@ -179,4 +179,13 @@ class ReservaController extends Controller
 
         return view('dashboards.listar_reservas',compact("reservas"));
     }
+    public function generar_contrato($id){
+        $reservas=DB::table('reservas')
+        ->join('clientes','reservas.cliente_id','=','clientes.id_cliente')
+        ->join('vehiculos','reservas.vehiculo_id','=','vehiculos.id_vehiculo')
+        ->select()
+        ->where('id_reserva','=',$id)
+        ->get();
+        return view('dashboards.registrar_contrato',compact("reservas"));
+    }
 }

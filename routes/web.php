@@ -39,6 +39,8 @@ Route::get('cliente_actual', "ClientesController@cliente_actual")->name("cliente
 
 Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualizar_cliente");
 
+Route::get('crear_contrato/{id}',"ReservaController@generar_contrato")->name("crear_contrato");
+
 Route::get('listar_cliente',"ClientesController@index")->name("listar_cliente");
 
 Route::get('listar_vehiculo',"VehiculosController@index")->name("listar_vehiculo");

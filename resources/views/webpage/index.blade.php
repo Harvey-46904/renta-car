@@ -103,11 +103,15 @@
                         <nav>
                             <ul id="gauto_navigation">
                                 <li class="active"><a href="{{ route('inicio')}}">INICIO</a></li>
+                                <!-- 
+                                
                                 <li><a href="{{ route('servicios')}}">SERVICIOS</a></li>
                                 <li><a href="{{ route('vehiculos')}}">VEHÍCULOS</a></li>
+                                -->
                                 <li><a href="{{ route('gallery')}}">GALERÍA</a></li>
-                                <li><a href="{{ route('info')}}">SOBRE NOSOTROS</a></li>
                                 <li><a href="{{ route('contact')}}">CONTÁCTANOS</a></li>
+                                <li><a href="{{ route('info')}}">SOBRE NOSOTROS</a></li>
+                               
                             </ul>
                         </nav>
                     </div>

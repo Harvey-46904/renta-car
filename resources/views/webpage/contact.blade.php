@@ -64,7 +64,7 @@
                     <div class="contact-right">
                         <h3>Información de Contacto</h3>
                         <div class="contact-details">
-                            <p><i class="fa fa-map-marker"></i>Cra. 22 Sur, Pasto, Nariño</p>
+                            <p><i class="fa fa-map-marker"></i>Cra 22B #11 sur 61 Condominio Alto Bello casa 1</p>
                             <div class="single-contact-btn">
                                 <h4>Escríbenos</h4><a href="#">rentacarpasto@gmail.com</a>
                             </div>

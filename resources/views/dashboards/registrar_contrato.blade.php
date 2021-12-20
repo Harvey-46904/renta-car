@@ -9,8 +9,125 @@
                         <h2>
                             REGISTRAR CONTRATO
                         </h2>
+                       
                         <br>
 						<div class="body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                   <div class="row">
+                                    <h4>Cliente</h4>
+                                   </div>
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <table class="table">
+                                          <thead class="thead-light">
+                                            <tr>
+                                              <th scope="col">Campos</th>
+                                              <th scope="col">Datos</th>
+                                            
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">NOMBRE COMPLETO</th>
+                                              <td>{{$reservas[0]->nombres}} {{$reservas[0]->apellidos}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">DOCUMENTO DE IDENTIDAD</th>
+                                              <td>{{$reservas[0]->numero_documento}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">TELEFONO DE CONTACTO</th>
+                                              <td>{{$reservas[0]->telefono}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">DIRECCION Y CIUDAD DE DOMICILIO</th>
+                                              <td>{{$reservas[0]->direccion}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">GARANTIA - VOUCHER</th>
+                                              <td>none</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">FECHA DE ENTREGA</th>
+                                              <td>{{$reservas[0]->fecha_inicio}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">FECHA DE DEVOLUCION</th>
+                                              <td>{{$reservas[0]->fecha_fin}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">CONDUCTOR ADICIONAL O AUTORIZADO</th>
+                                              <td>{{$reservas[0]->conductor_adicional}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">DOCUMENTO DE IDENTIDAD CONDUCTOR ADICIONAL</th>
+                                              <td>{{$reservas[0]->documento_conductor_adicional}}</td>
+                                            </tr>
+                                            
+                                          </tbody>
+                                        </table>
+                                     </div>
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="row">
+                                    <h4>Vehiculo</h4>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                
+                                  
+                                        <table class="table">
+                                          <thead class="thead-light">
+                                            <tr>
+                                              <th scope="col">Campos</th>
+                                              <th scope="col">Datos</th>
+                                            
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">VEHICULO</th>
+                                              <td>{{$reservas[0]->nombre_vehiculo}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">PLACA</th>
+                                              <td>{{$reservas[0]->placa}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">MARCA</th>
+                                              <td>{{$reservas[0]->marca}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">MODELO</th>
+                                              <td>{{$reservas[0]->modelo}}</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                              <th scope="row">COLOR</th>
+                                              <td>{{$reservas[0]->color}}</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row"> </th>
+                                              <td><img src="{{ url('/storage/vehiculo/', $reservas[0]->foto_vehiculo) }}"
+                                                class=" img-thumbnail" width="300px" height="300px"></td>
+                                            </tr>
+                                            
+                                          </tbody>
+                                        </table>
+                                     </div>
+                                  </div>
+                                </div>
+                               
+                               
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>Vehículo</h4>
+                                </div>
+                               
+                            </div>
                         <form action="" method="POST" >
                             @csrf
                             <label>Fecha de Salida</label>
@@ -228,79 +345,85 @@
                             <button type="submit" class="btn btn-primary m-t-15 waves-effect">GUARDAR</button>
                         </form>
                     </div>
-    <div class="contenedor">
-    <p>Firma</p>
-		<div class="row">
-			<div class="col-md-12">
-		 		<canvas id="draw-canvas" width="320" height="150">
-		 		</canvas>
-		 	</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<input type="button" class="button" id="draw-submitBtn" value="Crear Imagen"></input>
-				<input type="button" class="button" id="draw-clearBtn" value="Borrar Canvas"></input>
-
-						<label>Color</label>
-						<input type="color" id="color">
-						<label>Tamaño Puntero</label>
-						<input type="range" id="puntero" min="1" default="1" max="5" width="10%">
-			</div>
-
-            
-		</div>
-
-		<br/>
-		<div class="row">
-			<div class="col-md-12">
-				<textarea id="draw-dataUrl" class="form-control" rows="5">Base 64:</textarea>
-			</div>
-		</div>
-		<br/>
-		<div class="contenedor">
-			<div class="col-md-12">
-				<img id="draw-image" src="" alt=" Firma"/>
-			</div>
-		</div>
-	</div>
+   
 
 <hr>
 
 <div class="contenedor">
- <p>Firma</p>
-		<div class="row">
-			<div class="col-md-12">
-		 		<canvas id="draw-canvas2" width="320" height="150">
-		 		</canvas>
-		 	</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<input type="button" class="button" id="draw-submitBtn2" value="Crear Imagen"></input>
-				<input type="button" class="button" id="draw-clearBtn2" value="Borrar Canvas"></input>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Entregado por</p>
+            <div class="row">
+                <div class="col-md-12">
+                     <canvas id="draw-canvas" width="320" height="150">
+                     </canvas>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" class="button" id="draw-submitBtn" value="Crear Imagen"></input>
+                    <input type="button" class="button" id="draw-clearBtn" value="Borrar Canvas"></input>
+    
+                            <label>Color</label>
+                            <input type="color" id="color">
+                            <label>Tamaño Puntero</label>
+                            <input type="range" id="puntero" min="1" default="1" max="5" width="10%">
+                </div>
+    
+                
+            </div>
+    
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea id="draw-dataUrl" class="form-control" rows="5">Base 64:</textarea>
+                </div>
+            </div>
+            <br/>
+            <div class="contenedor">
+                <div class="col-md-12">
+                    <img id="draw-image" src="" alt=" Firma"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>Recibido por</p>
+            <div class="row">
+                <div class="col-md-12">
+                     <canvas id="draw-canvas2" width="320" height="150">
+                     </canvas>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" class="button" id="draw-submitBtn2" value="Crear Imagen"></input>
+                    <input type="button" class="button" id="draw-clearBtn2" value="Borrar Canvas"></input>
+    
+                            <label>Color</label>
+                            <input type="color" id="color2">
+                            <label>Tamaño Puntero</label>
+                            <input type="range" id="puntero2" min="1" default="1" max="5" width="10%">
+    
+    
+                </div>
+    
+            </div>
+    
+            <br/>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea id="draw-dataUrl2" class="form-control" rows="5">Base 64:</textarea>
+                </div>
+            </div>
+            <br/>
+            <div class="contenedor">
+                <div class="col-md-12">
+                    <img id="draw-image2" src="" alt=" Firma"/>
+                </div>
+            </div>
+        </div>
+    </div>
 
-						<label>Color</label>
-						<input type="color" id="color2">
-						<label>Tamaño Puntero</label>
-						<input type="range" id="puntero2" min="1" default="1" max="5" width="10%">
-
-
-			</div>
-
-		</div>
-
-		<br/>
-		<div class="row">
-			<div class="col-md-12">
-				<textarea id="draw-dataUrl2" class="form-control" rows="5">Base 64:</textarea>
-			</div>
-		</div>
-		<br/>
-		<div class="contenedor">
-			<div class="col-md-12">
-				<img id="draw-image2" src="" alt=" Firma"/>
-			</div>
-		</div>
 	</div>
 
                     </div>

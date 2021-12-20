@@ -97,9 +97,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-left">
-                        <h4>RENTACAR PASTO</h4>
+                        <h4>RENT A CAR PASTO</h4>
                         <h2>¡Bienvenido!</h2>
-                        <p>Tenemos diferentes modelos y gamas de autos para cada necesidad, estamos prestos para brindarte el mejor servicio de la ciudad.</p>
+                        <p>Empresa pionera y lider en Nariño pone a su disposición vehículos en diferentes gamas para:</p>
                         <div class="about-list">
                             <ul>
                                 <li><i class="fa fa-check"></i>Alquiler de Vehículos</li>
@@ -107,7 +107,7 @@
                                 <li><i class="fa fa-check"></i>Servicio de Recogida</li>
                                 <li><i class="fa fa-check"></i>Entrega a Domicilio</li>
                                 <li><i class="fa fa-check"></i>Cómodos Precios</li>
-                                <li><i class="fa fa-check"></i>Servicio de Conductor</li>
+                           
                             </ul>
                         </div>
                     </div>
@@ -138,8 +138,7 @@
                             <div class="service-text"><a href="#">
                                     <h3>Alquiler de Vehículos</h3>
                                 </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
+                                <p>Precios comodos en gamas baja,media y alta</p>
                             </div>
                         </div>
                         <div class="single-service"><span class="service-number">02</span>
@@ -148,38 +147,27 @@
                             <div class="service-text"><a href="#">
                                     <h3>Transporte Aeropuerto</h3>
                                 </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
+                                <p>Entregas y recogidas.</p>
                             </div>
                         </div>
+                      
+                       
                         <div class="single-service"><span class="service-number">03</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/service-3.png')!!}"
-                                    alt="hospital trasport" /></div>
-                            <div class="service-text"><a href="#">
-                                    <h3>Servicio de Conductor</h3>
-                                </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="single-service"><span class="service-number">04</span>
-                            <div class="service-icon"><img src="{!! asset('webpage/img/service-4.png')!!}"
-                                    alt="wedding trasport" /></div>
-                            <div class="service-text"><a href="#">
-                                    <h3>Servicio de Recogida</h3>
-                                </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="single-service"><span class="service-number">05</span>
                             <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
                                     alt="wedding trasport" /></div>
                             <div class="service-text"><a href="#">
                                     <h3>Entrega A Domicilio</h3>
                                 </a>
-                                <p>Risus commodo maecenas accumsan lacus vel facilisis. Dorem ipsum dolor consectetur
-                                    adipiscing elit.</p>
+                                <p>Entregas a domicilio dentro de la ciudad sin ningun costo</p>
+                            </div>
+                        </div>
+                        <div class="single-service"><span class="service-number">04</span>
+                            <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
+                                    alt="wedding trasport" /></div>
+                            <div class="service-text"><a href="#">
+                                    <h3>Traslados a nivel nacional</h3>
+                                </a>
+                                <p>Aplican terminos y condiciones</p>
                             </div>
                         </div>
                         
@@ -195,11 +183,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="promo-box-left"><img src="{!! asset('webpage/img/logo.png')!!}" width="220" height="200" /></div>
+                    <div class="promo-box-left"><img src="{!! asset('webpage/img/logo.png')!!}" width="220" height="300" /></div>
                 </div>
                 <div class="col-md-6">
                     <div class="promo-box-right">
-                        <h3>Trabaja como conductor</h3>
+                        <h3>¿Te gustaría tener ingresos adicionales?</h3>
+                        <p>Trabaja con nosotros si tienes vehículos con modelos superiores a 2018 contactanos.</p>
                     </div>
                 </div>
             </div>
@@ -235,11 +224,10 @@
                                                 </a>
                                                 <h4>$190.000<span>/ Día</span></h4>
                                                 <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                    Full equipo AC
                                                 </ul>
-                                                
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -280,6 +268,59 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Beat</h3>
+                                                </a>
+                                                <h4>$180.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-duster.jpg')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Sandero</h3>
+                                                </a>
+                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="single-offers">

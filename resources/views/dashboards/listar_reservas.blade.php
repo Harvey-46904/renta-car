@@ -45,6 +45,7 @@
                                             <th>LAVADO</th>
                                             <th>VALOR DE RESERVA</th>
                                             <th>VALOR TOTAL</th>
+                                            <th>CONTRATO</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -77,6 +78,21 @@
                                               
                                               <td>{{$reserva->valor_reserva}}</td>
                                               <td>{{$reserva->saldo}}</td>
+
+                                              <td>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <a type="button"
+                                                                class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline"
+                                                                href="{{ route('crear_contrato', $reserva->id_reserva) }}">
+                                                                <i class="material-icons">articleIcon</i>
+                                                            </a>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
