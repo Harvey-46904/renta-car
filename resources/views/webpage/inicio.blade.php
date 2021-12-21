@@ -291,6 +291,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                   
                                 </div>
                             </div>
                             <!-- All Tab End -->
@@ -299,7 +301,60 @@
                 </div>
             </div>
         </div>
-    </section><!-- Offers Area End -->
+    </section>
+    <!-- Offers Area End -->
+
+    <section class="gauto-offers-area section_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-heading">
+                        
+                        <h2>CAMIONETAS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="offer-tabs">
+                        
+                        <div class="tab-content" id="offerTabContent">
+                            <!-- All Tab Start -->
+                           
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Tracker</h3>
+                                                </a>
+                                                <h4>$280.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                                <!--
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   <!--AÑADIR CAMIONETAS AQUI-->
+                                   
+                                </div>
+                            </div>
+                            <!-- All Tab End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- About Area Start -->
     <section class="gauto-about-area section_70">
