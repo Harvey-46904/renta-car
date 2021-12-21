@@ -37,7 +37,8 @@
                                             <th>TIPO DOCUMENTO</th>
                                             <th>NÚMERO DOCUMENTO</th>
                                             <th>NOMBRES</th>
-                                            <th>APELLIDOS</th>
+                                            
+                                            <th class="text-center">EMAIL</th>
                                             <th>DIRECCIÓN</th>
                                             <th>TELÉFONO</th>
                                             <th>NOMBRE CONDUCTOR ADICIONAL</th>
@@ -51,8 +52,9 @@
                                                 <th scope="row">{{ $cliente->id_cliente }}</th>
                                                 <td>{{ $cliente->tipo_documento }}</td>
                                                 <td>{{ $cliente->numero_documento }}</td>
-                                                <td>{{ $cliente->nombres }}</td>
-                                                <td>{{ $cliente->apellidos }}</td>
+                                                <td>{{ $cliente->nombres }} {{ $cliente->apellidos }} </td>
+                                               
+                                                <td>{{ $cliente->email }}</td>
                                                 <td>{{ $cliente->direccion }}</td>
                                                 <td>{{ $cliente->telefono }}</td>
                                                 <td>{{ $cliente->conductor_adicional }}</td>

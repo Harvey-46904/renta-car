@@ -47,6 +47,7 @@ class ClientesController extends Controller
         $crear_clientes->nombres= $request->nombres;
         $crear_clientes->apellidos= $request->apellidos;
         $crear_clientes->direccion= $request->direccion;
+        $crear_clientes->email= $request->email;
         $crear_clientes->telefono= $request->telefono;
         $crear_clientes->conductor_adicional= $request->conductor_adicional;
         $crear_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
@@ -101,12 +102,15 @@ class ClientesController extends Controller
      */
     public function update(Request $request,$id)
     {
+      
+        //$actualizar_clientes=clientes::findOrFail([$id],["id_cliente"]);
+        $actualizar_clientes=clientes::where('id_cliente', $id)->firstOrFail();
        
-        $actualizar_clientes=clientes::findOrFail([$id],["id_cliente"]);
         $actualizar_clientes->tipo_documento=$request->tipo_documento;
         $actualizar_clientes->numero_documento= $request->numero_documento;
         $actualizar_clientes->nombres= $request->nombres;
         $actualizar_clientes->apellidos= $request->apellidos;
+        $actualizar_clientes->email= $request->email;
         $actualizar_clientes->direccion= $request->direccion;
         $actualizar_clientes->telefono= $request->telefono;
         $actualizar_clientes->conductor_adicional= $request->conductor_adicional;

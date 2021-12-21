@@ -31,9 +31,8 @@
                             <select class="form-control show-tick" id="tipo_documento" name="tipo_documento">
                                 <option value="">Seleccione...</option>
                                 <option value="Cédula de ciudadanía" >Cédula de ciudadanía</option>
-                                <option value="Registro Civil" >Registro Civil</option>
                                 <option value="Pasaporte" >Pasaporte</option>
-                                <option value="Documento Extranjero" >Documento Extranjero</option>
+                                <option value="Documento Extranjero" >Cédula Extranjero</option>
                                     </select>
                             </div>
                            
@@ -54,6 +53,12 @@
                             <div class="form-group">
                                 <div class="form-line">
                                     <input type="text" id="apellidos" name="apellidos" class="form-control">
+                                </div>
+                            </div>
+                            <label for="direccion">Correo Electronico</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="email" id="email" name="email" class="form-control">
                                 </div>
                             </div>
                             <label for="direccion">Dirección</label>

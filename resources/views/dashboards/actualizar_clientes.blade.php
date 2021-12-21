@@ -57,6 +57,12 @@
                                             class="form-control">
                                     </div>
                                 </div>
+                                <label for="direccion">Correo Electronico</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="email" id="email" name="email"  value="{{ $cliente->email }}" class="form-control">
+                                    </div>
+                                </div>
                                 <label for="direccion">Dirección</label>
                                 <div class="form-group">
                                     <div class="form-line">
