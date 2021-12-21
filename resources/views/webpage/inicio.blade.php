@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $180 por día</p>
+                                    <p>Autos desde $180.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                                 <p><input type="text" placeholder="Lugar de entrega" /></p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><input type="text" placeholder="Ciudad de recogida" /></p>
+                                                <p><input type="text" placeholder="Lugar de recogida" /></p>
                                             </div>
                                             <div class="col-md-4">
                                                 <p><select>
@@ -91,6 +91,216 @@
             </div>
         </div>
     </section><!-- Find Area End -->
+    <!-- Offers Area Start -->
+    <section class="gauto-offers-area section_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-heading">
+                        
+                        <h2>NUESTROS VEHÍCULOS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="offer-tabs">
+                        
+                        <div class="tab-content" id="offerTabContent">
+                            <!-- All Tab Start -->
+                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-picanto.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Sandero </h3>
+                                                </a>
+                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Tracker</h3>
+                                                </a>
+                                                <h4>$280.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                                <!--
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a></div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-logan.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Hyundai Tucson</h3>
+                                                </a>
+                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Beat</h3>
+                                                </a>
+                                                <h4>$180.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-duster.jpg')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Sandero</h3>
+                                                </a>
+                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Beat</h3>
+                                                </a>
+                                                <h4>$180.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-duster.jpg')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Sandero</h3>
+                                                </a>
+                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Model:2017</li>
+                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
+                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
+                                                </ul>
+                                                <ul>
+                                                    Full equipo AC
+                                                </ul>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- All Tab End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Offers Area End -->
+    
     <!-- About Area Start -->
     <section class="gauto-about-area section_70">
         <div class="container">
@@ -196,192 +406,5 @@
     </section>
     <!-- Promo Area End -->
 
-    <!-- Offers Area Start -->
-    <section class="gauto-offers-area section_70">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-heading">
-                        
-                        <h2>NUESTROS VEHÍCULOS</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="offer-tabs">
-                        
-                        <div class="tab-content" id="offerTabContent">
-                            <!-- All Tab Start -->
-                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-picanto.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Sandero </h3>
-                                                </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    Full equipo AC
-                                                </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                    href="#" class="offer-btn-2">Detalles</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Tracker</h3>
-                                                </a>
-                                                <h4>$280.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                                <!--
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a></div>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-logan.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Hyundai Tucson</h3>
-                                                </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                              
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Beat</h3>
-                                                </a>
-                                                <h4>$180.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-duster.jpg')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Duster</h3>
-                                                </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Sandero</h3>
-                                                </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Beat</h3>
-                                                </a>
-                                                <h4>$180.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-duster.jpg')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Duster</h3>
-                                                </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-ecosport.jpg')!!}" alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Sandero</h3>
-                                                </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Model:2017</li>
-                                                    <li><i class="fa fa-cogs"></i>Automatic</li>
-                                                    <li><i class="fa fa-dashboard"></i>20kmpl</li>
-                                                </ul>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- All Tab End -->
-                            
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- Offers Area End -->
+    
 @endsection
