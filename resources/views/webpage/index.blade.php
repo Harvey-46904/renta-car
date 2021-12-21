@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="header-top-left">
-                        <p><i class="fa fa-phone"></i><a onclick=" window.open('https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0', '_blank');">  Contáctanos: 3227795422</a></p>
+                        <p><i class="fa fa-whatsapp"></i><a onclick=" window.open('https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0', '_blank');">  Contáctanos: 3227795422</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
