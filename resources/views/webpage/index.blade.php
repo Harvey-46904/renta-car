@@ -143,10 +143,10 @@
                                         alt="footer-logo" /></a></div>
                             <div class="footer-address">
                                 <h3>RENTACAR PASTO</h3>
-                                <p>Carrera 22b #11 sur 61</p>
+                                <p>Carrera 22B #11 Sur 61</p>
                                 <ul>
                                     <li>Telefono: 3227795422</li>
-                                    <li>Email: Rentacarpasto@gmail.com</li>
+                                    <li>Email: rentacarpasto@gmail.com</li>
                                     <li>Horarios: 7AM a 7PM</li>
                                 </ul>
                             </div>
@@ -154,21 +154,21 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="single-footer quick_links">
-                            <h3>Quick Links</h3>
+                            <h3>ENLACES RÁPIDOS</h3>
                             <ul class="quick-links">
-                                <li><a href="{{ route('inicio')}}">inicio</a></li>
-                                <li><a href="{{ route('servicios')}}">servicios</a></li>
-                                <li><a href="{{ route('vehiculos')}}">vehiculos</a></li>
-                                <li><a href="{{ route('gallery')}}">galeria</a></li>
+                                <li><a href="{{ route('inicio')}}">Inicio</a></li>
+                                <li><a href="{{ route('servicios')}}">Servicios</a></li>
+                                <li><a href="{{ route('vehiculos')}}">Vehículos</a></li>
+                                <li><a href="{{ route('gallery')}}">Galería</a></li>
                             </ul>
                             <ul class="quick-links">
-                                <li><a href="{{ route('info')}}">información</a></li>
-                                <li><a href="{{ route('contact')}}">contactos</a></li>
+                                <li><a href="{{ route('info')}}">Información</a></li>
+                                <li><a href="{{ route('contact')}}">Contactos</a></li>
                                 
                             </ul>
                         </div>
                         <div class="single-footer newsletter_box">
-                            <h3>newsletter</h3>
+                            <h3>NOTICIAS</h3>
                             <form><input type="email" placeholder="Email Address" /><button type="submit"><i
                                         class="fa fa-paper-plane"></i></button></form>
                         </div>
