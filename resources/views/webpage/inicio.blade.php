@@ -98,7 +98,7 @@
                 <div class="col-md-12">
                     <div class="site-heading">
                         
-                        <h2>NUESTROS VEHÍCULOS</h2>
+                        <h2>NUESTROS VEHÍCULOS |||</h2>
                     </div>
                 </div>
             </div>
