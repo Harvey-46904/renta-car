@@ -35,7 +35,104 @@
                     </div>
                 </div>
             </div>
+            <div class="gauto-main-slide slide-item-3">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gauto-main-slide slide-item-4">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gauto-main-slide slide-item-5">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gauto-main-slide slide-item-6">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gauto-main-slide slide-item-7">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gauto-main-slide slide-item-8">
+                <div class="gauto-main-caption">
+                    <div class="gauto-caption-cell">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slider-text">
+                                    <p>Autos desde $180.000 por día</p>
+                                        <h2>Reserva Hoy Mismo</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </section>
     <!-- Slider Area End -->
      <!-- Find Area Start -->
