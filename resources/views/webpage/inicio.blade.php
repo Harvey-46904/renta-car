@@ -480,12 +480,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="promo-box-left"><img src="{!! asset('webpage/img/logo-web.png')!!}" width="220" height="300" /></div>
+                    <div class="promo-box-left" style="height:260px;width:500px"><img src="{!! asset('webpage/img/logo-web.png')!!}" width="200"  /></div>
                 </div>
                 <div class="col-md-6">
                     <div class="promo-box-right">
-                        <h3>¿Te gustaría tener ingresos adicionales?</h3>
-                        <p>Trabaja con nosotros si tienes vehículos con modelos superiores a 2018 contactanos.</p>
+                        <h3 style="color:White;">¿Te gustaría tener ingresos adicionales?</h3>
+                        <p style="color:White;">Trabaja con nosotros, si tienes vehículos con modelos superiores a 2018 contactanos.</p>
                     </div>
                 </div>
             </div>
