@@ -1,36 +1,6 @@
 @extends('webpage.index')
 @section('content')
-<style>
-.btn-wsp{
-    position:fixed;
-    width:60px;
-    height:60px;
-    line-height: 63px;
-    bottom:50px;
-    left:25px;
-    background:#22c25c;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
-    font-size:35px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-    z-index:100;
-    transition: all 300ms ease;
-}
-.btn-wsp:hover{
-    background: #134225;
-}
-@media only screen and (min-width:320px) and (max-width:768px){
-    .btn-wsp{
-        width:63px;
-        height:63px;
-        line-height: 66px;
-	}
-}
-</style>
-<a href="https://api.whatsapp.com/send?phone=+573227795422" class="btn-wsp" target="_blank">
-	    <i class="fa fa-whatsapp icono"></i>
-</a>
+
 <!-- Slider Area Start -->
 <section class="gauto-slider-area fix">
         <div class="gauto-slide owl-carousel">
@@ -291,7 +261,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row justify-content-center">
                                     
                                     <div class="col-lg-4">
                                         <div class="single-offers">
@@ -388,7 +358,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row justify-content-center">
                                 <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster.png')!!}"
