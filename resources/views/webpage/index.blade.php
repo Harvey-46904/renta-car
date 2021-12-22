@@ -223,6 +223,8 @@
     <script src="{!! asset('webpage/js/jquery-clockpicker.min.js') !!}"></script>
     <!--Main js-->
     <script src="{!! asset('webpage/js/main.js') !!}"></script>
+    <!--WhatsappButton js-->
+    <script src="{!! asset('webpage/js/whpbtn.js') !!}"></script>
 </body>
 
 </html>
