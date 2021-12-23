@@ -153,16 +153,40 @@
                                     <form>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <p><input type="text" placeholder="Lugar de entrega" /></p>
+                                                <p>
+                                                <select id="lugar-entrega">
+                                                <option disabled selected>Lugar de entrega</option>
+                                                <option>Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option>Ipiales - Aeropuerto San Luis</option>
+                                                </select>
+                                                </p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><input type="text" placeholder="Lugar de recogida" /></p>
+                                                <p>
+                                                <select id="lugar-recogida">
+                                                <option disabled selected>Lugar de recogida</option>
+                                                <option>Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option>Ipiales - Aeropuerto San Luis</option>
+                                                </select>
+                                                </p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><select>
-                                                        <option data-display="Vehiculo">AC Car</option>
-                                                        <option>Non-AC Car</option>
-                                                    </select></p>
+                                                <p>
+                                                <select>
+                                                <option disabled selected>Vehículo</option>
+                                                <option>Chevrolet Beat</option>
+                                                <option>Renault Logan</option>
+                                                <option>Renault Sandero</option>
+                                                <option>Sandero Stepway</option>
+                                                <option>Chevrolet Onix</option>
+                                                <option>Hyundai HB20</option>
+                                                <option disabled>CAMIONETAS</option>
+                                                <option>Chevrolet Tracker</option>
+                                                <option>Renault Duster</option>
+                                                <option>Hyundai Tucson</option>
+                                                <option>Nissan Qashqai</option>
+                                                </select>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -195,7 +219,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="site-heading">
-                        
                         <h2>NUESTROS VEHÍCULOS</h2>
                     </div>
                 </div>
@@ -208,41 +231,7 @@
                             <!-- All Tab Start -->
                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                 <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Sandero Stepway</h3>
-                                                </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                    href="#" class="offer-btn-2">Detalles</a></div>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-onix.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Onix</h3>
-                                                </a>
-                                                <h4>$000.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
+                                <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-beat.png')!!}"
                                                         alt="offer 1" /></a></div>
@@ -259,25 +248,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="row justify-content-center">
-                                    
                                     <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/hb20.png')!!}"
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renaultlogan.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Hyundai HB20</h3>
+                                                    <h3>Renault Logan</h3>
                                                 </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <h4>$180.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
                                                 </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -296,9 +280,58 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Sandero Stepway</h3>
+                                                </a>
+                                                <h4>$200.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-onix.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Onix</h3>
+                                                </a>
+                                                <h4>$210.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/hb20.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Hyundai HB20</h3>
+                                                </a>
+                                                <h4>$210.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
                                 <div class="site-heading">
                                     <br>
                                     <h2>CAMIONETAS</h2>
@@ -306,6 +339,41 @@
 
                                 <div class="row">
                                 <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-tracker.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Tracker</h3>
+                                                </a>
+                                                <h4>$280.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$290.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/tucson.png')!!}"
                                                         alt="offer 1" /></a></div>
@@ -323,49 +391,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-tracker.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Tracker</h3>
-                                                </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
+                                </div>
+
+                                    
+                            </div>
+                            <div class="row justify-content-center">
+                            <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/qashqai.png')!!}" alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
                                                     <h3>Nissan Qashqai</h3>
                                                 </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Duster</h3>
-                                                </a>
                                                 <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
@@ -373,11 +409,9 @@
                                                 <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
-                                              
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                             <!-- All Tab End -->

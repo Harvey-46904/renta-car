@@ -70,7 +70,7 @@
             }
         }
         </style>
-        <a href="https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0" class="btn-wsp" target="_blank">
+        <a href="https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0&text=Hola" class="btn-wsp" target="_blank">
                 <i class="fa fa-whatsapp icono"></i>
         </a>
     <!-- Header Top Area Start -->
