@@ -15,7 +15,7 @@
                         </div>
                         <div class="content">
                             <div class="text">CLIENTES</div>
-                            <div class="number">15</div>
+                            <div class="number">{{$clientes}}</div>
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@
                         </div>
                         <div class="content">
                             <div class="text">VEHÍCULOS</div>
-                            <div class="number">32</div>
+                            <div class="number">{{$vehiculos}}</div>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="content">
                             <div class="text">RESERVACIONES</div>
-                            <div class="number">18</div>
+                            <div class="number">{{$reservas}}</div>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="content">
                             <div class="text">CONTRATOS</div>
-                            <div class="number">11</div>
+                            <div class="number">{{$contratos}}</div>
                         </div>
                     </div>
                 </div>

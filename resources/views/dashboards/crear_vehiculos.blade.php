@@ -79,12 +79,7 @@
                                     <input type="text" id="precio_lavado" name="precio_lavado" class="form-control" placeholder="30.000">
                                 </div>
                             </div>
-                            <label for="disponibilidad">Disponibilidad Vehículo</label>
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" id="disponibilidad" name="disponibilidad" class="form-control">
-                                </div>
-                            </div>
+                            
 
                             <label for="disponibilidad">Cargar Foto de Vehiculo</label>
                             <div class="form-group">

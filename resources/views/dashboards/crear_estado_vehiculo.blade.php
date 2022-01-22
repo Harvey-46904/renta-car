@@ -201,18 +201,11 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label class="col-sm-8 text-center col-form-label">Kilometraje</label>
-                                    <div class="switch">
-                                        <label>No<input type="checkbox" checked name="Kilometraje" id="Kilometraje"><span
-                                                class="lever"></span>Si</label>
-                                    </div>
-                                </div>
-
+                    
                                 <div class="form-group row">
                                     <label class="col-sm-8 text-center col-form-label">Mantenimiento</label>
                                     <div class="switch">
-                                        <label>No<input type="checkbox" checked name="mantenimiento"
+                                        <label>No<input type="checkbox" checked name="mantenimiento_m"
                                                 id="mantenimiento"><span class="lever"></span>Si</label>
                                     </div>
                                 </div>
@@ -225,7 +218,7 @@
                                     </div>
                                 </div>
 
-
+<!--
                                 <div class="form-group">
                                     <label for="Foto_izq">Foto de Vehiculo - Lado Izquierdo</label>
                                     <input accept="image/*" class="form-control-file" type="file" id="Foto_izq"
@@ -249,7 +242,14 @@
                                     <input accept="image/*" class="form-control-file" type="file" id="Foto_trasera"
                                         name="Foto_trasera">
                                 </div>
-
+ -->
+                                
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Kilometraje</label>
+                                     <input type="number" id="kilometraje" name="kilometraje"
+                                         class="form-control bg-light text-center" placeholder="" value="0"
+                                        >
+                                </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Observaciones</label>
                                     <textarea class="form-control" id="observaciones" name="observaciones" rows="3"

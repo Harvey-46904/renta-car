@@ -47,6 +47,29 @@ class ReservaController extends Controller
     public function store(Request $request)
     {
         $todo=$request->all();
+       
+        $nuevo_lugar=$request->lugar;
+        $nuevo_precio_transporte=0;
+        if($nuevo_lugar=="Otro"){
+            $nuevo_lugar=$request->nuevo_lugar;
+            $nuevo_precio_transporte= $request->nuevo_lugar_precio;
+        }else{
+            if($nuevo_lugar=="Pasto"){
+                $nuevo_precio_transporte=35000;
+            }
+            if($nuevo_lugar=="Ipiales"){
+                $nuevo_precio_transporte=120000;
+            }
+        }
+        $trans=0;
+        if(is_null($nuevo_lugar)){
+            $trans=0;
+            $nuevo_lugar="No requiere transporte";
+        }else{
+            $trans=1;
+        }
+
+       
         //obtengo el cliente 
         $clientes=DB::table('clientes')
         ->select("id_cliente")
@@ -80,11 +103,11 @@ class ReservaController extends Controller
         //comprobar lavado
         $precio_lavado=$lavado==1?$vehiculo->precio_lavado:0;
         //calcular saldo
-        $precio_trasnporte=$transporte==1?self::lugares($lugar,$personas):0;
+        $precio_trasnporte=$nuevo_precio_transporte;
 
 
         $saldo=self::saldos_calculo($precio_total,$valor_reserva,$precio_trasnporte,$precio_lavado);
-
+        $saldo=$saldo-$request->descuento;
         //return response(["data"=>$saldo,"total"=>$precio_total,"trans"=>$precio_trasnporte,"reserva"=>$valor_reserva]);
         $reservas=new reserva;
         $reservas->vehiculo_id=$request->vehiculo;
@@ -92,12 +115,14 @@ class ReservaController extends Controller
         $reservas->fecha_inicio=$request->desde;
         $reservas->fecha_fin=$request->hasta;
         $reservas->dias_reserva=$dias;
-        $reservas->transporte=$transporte;
-        $reservas->personas=$personas;
-        $reservas->lugar=$lugar;
+        $reservas->transporte=$trans;
+        $reservas->personas=0;
+        $reservas->lugar=$nuevo_lugar;
         $reservas->lavado=$lavado;
         $reservas->valor_reserva=$valor_reserva;
         $reservas->saldo=$saldo;
+        $reservas->descuento=$request->descuento;
+        $reservas->estado_reserva="Reserva";
         $reservas->save();
         return Redirect::to('/listar_reservas')->with('correcto', 'El cliente se creo correctamente');
         
@@ -183,9 +208,30 @@ class ReservaController extends Controller
         $reservas=DB::table('reservas')
         ->join('clientes','reservas.cliente_id','=','clientes.id_cliente')
         ->join('vehiculos','reservas.vehiculo_id','=','vehiculos.id_vehiculo')
+        ->join('estado_vehiculos','estado_vehiculos.vehiculo_id','=','vehiculos.id_vehiculo')
         ->select()
         ->where('id_reserva','=',$id)
         ->get();
         return view('dashboards.registrar_contrato',compact("reservas"));
+    }
+    public function consulta_clientes_reserva(Request $request)
+    {
+        $todo=$request->all();
+        
+      
+        $fecha_prueba=strtotime($todo["desdes"]);
+        $desde=date('Y-m-d  H:i:s',$fecha_prueba);
+
+    
+        $fecha_prueba1=strtotime($todo["hastas"]);
+        $hasta=date('Y-m-d  H:i:s',$fecha_prueba1);
+
+
+        $reservas=DB::table('reservas')
+        ->select()
+        ->where("fecha_inicio",'>',$desde)
+        ->where("fecha_fin",'<',$desde)
+        ->get();
+        return response(["data"=>$todo,"reservas"=>$reservas]);
     }
 }

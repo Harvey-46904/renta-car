@@ -24,7 +24,7 @@ class CreateVehiculosTable extends Migration
             $table->dateTime('vigencia_tecnomecanica');
             $table->string('precio_alquiler');
             $table->string('precio_lavado');
-            $table->string('disponibilidad');
+            $table->boolean('disponibilidad');
             $table->string('foto_vehiculo');
             $table->timestamps();
         });

@@ -5409,6 +5409,9 @@ button.bg-warning:hover,
 button.bg-warning:focus {
   background-color: #d39e00 !important; }
 
+.bg-carmesy{
+  background-color: #BF252F !important; 
+}
 .bg-danger {
   background-color: #dc3545 !important; }
 
@@ -5427,6 +5430,9 @@ button.bg-light:focus {
 
 .bg-dark {
   background-color: #343a40 !important; }
+
+  .bg-black {
+    background-color: #000000 !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,

@@ -102,15 +102,37 @@
                                     </div>
                                         <div class="form-group row form_person">
                                             <hr>
-                                            <div class="col-md-5">Número Personas</div>
+                                            <div class="col-md-5">Lugar</div>
                                             <div class="col-sm-7">
-                                                <div class="form-group">
-                                                    <div class="form-line">
-                                                        <input type="number" id="personas" name="personas"
-                                                            class="form-control">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios1" value="Pasto" >
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                    Pasto
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios2" value="Ipiales">
+                                                    <label class="form-check-label" for="exampleRadios2">
+                                                     Ipiales
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios3" value="Otro">
+                                                    <label class="form-check-label" for="exampleRadios3">
+                                                     Otro Lugar
+                                                    </label>
+                                                  </div>
+                                                  <div id="nuevos_lugares" style="display: none;">
+                                                        <div class="form-group">
+                                                            <label for="nuevo_lugar">Lugar</label>
+                                                            <input type="text" class="form-control bg-light" id="nuevo_lugar" placeholder="Nuevo Lugar" name="nuevo_lugar">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="nuevo_lugar">Precio</label>
+                                                            <input type="number" class="form-control bg-light" id="nuevo_lugar_precio" placeholder="Precio" name="nuevo_lugar_precio">
+                                                        </div>
+                                                  </div>
 
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     <fieldset class="form-group lugar">
@@ -269,7 +291,7 @@
                                                     <div class="form-line">
                                                         <input type="text" id="t_vehiculo" name="t_vehiculo"
                                                             class="form-control bg-light text-center" placeholder="" value="0"
-                                                            disabled>
+                                                          disabled  >
                                                     </div>
                                                 </div>
                                             </div>
@@ -283,7 +305,7 @@
                                                     <div class="form-line">
                                                         <input type="text" id="transporte" name="transporte"
                                                             class="form-control bg-light text-center" placeholder="" value="0"
-                                                            disabled>
+                                                           disabled >
                                                     </div>
                                                 </div>
                                             </div>
@@ -297,11 +319,12 @@
                                                     <div class="form-line">
                                                         <input type="text" id="lava" name="lava"
                                                             class="form-control bg-light text-center" placeholder="" value="0"
-                                                            disabled>
+                                                           disabled >
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                         <div class="row justify-content-center">
                                             <div class="col-md-3">
                                                 <h5><b>Valor Reserva</b></h5>
@@ -311,7 +334,7 @@
                                                     <div class="form-line">
                                                         <input type="text" id="reserva" name="reserva"
                                                             class="form-control bg-light text-center" placeholder="" value="0"
-                                                            disabled>
+                                                           disabled >
                                                     </div>
                                                 </div>
                                             </div>
@@ -325,12 +348,25 @@
                                                     <div class="form-line">
                                                         <input type="text" id="saldo" name="saldo"
                                                             class="form-control bg-light text-center" placeholder="" value="0"
-                                                            disabled>
+                                                          disabled  >
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-3">
+                                                <h5><b>Descuento</b></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="number" id="descuento" name="descuento"
+                                                            class="form-control bg-success text-center" placeholder="" value="0"
+                                                            >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 

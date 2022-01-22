@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            REGISTRAR CONTRATO
+                          FINALIZAR CONTRATO
                         </h2>
                        
                         <br>
@@ -125,45 +125,46 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h4>Información Salida</h4>
+                                    <h4>Información Entrada</h4>
                                 </div>
                                
                             </div>
-                        <form action="{{ route('post_registro_contrato', $reservas[0]->id_reserva) }}" method="POST" >
+                            
+                        <form action="{{ route('post_finalizar_contrato', $id_contrato) }}" method="POST" >
                             @csrf
                             <?php 
                              $todo= $reservas[0]->fecha_inicio; 
                              $fecha_prueba=strtotime($todo);
                              $desde=date('Y-m-d',$fecha_prueba);
                             ?>
-                            <label>Fecha de Salida</label>
+                            <label>Fecha de Entrada</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="date"  class="form-control"  value="{{ $desde}}" name="fecha_salida">
+                                    <input type="date"  class="form-control"  value="{{ $desde}}" name="fecha_entrada">
                                 </div>
                             </div>
-                            <label>KM Salida</label>
+							<label>Hora Entrada</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="number" class="form-control" value="{{$reservas[0]->kilometraje}}"  name="km_salida">
+                                    <input type="time"  id="hora_entrada"  name="hora_entrada" class="form-control" placeholder="HH:MM">
                                 </div>
                             </div>
-                            <label>Hora Salida</label>
+							<label>KM Entrada</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="time"  id="hora_salida"  name="hora_salida" class="form-control" placeholder="HH:MM">
+                                    <input type="number" class="form-control" value="{{$reservas[0]->kilometraje}}"  name="km_entrada">
                                 </div>
                             </div>
-                            <label>KM Permitido</label>
+							<label>KM por Cobrar</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="number" class="form-control" id="km_permitido" name="km_permitido">
+                                    <input type="number" class="form-control" id="km_por_cobrar" name="km_por_cobrar">
                                 </div>
                             </div>
-                            <label>Combustible de Salida</label>
+							<label>Combustible de Entrada</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <select class="form-control show-tick" id="combustible_salida" name="combustible_salida">
+                                    <select class="form-control show-tick" id="combustible_entrada" name="combustible_entrada">
                                         <option value="R">R</option>
                                         <option value="1/2" >1/2</option>
                                         <option value="1/4" >1/4</option>
@@ -172,10 +173,10 @@
                                             </select>
                                 </div>
                             </div>
-							<label>Destino</label>
+							<label>No. Días</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="destino" name="destino">
+                                    <input type="number" class="form-control" id="dias" name="dias">
                                 </div>
                             </div>
                             
@@ -324,16 +325,16 @@
                             <br>
                             
                                 <br><br>
-                            <label>¿Observaciones por parte de quien entrega?</label>
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" value="Todo en orden" class="form-control" id="observaciones_entregado" name="observaciones_entregado">
-                                </div>
-                            </div>
                             <label>¿Observaciones por parte de quien recibe?</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" value="Todo en orden" class="form-control" id="observaciones_recibido" name="observaciones_recibido">
+                                    <input type="text" value="Todo en orden" class="form-control" id="observaciones_recibido_entrada" name="observaciones_recibido_entrada">
+                                </div>
+                            </div>
+                            <label>¿Observaciones por parte de quien entrega?</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" value="Todo en orden" class="form-control" id="observaciones_entregado_entrada" name="observaciones_entregado_entrada">
                                 </div>
                             </div>
                     </div>
@@ -344,7 +345,7 @@
 <div class="contenedor">
     <div class="row">
         <div class="col-md-6">
-            <p>Entregado por</p>
+            <p>Recibido por</p>
             <div class="row">
                 <div class="col-md-12">
                      <canvas id="draw-canvas" width="320" height="150">
@@ -368,7 +369,7 @@
             <br/>
             <div class="row">
                 <div class="col-md-12">
-                    <textarea id="draw-dataUrl" name="entregado_por" class="form-control" rows="5">Base 64:</textarea>
+                    <textarea id="draw-dataUrl" name="recibido_por_entrada" class="form-control" rows="5">Base 64:</textarea>
                 </div>
             </div>
             <br/>
@@ -379,7 +380,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <p>Recibido por</p>
+            <p>Entregado por</p>
             <div class="row">
                 <div class="col-md-12">
                      <canvas id="draw-canvas2" width="320" height="150">
@@ -404,7 +405,7 @@
             <br/>
             <div class="row">
                 <div class="col-md-12">
-                    <textarea id="draw-dataUrl2" name="recibido_por" class="form-control" rows="5">Base 64:</textarea>
+                    <textarea id="draw-dataUrl2" name="entregado_por_entrada" class="form-control" rows="5">Base 64:</textarea>
                 </div>
             </div>
             <br/>

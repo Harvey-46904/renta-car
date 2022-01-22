@@ -44,7 +44,7 @@ class EstadoVehiculoController extends Controller
         //return response(["datas"=>$request->Foto_izq]);
         $ldate = date('Y-m-d-H_i_s');
         //imagen left
-
+/*
         $file = $request->file('Foto_izq');
         
         $nombre_l = $file->getClientOriginalName();
@@ -71,7 +71,7 @@ class EstadoVehiculoController extends Controller
         $nombre_t = $file->getClientOriginalName();
         \Storage::disk('local')->put("/estado/".$ldate.$nombre_t,  \File::get($file));
 
-
+*/
 
 
         $crear_estado=new estado_vehiculo;
@@ -90,17 +90,24 @@ class EstadoVehiculoController extends Controller
         $crear_estado->Emblemas= self::validador_checks(  $request->Emblemas);
         $crear_estado->Antena= self::validador_checks( $request->Antena);
         $crear_estado->Copas= self::validador_checks(  $request->Copas);
-        $crear_estado->Kilometraje = self::validador_checks( $request->Kilometraje);
-        $crear_estado->mantenimiento= self::validador_checks( $crear_estado->mantenimiento);
+       
+        $crear_estado->mantenimiento= self::validador_checks( $request->mantenimiento_m);
         $crear_estado->lavado= self::validador_checks( $request->lavado);
         //$crear_estado->Foto_izq  $request->Foto_izq
         //$crear_estado->Foto_der ="da";
         //$crear_estado->Foto_frente ="da";
         //$crear_estado->Foto_trasera ="da";
+        /*
         $crear_estado->Foto_izq=$ldate.$nombre_l;
         $crear_estado->Foto_der=$ldate.$nombre_r;
         $crear_estado->Foto_frente=$ldate.$nombre_f;
         $crear_estado->Foto_trasera=$ldate.$nombre_t;
+        */
+        $crear_estado->Foto_izq="foto";
+        $crear_estado->Foto_der="foto";
+        $crear_estado->Foto_frente="foto";
+        $crear_estado->Foto_trasera="foto";
+        $crear_estado->kilometraje=$request->kilometraje;
         $crear_estado->observaciones= $request->observaciones;
         $crear_estado->save();
         return Redirect::to('/listar_vehiculo')->with('correcto', 'El vehículo se creo correctamente');

@@ -70,7 +70,7 @@
             }
         }
         </style>
-        <a href="https://api.whatsapp.com/send/?phone=573227795422&text&app_absent=0&text=Hola" class="btn-wsp" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=573227795422&text=Hola%20Rent%20A%20Car%20necesito%20ayuda%20para%20alquilar%20un%20veh%C3%ADculo." class="btn-wsp" target="_blank">
                 <i class="fa fa-whatsapp icono"></i>
         </a>
     <!-- Header Top Area Start -->
@@ -230,8 +230,11 @@
     </footer>
     <!-- Footer Area End -->
 
-    <!--Jquery js-->
+    <!--Jquery js
     <script src="{!! asset('webpage/js/jquery.min.js') !!}"></script>
+-->
+
+    <script src="{!! asset('dash/plugins/jquery/jquery.min.js ') !!}"></script>
     <!-- Popper JS -->
     <script src="{!! asset('webpage/js/popper.min.js')!!}"></script>
     <script src="{!! asset('webpage/js/popper.min.js') !!}"></script>
@@ -256,6 +259,8 @@
     <script src="{!! asset('webpage/js/main.js') !!}"></script>
     <!--WhatsappButton js-->
     <script src="{!! asset('webpage/js/whpbtn.js') !!}"></script>
+    <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
+    <script src="{!! asset('webpage/js/style_hache.js') !!}"></script>
 </body>
 
 </html>

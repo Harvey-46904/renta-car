@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <p>Please wait...</p>
+            <p>Espere Por Favor....</p>
         </div>
     </div>
     <!-- #END# Page Loader -->
@@ -100,16 +100,31 @@
             color: white;
             }
             </style>
-            <button type="button" class="close" aria-label="Close">Salir
-                <span aria-hidden="true">&times;</span>
+
+
+@guest
+
+@endguest
+
+
+            <button type="button" class="close btn btn-danger" aria-label="Close">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                 {{ __('Salir') }}
+             </a>
+
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                 @csrf
+             </form>
             </button>
                 <div class="image">
                     <img src="{!! asset('dash/images/user.png') !!}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John
-                        Doe</div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}</div>
+                    <div class="email">  {{ Auth::user()->email }}</div>
                 </div>
             </div>
             <!-- #User Info -->
@@ -118,7 +133,7 @@
                 <ul class="list">
                     <li class="header">MENU DE NAVEGACION</li>
                     <li class="active">
-                        <a href="{{ url('dashboard') }}">
+                        <a href="{{ url('home') }}">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
@@ -171,11 +186,12 @@
                             <span>Contratos</span>
                         </a>
                         <ul class="ml-menu">
+                            
                             <li>
-                                <a href="{{url('registrar_contrato')}}">Registrar Contrato</a>
+                                <a href="{{url('lista_contratos')}}">Contratos en Proceso</a>
                             </li>
                             <li>
-                                <a href="pages/medias/carousel.html">Listar Contrato</a>
+                                <a href="{{url('lista_contratos_finalizados')}}">Contratos Finalizados</a>
                             </li>
                         </ul>
                     </li>

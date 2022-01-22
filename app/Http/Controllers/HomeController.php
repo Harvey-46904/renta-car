@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //return view('home');
+        $clientes = DB::table('clientes')->count();
+        $vehiculos = DB::table('vehiculos')->count();
+        $reservas = DB::table('reservas')->count();
+        $contratos = DB::table('registro_contratos')->count();
+        return view('dashboards.inicio',compact("clientes","vehiculos","reservas","contratos"));
     }
 }

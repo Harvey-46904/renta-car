@@ -31,13 +31,14 @@ class CreateEstadoVehiculosTable extends Migration
             $table->boolean('Emblemas');
             $table->boolean('Antena');
             $table->boolean('Copas');
-            $table->boolean('Kilometraje');
+          
             $table->boolean('mantenimiento');
             $table->boolean('lavado');
             $table->string('Foto_izq');
             $table->string('Foto_der');
             $table->string('Foto_frente');
             $table->string('Foto_trasera');
+            $table->integer('kilometraje');
             $table->string('observaciones');
             $table->timestamps();
         });

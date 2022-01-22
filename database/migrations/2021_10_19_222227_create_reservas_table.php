@@ -28,6 +28,8 @@ class CreateReservasTable extends Migration
             $table->boolean('lavado');
             $table->integer('valor_reserva');
             $table->integer('saldo');
+            $table->integer('descuento');
+            $table->string('estado_reserva');
             $table->timestamps();
         });
     }

@@ -61,7 +61,7 @@ class VehiculosController extends Controller
         $crear_vehiculo->vigencia_tecnomecanica= $request->vigencia_tecnomecanica;
         $crear_vehiculo->precio_alquiler=$request->precio_alquiler;
         $crear_vehiculo->precio_lavado=$request->precio_lavado;
-        $crear_vehiculo->disponibilidad=$request->disponibilidad;
+        $crear_vehiculo->disponibilidad=1;
         $crear_vehiculo->foto_vehiculo=$ldate.$nombre;
         
         $crear_vehiculo->save();

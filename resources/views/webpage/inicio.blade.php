@@ -1,6 +1,31 @@
 @extends('webpage.index')
 @section('content')
 
+  
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-carmesy text-center" style="
+        border-bottom-width: 0px;
+    ">
+          <h5 class="modal-title  text-light" id="exampleModalLabel">Rent A Car</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body bg-black">
+           <a href="https://api.whatsapp.com/send?phone=573227795422&text=Hola%20Rent%20A%20Car%20necesito%20ayuda%20para%20alquilar%20un%20veh%C3%ADculo.">  <img src="{!! asset('webpage/img/publicidad1rentacar.jpg')!!}" 
+            class="img-fluid rounded mx-auto d-block" alt="Responsive image"></a>
+        </div>
+        <div class="modal-footer bg-black text-center" style="
+        border-top-width: 0px;
+    ">
+          <button type="button" class="btn btn-secondary bg-carmesy" data-dismiss="modal">Visita Nuestro Portal</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Slider Area Start -->
 <section class="gauto-slider-area fix">
         <div class="gauto-slide owl-carousel">
@@ -150,26 +175,28 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="find-form">
-                                    <form>
+                                    <form method="POST" action="{{ route('post_reserva_usuario') }}">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <p>
-                                                <select id="lugar-entrega">
+                                                <select id="lugar-entrega" name="lugar_entrega">
                                                 <option disabled selected>Lugar de entrega</option>
-                                                <option>Pasto - Aeropuerto Antonio Nariño</option>
-                                                <option>Ipiales - Aeropuerto San Luis</option>
+                                                <option value="Pasto">Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option value="Ipiales">Ipiales - Aeropuerto San Luis</option>
                                                 </select>
                                                 </p>
                                             </div>
                                             <div class="col-md-4">
                                                 <p>
-                                                <select id="lugar-recogida">
+                                                <select id="lugar-recogida" name="lugar_recogida">
                                                 <option disabled selected>Lugar de recogida</option>
-                                                <option>Pasto - Aeropuerto Antonio Nariño</option>
-                                                <option>Ipiales - Aeropuerto San Luis</option>
+                                                <option value="Pasto">Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option value="Ipiales">Ipiales - Aeropuerto San Luis</option>
                                                 </select>
                                                 </p>
                                             </div>
+<!--
                                             <div class="col-md-4">
                                                 <p>
                                                 <select>
@@ -188,17 +215,16 @@
                                                 </select>
                                                 </p>
                                             </div>
+                                             -->
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <p><input id="reservation_date" name="reservation_date"
-                                                        placeholder="Fecha Reserva" data-select="datepicker" type="text">
+                                                <p> <input class="form-control" type="date" id="desdes" name="desdes">
                                                 </p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p class="input-group clockpicker" data-placement="bottom"
-                                                    data-align="top" data-autoclose="true"><input type="text"
-                                                        class="form-control" placeholder="Hora Reserva" /></p>
+                                                <p> <input class="form-control" type="date" id="hastas" name="hastas">
+                                            </p>
                                             </div>
                                             <div class="col-md-4">
                                                 <p><button type="submit" class="gauto-theme-btn">BUSCAR</button></p>
@@ -242,7 +268,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a  href="" onclick="mensaje_wpp_carro('Chevrolet Beat')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
@@ -259,7 +285,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
                                                 </div>
                                         </div>
@@ -274,7 +300,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Sandero')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
@@ -291,7 +317,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Sandero Stepway')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
                                                 </div>
                                         </div>
@@ -308,7 +334,7 @@
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
                                                 
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Onix')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
@@ -325,7 +351,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Hyundai HB20')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
@@ -349,7 +375,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Tracker')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
@@ -366,7 +392,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Renault Duster')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                               
@@ -384,7 +410,7 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Hyundai Tucson')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                               
@@ -406,8 +432,8 @@
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="#" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Nissan Qashqai')" class="offer-btn-1">Reservar</a><a
+                                                        href="" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
                                         </div>

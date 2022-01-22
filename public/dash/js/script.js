@@ -55,6 +55,9 @@ $('#cedula_usuario').keyup(function() {
         asignar_saldo()
     }
     });
+
+
+
 $('#gridCheck1').change(function () {
    var comprobador= $('#gridCheck1').is(':checked')
     if(comprobador){
@@ -63,7 +66,9 @@ $('#gridCheck1').change(function () {
         asignar_saldo()
     }
     else{
-       
+        $("#nuevos_lugares").hide();
+        $("#nuevo_lugar").val("")
+        $("#nuevo_lugar_precio").val("")
         $("#personas").val("")
         $("#ubicacion").text("")
         $("#transporte").val(0)
@@ -71,9 +76,42 @@ $('#gridCheck1').change(function () {
         $(".form_person").hide();
         $('#gridRadios1').prop("checked", false);
         $('#gridRadios2').prop("checked", false);
+
+        $('#exampleRadios1').prop("checked", false);
+        $('#exampleRadios2').prop("checked", false);
+        $('#exampleRadios3').prop("checked", false);
+        
         asignar_saldo()
     }
 });
+
+$("#exampleRadios3").change(function(){
+    var comprobador= $('#exampleRadios3').is(':checked');
+    if(comprobador){
+        $("#transporte").val(0)
+        $("#nuevos_lugares").show();
+        asignar_saldo();
+    }
+});
+$("#exampleRadios1").change(function(){
+    var comprobador= $('#exampleRadios1').is(':checked');
+    if(comprobador){
+        $("#nuevos_lugares").hide();
+        $("#nuevo_lugar").val("")
+        $("#nuevo_lugar_precio").val("")
+        
+    }
+});
+$("#exampleRadios2").change(function(){
+    var comprobador= $('#exampleRadios2').is(':checked');
+    if(comprobador){
+        $("#nuevos_lugares").hide();
+        $("#nuevo_lugar").val("")
+        $("#nuevo_lugar_precio").val("")
+    }
+});
+
+
 
 let n_person=0;
 
@@ -90,22 +128,30 @@ $("#personas").on("input", function(e) {
 
   });
 
-$('#gridRadios1').change(
+$('#exampleRadios1').change(
     function(){
         $("#ubicacion").text("Pasto")
-        var p_transporte=35000*n_person
+        var p_transporte=35000
         $("#transporte").val(p_transporte)
         asignar_saldo()
     }
 )
-$('#gridRadios2').change(
+$('#exampleRadios2').change(
     function(){
         $("#ubicacion").text("Ipiales")
-        var p_transporte=120000*n_person
+        var p_transporte=120000
         $("#transporte").val(p_transporte)
         asignar_saldo()
     }
 )
+
+$("#nuevo_lugar_precio").change(function(){
+    var l=$("#nuevo_lugar").val();
+    $("#ubicacion").text(l)
+   var p= $("#nuevo_lugar_precio").val();
+    $("#transporte").val(p);
+    asignar_saldo();
+});
 
 
 
@@ -188,7 +234,7 @@ function borrar_datos_ticket_carro(){
         asignar_saldo()
     console.log("no hay carro");
 }
-
+saldos_totales=0;
 function asignar_saldo(){
     var total_vehiculo =parseInt($("#t_vehiculo").val())
     var total_transporte =parseInt($("#transporte").val())
@@ -196,8 +242,22 @@ function asignar_saldo(){
     var total_reserva =parseInt($("#reserva").val())
     var saldo=(total_vehiculo+total_transporte+total_lavado)-total_reserva
     $("#saldo").val(saldo)
+    saldos_totales=saldo;
 }
 
 function saludar(d){
     alert("hola yo soy "+d)
 }
+
+
+$("#descuento").keyup(
+    function(){
+      var descuento= $("#descuento").val()
+      var saldo= saldos_totales;
+      var nuevo_saldo=saldo-descuento;
+      $("#saldo").val(nuevo_saldo)
+    }
+)
+
+
+
