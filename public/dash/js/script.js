@@ -263,7 +263,7 @@ function confirmar_notificacion(id,id_vehiculo) {
     
 
     var URLdomain = window.location.host;
-    var nombreruta="notificacionesupdate/"
+    var nombreruta="/notificacionesupdate/"
     url=nombreruta+id;
     $.get( url, function( data ) {
         console.log(data);
