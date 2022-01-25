@@ -264,7 +264,7 @@ function confirmar_notificacion(id,id_vehiculo) {
 
     var URLdomain = window.location.host;
     var nombreruta="notificacionesupdate/"
-    url="/renta_car/public/"+nombreruta+id;
+    url=nombreruta+id;
     $.get( url, function( data ) {
         console.log(data);
         $(location).attr('href',"actualizar_estado/"+id_vehiculo);
