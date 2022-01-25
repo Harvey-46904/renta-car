@@ -66,9 +66,9 @@ class VehiculosController extends Controller
         $crear_vehiculo->foto_vehiculo=$ldate.$nombre;
         
         $crear_vehiculo->save();
-        
+       $id= $crear_vehiculo->id_vehiculo;
       
-        return Redirect::to('/crear_estado'.'/'.$crear_vehiculo->id)->with('correcto', 'El vehiculo se creo correctamente');
+        return Redirect::to('/crear_estado'.'/'.$id)->with('correcto', 'El vehiculo se creo correctamente');
     }
 
     /**
