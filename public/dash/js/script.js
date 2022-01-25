@@ -184,14 +184,12 @@ $("#hasta").change(
 
 $("select#vehiculo").change(
     function(){
-     var valor=$(this)[0].selectedIndex;
+     var valor=this.value;
+     console.log(valor);
      borrar_datos_ticket_carro()
     if(valor!=0){
         $.get( "obtener_carro/"+valor, function( data ) {
-       
-            if(data.data =="error"){
-            console.log("error");
-            }else{
+       console.log(data);
                 $("#trans").show()
                 $("#lav").show()
                 vehiculo_solo=data.data;
@@ -204,7 +202,7 @@ $("select#vehiculo").change(
                 $("#t_vehiculo").val(t_vehiculo)
                 $("#reserva").val(total_reserva);
                 asignar_saldo()
-            }
+            
           });
     }
     else{
