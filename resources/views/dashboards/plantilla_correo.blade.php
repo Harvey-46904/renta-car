@@ -12,14 +12,7 @@
         
         <img src="https://rentacarpasto.com/dash/images/banner-correo.png" alt="Logo" width="100%" height="250">
     </div>
-    <div align="center">
-        
-        <img src="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}" alt="Logo" width="100%" height="250">
-    </div>
-    <div align="center">
-        
-        <img src="{!! asset('/storage/vehiculo/'.$vehiculo->foto_vehiculo)!!}" alt="Logo" width="100%" height="250">
-    </div>
+   
 
     <div align="center">
         <hr width=900 color=#C52121>
@@ -120,7 +113,7 @@
                 </td>
 
                 <td rowspan="10">
-                    <img src="escarabajo.jpg" width="400" height="280" />
+                    <img src="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}" width="400" height="280" />
                 </td>
             </tr>
 
