@@ -102,7 +102,7 @@ class ClientesController extends Controller
     public function update(Request $request,$id)
     {
        
-        $actualizar_clientes=clientes::findOrFail([$id],["id_cliente"]);
+        $actualizar_clientes=clientes::findOrFail($id);
         $actualizar_clientes->tipo_documento=$request->tipo_documento;
         $actualizar_clientes->numero_documento= $request->numero_documento;
         $actualizar_clientes->nombres= $request->nombres;

@@ -6,6 +6,7 @@ use App\Models\registro_contrato;
 use Illuminate\Http\Request;
 use DB;
 use Redirect;
+use App\Models\estado_vehiculo;
 use Illuminate\Support\Facades\App;
 class RegistroContratoController extends Controller
 {
@@ -57,6 +58,8 @@ class RegistroContratoController extends Controller
      */
     public function store(Request $request,$id)
     {
+        $data_salida=self::convertir_array_string($request->all());
+        
         $todo=$request->all();
         $ldate = date('Y-m-d-H_i_s');
         $contrato= new registro_contrato;
@@ -71,7 +74,7 @@ class RegistroContratoController extends Controller
         $contrato->recibido_por="url img";
         $contrato->observaciones_entregado=$request->observaciones_entregado;
         $contrato->observaciones_recibido=$request->observaciones_recibido;
-        $contrato->estado_salida="aqui va el estado ";
+        $contrato->estado_salida=$data_salida;
         $contrato->Estado_contrato="Salida";
         $contrato->save();
         $id_contrato=$contrato->id;
@@ -95,6 +98,32 @@ class RegistroContratoController extends Controller
         return Redirect::to('/lista_contratos')->with('correcto', 'El cliente se creo correctamente');
         return response(["id_reserva"=>$todo]);
     }
+
+    public function convertir_array_string($objeto){
+        $array_estado=array(
+            "documento_dia"=>isset($objeto["documento_dia"])?1:0,
+            "Luces_exteriores"=>isset($objeto["Luces_exteriores"])?1:0,
+            "Luz_interior"=>isset($objeto["Luz_interior"])?1:0,
+            "Limpia_brisas"=>isset($objeto["Limpia_brisas"])?1:0,
+            "Pito"=>isset($objeto["Pito"])?1:0,
+            "Espejos_externos_internos"=>isset($objeto["Espejos_externos_internos"])?1:0,
+            "Radio"=>isset($objeto["Radio"])?1:0,
+            "Llanta_repuesto"=>isset($objeto["Llanta_repuesto"])?1:0,
+            "Gato"=>isset($objeto["Gato"])?1:0,
+            "Cruceta"=>isset($objeto["Cruceta"])?1:0,
+            "Equipo_carretera"=>isset($objeto["Equipo_carretera"])?1:0,
+            "Emblemas"=>isset($objeto["Emblemas"])?1:0,
+            "Antena"=>isset($objeto["Antena"])?1:0,
+            "Copas"=>isset($objeto["Copas"])?1:0,
+            "mantenimiento"=>isset($objeto["mantenimiento"])?1:0,
+            "lavado"=>isset($objeto["lavado"])?1:0
+        );
+        $array_estado=json_encode( $array_estado );  
+        return $array_estado; 
+    }
+
+    
+
 
     /**
      * Display the specified resource.
@@ -150,14 +179,26 @@ class RegistroContratoController extends Controller
         ->select()
         ->where("registro_contratos.id","=",$data)
         ->first();
-       
-
+       if($contratos->estado_entrada==null){
+        $estado=json_decode($contratos->estado_salida,TRUE);  
         $dompdf = App::make("dompdf.wrapper");
-        $dompdf->loadView("dashboards.contrato",compact("contratos"));
+        $dompdf->loadView("dashboards.contrato_proceso",compact("contratos","estado"));
         $nombres_completos=$contratos->nombres."-".$contratos->apellidos;
         $nombre_archivo="Contrato-".$nombres_completos.".pdf";
        // return $dompdf->stream();
-       return $dompdf->download($nombre_archivo);
+       return $dompdf->download($nombre_archivo); 
+       }else{
+        $finalizado=json_decode($contratos->estado_entrada,TRUE); 
+        $estado=json_decode($contratos->estado_salida,TRUE);  
+        $dompdf = App::make("dompdf.wrapper");
+        $dompdf->loadView("dashboards.contrato",compact("contratos","estado","finalizado"));
+        $nombres_completos=$contratos->nombres."-".$contratos->apellidos;
+        $nombre_archivo="Contrato-".$nombres_completos.".pdf";
+        return $dompdf->download($nombre_archivo); 
+       }
+        
+        
+        
     }
 
     public function finalizar_contrato($id){
@@ -182,6 +223,14 @@ class RegistroContratoController extends Controller
     }
 
     public function fin(Request $request,$id){
+        $vehiculo=DB::table('registro_contratos')
+        ->select("vehiculo_id")
+        ->join("reservas","registro_contratos.id_de_reserva","=","reservas.id_reserva")
+        ->where("registro_contratos.id","=",$id)
+        ->first();
+
+
+        $data_entrada=self::convertir_array_string_entrada($request->all(),$vehiculo->vehiculo_id);
         $todo=$request->all();
         $actualizar_contrato=registro_contrato::findOrFail($id);
         
@@ -212,12 +261,54 @@ class RegistroContratoController extends Controller
 
         $actualizar_contrato->recibido_por_entrada=$nombres2;
 
-
+        $actualizar_contrato->estado_entrada=$data_entrada;
         $actualizar_contrato->observaciones_entregado_entrada=$request->observaciones_entregado_entrada;
         $actualizar_contrato->observaciones_recibido_entrada=$request->observaciones_recibido_entrada;
         $actualizar_contrato->Estado_contrato="Finalizado";
         $actualizar_contrato->save();
         return Redirect::to('/lista_contratos_finalizados')->with('correcto', 'El cliente se creo correctamente');
        
+    }
+    public function convertir_array_string_entrada($objeto,$id_vehiculo){
+        $id_estado=DB::table("estado_vehiculos")->select("id")->where("vehiculo_id","=",$id_vehiculo)->first();
+        $id_estado=$id_estado->id;
+        $actualizar_estado= estado_vehiculo::findOrFail($id_estado);
+        $actualizar_estado->documento_dia=isset($objeto["documento_dia"])?1:0;
+        $actualizar_estado->Luces_exteriores=isset($objeto["Luces_exteriores"])?1:0;
+        $actualizar_estado->Luz_interior=isset($objeto["Luz_interior"])?1:0;
+        $actualizar_estado->Limpia_brisas=isset($objeto["Limpia_brisas"])?1:0;
+        $actualizar_estado->Pito=isset($objeto["Pito"])?1:0;
+        $actualizar_estado->Espejos_externos_internos=isset($objeto["Espejos_externos_internos"])?1:0;
+        $actualizar_estado->Radio=isset($objeto["Radio"])?1:0;
+        $actualizar_estado->Llanta_repuesto=isset($objeto["Llanta_repuesto"])?1:0;
+        $actualizar_estado->Gato=isset($objeto["Gato"])?1:0;
+        $actualizar_estado->Cruceta=isset($objeto["Cruceta"])?1:0;
+        $actualizar_estado->Equipo_carretera=isset($objeto["Equipo_carretera"])?1:0;
+        $actualizar_estado->Emblemas=isset($objeto["Emblemas"])?1:0;
+        $actualizar_estado->Antena=isset($objeto["Antena"])?1:0;
+        $actualizar_estado->Copas=isset($objeto["Copas"])?1:0;
+        $actualizar_estado->mantenimiento=isset($objeto["mantenimiento"])?1:0;
+        $actualizar_estado->lavado=isset($objeto["lavado"])?1:0;
+        $actualizar_estado->save();
+        $array_estado=array(
+            "documento_dia"=>isset($objeto["documento_dia"])?1:0,
+            "Luces_exteriores"=>isset($objeto["Luces_exteriores"])?1:0,
+            "Luz_interior"=>isset($objeto["Luz_interior"])?1:0,
+            "Limpia_brisas"=>isset($objeto["Limpia_brisas"])?1:0,
+            "Pito"=>isset($objeto["Pito"])?1:0,
+            "Espejos_externos_internos"=>isset($objeto["Espejos_externos_internos"])?1:0,
+            "Radio"=>isset($objeto["Radio"])?1:0,
+            "Llanta_repuesto"=>isset($objeto["Llanta_repuesto"])?1:0,
+            "Gato"=>isset($objeto["Gato"])?1:0,
+            "Cruceta"=>isset($objeto["Cruceta"])?1:0,
+            "Equipo_carretera"=>isset($objeto["Equipo_carretera"])?1:0,
+            "Emblemas"=>isset($objeto["Emblemas"])?1:0,
+            "Antena"=>isset($objeto["Antena"])?1:0,
+            "Copas"=>isset($objeto["Copas"])?1:0,
+            "mantenimiento"=>isset($objeto["mantenimiento"])?1:0,
+            "lavado"=>isset($objeto["lavado"])?1:0
+        );
+        $array_estado=json_encode( $array_estado );  
+        return $array_estado; 
     }
 }

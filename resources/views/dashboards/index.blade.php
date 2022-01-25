@@ -41,7 +41,16 @@
 
     <!--Icon webpage-->
     <link rel="icon" href="{!! asset('webpage/img/icon-webpage.png') !!}" />
-    
+    <style>span.blue {
+        background: #e2c0c000;
+        border-radius: 0.8em;
+        -moz-border-radius: 0.8em;
+        -webkit-border-radius: 0.8em;
+        color: #ffffff;
+        line-height: 2em;
+        text-align: right;
+        width: 1.8em; 
+      }</style>
 </head>
 
 <body class="theme-red">
@@ -65,28 +74,44 @@
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
+    <?php 
+    $url=url("notificaciones");
+    $ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
+$response = curl_exec ($ch);
+$err = curl_error($ch);  //if you need
+curl_close ($ch);
+$data = json_decode($response,true);
+$data=$data["data"];
+    ?>
 <nav class="navbar">
     <a href="javascript:void(0);" class="bars"></a>
     <div> <a class="navbar-brand" href="{{url('dashboard')}}"><b>RENTACAR PASTO</b></a> </div>
-    <div class="icon" id="bell"> <img src="{!! asset('dash/images/bell.png')!!}"> </div>
-    <div class="notifications" id="box">
-        <h2>Notifications - <span>2</span></h2>
-        <div class="notifications-item"> <img src="{!! asset('dash/images/pic.jpg')!!}" alt="img">
+    <div class="icon" id="bell">
+        
+        <img src="{!! asset('dash/images/bell.png')!!}"> 
+        <span class="blue px-3 ">{{ count($data) }}</span>
+    </div>
+    <div class="notifications" id="box" style="height: auto; opacity: 1;">
+        
+        <h2>Notificationes - <span>{{ count($data) }}</span></h2>
+        @foreach ($data as $item)
+        <div class="notifications-item" onclick="confirmar_notificacion({{$item['id']}},{{$item['id_v']}})"> 
+            <img src="{!! asset($item["img_notificacion"])!!}" alt="img">
             <div class="text">
-                <h4>Samso aliao</h4>
-                <p>Samso Nagaro Like your home work</p>
+                <h4>{{$item["titulo_notificacion"]}}</h4>
+                <p>{{$item["descripcion_notificacion"]}}</p>
             </div>
-        </div>
-        <div class="notifications-item"> <img src="https://img.icons8.com/flat_round/64/000000/vote-badge.png" alt="img">
-            <div class="text">
-                <h4>John Silvester</h4>
-                <p>+20 vista badge earned</p>
-            </div>
-        </div>
+        </div> 
+        @endforeach
+      
+        
     </div>
 </nav>
-</nav>
+
 
     <!-- #Top Bar -->
     <section>

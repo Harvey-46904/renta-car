@@ -33,13 +33,17 @@ Route::get('crear_cliente', function () {
 });
 
 Route::get('crear_estado/{id}',"EstadoVehiculoController@registrar_estado");
-
+Route::get('actualizar_estado/{id}',"EstadoVehiculoController@show");
 
 Route::get('cliente_actual', "ClientesController@cliente_actual")->name("cliente_actual");
 
 Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualizar_cliente");
 
 Route::get('crear_contrato/{id}',"ReservaController@generar_contrato")->name("crear_contrato");
+
+//envuar correo purebas
+Route::get('correo',"ReservaController@enviar_correo")->name("correo");
+
 Route::get('finalizar_contrato/{id}',"RegistroContratoController@finalizar_contrato")->name("finalizar_contrato");
 
 Route::get('listar_cliente',"ClientesController@index")->name("listar_cliente");
@@ -54,6 +58,10 @@ Route::get('actualizar_vehiculos', function () {
     return view('dashboards.actualizar_vehiculos');
 });
 
+Route::get('plantilla', function () {
+    
+    return view('dashboards.plantilla_correo');
+});
 //vista crear reserva
 Route::get('crear_reserva', "ReservaController@index");
 
@@ -127,6 +135,7 @@ Route::delete('clientes_eliminar/{id}', "ClientesController@destroy")->name("eli
 
 Route::post('actualizar_cliente_unico/{id}', "ClientesController@update")->name('actualizar_cliente_unico');
 
+Route::post('actualizar_vehiculo/{id}', "EstadoVehiculoController@update")->name('actualizar_vehiculo');
 
 
 
@@ -144,6 +153,9 @@ Route::get('storage/{archivo}', function ($nombre) {
     abort(404);
   
   });
+Route::get('notificaciones',"NotificacionesController@index");
+Route::get('notificacionesupdate/{id}',"NotificacionesController@update");
+Route::get('crear_notificaciones',"NotificacionesController@crear_notificaciones");
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

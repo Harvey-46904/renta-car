@@ -235,83 +235,83 @@ footer {
                         </tr>
                         <tr>
                             <td>1. DOCUMENTOS AL DÍA</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["documento_dia"]}}</td>
+                            <td>{{$finalizado["documento_dia"]}}</td>
                         </tr>
                         <tr>
                             <td>2. LUCES EXTERIORES</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Luces_exteriores"]}}</td>
+                            <td>{{$finalizado["Luces_exteriores"]}}</td>
                         </tr>
                         <tr>
                             <td>3. LUZ INTERIOR</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Luz_interior"]}}</td>
+                            <td>{{$finalizado["Luz_interior"]}}</td>
                         </tr>
                         <tr>
                             <td>4. LIMPIAPARABRISAS</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Limpia_brisas"]}}</td>
+                            <td>{{$finalizado["Limpia_brisas"]}}</td>
                         </tr>
                         <tr>
                             <td>5. PITO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Pito"]}}</td>
+                            <td>{{$finalizado["Pito"]}}</td>
                         </tr>
                         <tr>
                             <td>6. ESPEJOS INTERNOS Y EXTERNOS</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Espejos_externos_internos"]}}</td>
+                            <td>{{$finalizado["Espejos_externos_internos"]}}</td>
                         </tr>
                         <tr>
                             <td>7. RADIO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Radio"]}}</td>
+                            <td>{{$finalizado["Radio"]}}</td>
                         </tr>
                         <tr>
                             <td>8. LLANTA DE REPUESTO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Llanta_repuesto"]}}</td>
+                            <td>{{$finalizado["Llanta_repuesto"]}}</td>
                         </tr>
                         <tr>
                             <td>9. GATO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Gato"]}}</td>
+                            <td>{{$finalizado["Gato"]}}</td>
                         </tr>
                         <tr>
                             <td>10. CRUCETA</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Cruceta"]}}</td>
+                            <td>{{$finalizado["Cruceta"]}}</td>
                         </tr>
                         <tr>
                             <td>11. EQUIPO DE CARRETERA</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Equipo_carretera"]}}</td>
+                            <td>{{$finalizado["Equipo_carretera"]}}</td>
                         </tr>
                         <tr>
                             <td>12. EMBLEMAS</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Emblemas"]}}</td>
+                            <td>{{$finalizado["Emblemas"]}}</td>
                         </tr>
                         <tr>
                             <td>13. ANTENA</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Antena"]}}</td>
+                            <td>{{$finalizado["Antena"]}}</td>
                         </tr>
                         <tr>
                             <td>14. COPAS</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["Copas"]}}</td>
+                            <td>{{$finalizado["Copas"]}}</td>
                         </tr>
                         <tr>
                             <td>15. MANTENIMIENTO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["mantenimiento"]}}</td>
+                            <td>{{$finalizado["mantenimiento"]}}</td>
                         </tr>
                         <tr>
                             <td>16. LAVADO</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$estado["lavado"]}}</td>
+                            <td>{{$finalizado["lavado"]}}</td>
                         </tr>
                     </table>
                 </td>

@@ -145,7 +145,7 @@ $('#exampleRadios2').change(
     }
 )
 
-$("#nuevo_lugar_precio").change(function(){
+$("#nuevo_lugar_precio").keyup(function(){
     var l=$("#nuevo_lugar").val();
     $("#ubicacion").text(l)
    var p= $("#nuevo_lugar_precio").val();
@@ -258,6 +258,23 @@ $("#descuento").keyup(
       $("#saldo").val(nuevo_saldo)
     }
 )
+
+function confirmar_notificacion(id,id_vehiculo) {
+    
+
+    var URLdomain = window.location.host;
+    var nombreruta="notificacionesupdate/"
+    url="/renta_car/public/"+nombreruta+id;
+    $.get( url, function( data ) {
+        console.log(data);
+        $(location).attr('href',"actualizar_estado/"+id_vehiculo);
+        console.log("redirigido");
+      });
+      //window.location="actualizar_estado/"+id;
+     
+    
+
+  }
 
 
 

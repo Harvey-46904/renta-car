@@ -62,7 +62,7 @@
                                               <td class="text-center">{{ date('Y-m-d', strtotime($reserva->fecha_fin))}}</td>
                                               <td class="text-center"> <b>{{$reserva->dias_reserva}}</b></td>
                                               @if ($reserva->transporte==1)
-                                                <td class="bg-verde text-center ">{{$reserva->lugar}} <br> <b>{{$reserva->personas}}</b> Personas</td>
+                                                <td class="bg-verde text-center ">{{$reserva->lugar}} </td>
                                                 @else
                                                 <td class="bg-rojo text-light text-center">No Requiere Transporte</td>
                                                 @endif

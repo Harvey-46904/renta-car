@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use DB;
 use Redirect;
 use Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReservaCorreo;
 class ReservaController extends Controller
 {
     /**
@@ -47,7 +49,7 @@ class ReservaController extends Controller
     public function store(Request $request)
     {
         $todo=$request->all();
-       
+      
         $nuevo_lugar=$request->lugar;
         $nuevo_precio_transporte=0;
         if($nuevo_lugar=="Otro"){
@@ -72,16 +74,19 @@ class ReservaController extends Controller
        
         //obtengo el cliente 
         $clientes=DB::table('clientes')
-        ->select("id_cliente")
+        ->select()
         ->where("numero_documento","=",$request->cedula_usuario)
         ->first();
+       
+        
          //calcular dias
          $dias=self::diferencia_dias($request->desde,$request->hasta);
         //obtengo el vehiculo
         $vehiculo=DB::table('vehiculos')
-        ->select("precio_alquiler","precio_lavado")
+        ->select()
         ->where("id_vehiculo","=",$request->vehiculo)
         ->first();
+        
         //calcular reservas
         $precio_total=$vehiculo->precio_alquiler*$dias;
         $valor_reserva=(($precio_total)*30)/100;
@@ -116,6 +121,7 @@ class ReservaController extends Controller
         $reservas->fecha_fin=$request->hasta;
         $reservas->dias_reserva=$dias;
         $reservas->transporte=$trans;
+        $reservas->precio_transporte=$nuevo_precio_transporte;
         $reservas->personas=0;
         $reservas->lugar=$nuevo_lugar;
         $reservas->lavado=$lavado;
@@ -124,6 +130,7 @@ class ReservaController extends Controller
         $reservas->descuento=$request->descuento;
         $reservas->estado_reserva="Reserva";
         $reservas->save();
+        self::enviar_correo($clientes,$vehiculo,$reservas);
         return Redirect::to('/listar_reservas')->with('correcto', 'El cliente se creo correctamente');
         
         return response(["data"=>"ok"]);
@@ -233,5 +240,13 @@ class ReservaController extends Controller
         ->where("fecha_fin",'<',$desde)
         ->get();
         return response(["data"=>$todo,"reservas"=>$reservas]);
+    }
+
+    public function enviar_correo($cliente,$vehiculo,$reserva){
+        $arreglo=$cliente;
+        $arreglo1=$vehiculo;
+        $arreglo2=$reserva;
+        Mail::to("harveympv@hotmail.com")->send( new ReservaCorreo($arreglo,$arreglo1,$arreglo2));
+        return "OK";
     }
 }

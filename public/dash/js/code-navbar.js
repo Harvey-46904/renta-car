@@ -1,19 +1,17 @@
 $(document).ready(function(){
-
+    $("#box").hide()
 var down = false;
 
 $('#bell').click(function(e){
 
-var color = $(this).text();
-if(down){
 
-$('#box').css('height','0px');
-$('#box').css('opacity','0');
+if(down){
+    $("#box").hide()
+
 down = false;
 }else{
+    $("#box").show()
 
-$('#box').css('height','auto');
-$('#box').css('opacity','1');
 down = true;
 
 }

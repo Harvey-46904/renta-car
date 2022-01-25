@@ -128,9 +128,15 @@ class EstadoVehiculoController extends Controller
      * @param  \App\Models\estado_vehiculo  $estado_vehiculo
      * @return \Illuminate\Http\Response
      */
-    public function show(estado_vehiculo $estado_vehiculo)
+    public function show($id)
     {
-        //
+        $vehiculo=DB::table('vehiculos')
+        ->join("estado_vehiculos","estado_vehiculos.vehiculo_id","=","vehiculos.id_vehiculo")
+        ->select()
+        ->where("id_vehiculo","=",$id)
+        ->first();
+        return view('dashboards.actualizar_vehiculo',compact("vehiculo"));
+        
     }
 
     /**
@@ -151,9 +157,47 @@ class EstadoVehiculoController extends Controller
      * @param  \App\Models\estado_vehiculo  $estado_vehiculo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, estado_vehiculo $estado_vehiculo)
+    public function update(Request $request,$id_vehiculo)
     {
-        //
+        //actualizar vehiculo
+        $actualizar_vehiculo=vehiculos::findOrFail($id_vehiculo);
+        $actualizar_vehiculo->nombre_vehiculo=$request->nombre_vehiculo;
+        $actualizar_vehiculo->placa=$request->placa;
+        $actualizar_vehiculo->marca=$request->marca;
+        $actualizar_vehiculo->modelo=$request->modelo;
+        $actualizar_vehiculo->color=$request->color;
+        $actualizar_vehiculo->vigencia_soat=$request->vigencia_soat;
+        $actualizar_vehiculo->vigencia_tecnomecanica=$request->vigencia_tecnomecanica;
+        $actualizar_vehiculo->precio_alquiler=$request->precio_alquiler;
+        $actualizar_vehiculo->precio_lavado=$request->precio_lavado;
+        $actualizar_vehiculo->disponibilidad=$request->disponibilidad;
+        $actualizar_vehiculo->save();
+        //actualizar estado
+        $id_estado=DB::table("estado_vehiculos")->select("id")->where("vehiculo_id","=",$id_vehiculo)->first();
+        $id_estado=$id_estado->id;
+        $actualizar_estado= estado_vehiculo::findOrFail($id_estado);
+        $actualizar_estado->documento_dia=$request->documento_dia=="on"?1:0;
+        $actualizar_estado->Luces_exteriores=$request->Luces_exteriores=="on"?1:0;
+        $actualizar_estado->Luz_interior=$request->Luz_interior=="on"?1:0;
+        $actualizar_estado->Limpia_brisas=$request->Limpia_brisas=="on"?1:0;
+        $actualizar_estado->Pito=$request->Pito=="on"?1:0;
+        $actualizar_estado->Espejos_externos_internos=$request->Espejos_externos_internos=="on"?1:0;
+        $actualizar_estado->Radio=$request->Radio=="on"?1:0;
+        $actualizar_estado->Llanta_repuesto=$request->Llanta_repuesto=="on"?1:0;
+        $actualizar_estado->Gato=$request->Gato=="on"?1:0;
+        $actualizar_estado->Cruceta=$request->Cruceta=="on"?1:0;
+        $actualizar_estado->Equipo_carretera=$request->Equipo_carretera=="on"?1:0;
+        $actualizar_estado->Emblemas=$request->Emblemas=="on"?1:0;
+        $actualizar_estado->Antena=$request->Antena=="on"?1:0;
+        $actualizar_estado->Copas=$request->Copas=="on"?1:0;
+        $actualizar_estado->mantenimiento=$request->mantenimiento=="on"?1:0;
+        $actualizar_estado->lavado=$request->lavado=="on"?1:0;
+        $actualizar_estado->kilometraje=$request->kilometraje;
+        $actualizar_estado->observaciones=$request->observaciones;
+        $actualizar_estado->save();
+        return Redirect::to('/listar_vehiculo')->with('correcto1', 'El cliente se creo correctamente');
+        return response(["data"=>$request->all(),"id"=>$id_estado]);
+        
     }
 
     /**

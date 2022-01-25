@@ -182,7 +182,7 @@
 							<br>
 
 							
-							<div class="form-group row">
+							    <div class="form-group row">
                                     <label class="col-md-8 text-center text-center col-form-label">Documentos al día</label>
                                     <div class="switch">
                                         <label>No<input type="checkbox"  name="documento_dia"
@@ -353,8 +353,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <input type="button" class="button" id="draw-submitBtn" value="Crear Imagen"></input>
-                    <input type="button" class="button" id="draw-clearBtn" value="Borrar Canvas"></input>
+                    <input type="button" class="button" id="draw-submitBtn" value="Crear Firma"></input>
+                    <input type="button" class="button" id="draw-clearBtn" value="Borrar Firma"></input>
     
                             <label style="display:none;">Color</label>
                             <input style="display:none;" type="color" id="color">
@@ -388,8 +388,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <input type="button" class="button" id="draw-submitBtn2" value="Crear Imagen"></input>
-                    <input type="button" class="button" id="draw-clearBtn2" value="Borrar Canvas"></input>
+                    <input type="button" class="button" id="draw-submitBtn2" value="Crear Firma"></input>
+                    <input type="button" class="button" id="draw-clearBtn2" value="Borrar Firma"></input>
     
                             <label style="display:none;">Color</label>
                             <input style="display:none;" type="color" id="color2">

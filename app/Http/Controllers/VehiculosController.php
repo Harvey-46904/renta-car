@@ -6,6 +6,7 @@ use App\Models\vehiculos;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
+use App\Http\Controllers\NotificacionesController;
 use Redirect;
 class VehiculosController extends Controller
 {
@@ -66,7 +67,8 @@ class VehiculosController extends Controller
         
         $crear_vehiculo->save();
         
-     
+       $notificacion=new NotificacionesController;
+       $notificacion->create($request->nombre_vehiculo,"Se a creado un vehiculo");
         return Redirect::to('/crear_estado'.'/'.$crear_vehiculo->id)->with('correcto', 'El vehiculo se creo correctamente');
     }
 

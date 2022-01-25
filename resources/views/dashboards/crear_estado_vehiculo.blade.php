@@ -25,9 +25,7 @@
                             </ul>
                             <hr>
                             <div class="container-fluid ">
-                                <div class="row">
-                                    <div class="col-md-18 bg-danger text-center">VEHICULO</div>
-                                </div>
+                               
                                 <div class="row">
                                     <div class="col-md-6 text-center">
 
@@ -62,22 +60,7 @@
                                             <div class="col-md-6"><b>Precio Alquiler:</b>
                                                 ${{ $vehiculo->precio_alquiler }} </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <a type="button"
-                                                    class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline"
-                                                    href="">
-                                                    <i class="material-icons">mode_edit</i>
-                                                </a>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a type="button"
-                                                    class=" btn_eliminar btn bg-red btn-circle waves-effect waves-circle waves-float d-inline"
-                                                    onclick="getid({{ $vehiculo->id_vehiculo }})">
-                                                    <i class="material-icons">delete</i>
-                                                </a>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +235,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Observaciones</label>
-                                    <textarea class="form-control" id="observaciones" name="observaciones" rows="3"
+                                    <textarea class="form-control bg-light" id="observaciones" name="observaciones" rows="3"
                                         placeholder="Digite aquí las observaciones del vehículo"></textarea>
                                 </div>
 

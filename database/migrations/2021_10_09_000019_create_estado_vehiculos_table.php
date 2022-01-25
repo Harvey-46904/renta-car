@@ -17,6 +17,7 @@ class CreateEstadoVehiculosTable extends Migration
             $table->id();
             $table->unsignedInteger('vehiculo_id');
             $table->foreign("vehiculo_id")->references('id_vehiculo')->on('vehiculos')->onDelete('cascade');
+           
             $table->boolean('documento_dia');
             $table->boolean('Luces_exteriores');
             $table->boolean('Luz_interior');
@@ -31,9 +32,9 @@ class CreateEstadoVehiculosTable extends Migration
             $table->boolean('Emblemas');
             $table->boolean('Antena');
             $table->boolean('Copas');
-          
             $table->boolean('mantenimiento');
             $table->boolean('lavado');
+
             $table->string('Foto_izq');
             $table->string('Foto_der');
             $table->string('Foto_frente');

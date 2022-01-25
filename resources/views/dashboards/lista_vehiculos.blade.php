@@ -12,6 +12,15 @@
                         <span><b>El vehículo se creo correctamente</span>
                     </div>
                 @endif
+                @if (Session::get('correcto1'))
+                <div class="alert alert-success">
+                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                    <span><b>El vehículo se actualizo correctamente</span>
+                </div>
+            @endif
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
@@ -68,7 +77,7 @@
                                                 <div class="col-md-2">
                                                     <a type="button"
                                                         class="btn btn-success btn-circle waves-effect waves-circle waves-float d-inline"
-                                                        href="">
+                                                        href="{{url("actualizar_estado", $vehiculo->id_vehiculo)}}">
                                                         <i class="material-icons">mode_edit</i>
                                                     </a>
                                                 </div>
