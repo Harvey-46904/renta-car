@@ -67,8 +67,7 @@ class VehiculosController extends Controller
         
         $crear_vehiculo->save();
         
-       $notificacion=new NotificacionesController;
-       $notificacion->create($request->nombre_vehiculo,"Se a creado un vehiculo");
+      
         return Redirect::to('/crear_estado'.'/'.$crear_vehiculo->id)->with('correcto', 'El vehiculo se creo correctamente');
     }
 
