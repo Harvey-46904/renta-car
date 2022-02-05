@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use DB;
 use Redirect;
 use App\Models\estado_vehiculo;
+use App\Models\reserva;
+use App\Models\control_kilometraje;
+use App\Http\Controllers\ControlKilometrajeController;
 use Illuminate\Support\Facades\App;
 class RegistroContratoController extends Controller
 {
@@ -59,19 +62,20 @@ class RegistroContratoController extends Controller
     public function store(Request $request,$id)
     {
         $data_salida=self::convertir_array_string($request->all());
-        
         $todo=$request->all();
         $ldate = date('Y-m-d-H_i_s');
         $contrato= new registro_contrato;
         $contrato->id_de_reserva=$id;
         $contrato->fecha_salida =$request->fecha_salida;
         $contrato->km_salida=$request->km_salida;
+        $contrato->voucher=$request->voucher;
         $contrato->km_permitido=$request->km_permitido;
         $contrato->hora_salida=$request->hora_salida;
         $contrato->combustible_salida=$request->combustible_salida;
         $contrato->destino=$request->destino;
         $contrato->entregado_por="url img";
         $contrato->recibido_por="url img";
+        $contrato->inventario_salida="url img";
         $contrato->observaciones_entregado=$request->observaciones_entregado;
         $contrato->observaciones_recibido=$request->observaciones_recibido;
         $contrato->estado_salida=$data_salida;
@@ -92,9 +96,23 @@ class RegistroContratoController extends Controller
         $image_base64 = base64_decode($image_parts[1]);
         $nombres2=$id_contrato."-recibido_por.png";
         \Storage::disk('local')->put("/firmas/".$nombres2,  $image_base64);
+        $img = $request->inventario;
+        $image_parts = explode(";base64,", $img);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+        $nombres3=$id_contrato."-inventario_salida.png";
+        \Storage::disk('local')->put("/firmas/".$nombres3,  $image_base64);
         $contrato->entregado_por=$nombres1;
         $contrato->recibido_por=$nombres2;
+        $contrato->inventario_salida=$nombres3;
+
+        
         $contrato->save();
+        $actualizar_reserva=reserva::findOrFail($id);
+        $actualizar_reserva->estado_reserva="Contratado";
+        $actualizar_reserva->save();
+
         return Redirect::to('/lista_contratos')->with('correcto', 'El cliente se creo correctamente');
         return response(["id_reserva"=>$todo]);
     }
@@ -218,13 +236,15 @@ class RegistroContratoController extends Controller
         ->select()
         ->where('id_reserva','=',$reserva_id)
         ->get();
-        return view('dashboards.finalizar_contrato',compact("reservas","id_contrato"));
+        $url_salida=$contratos->inventario_salida;
+        return view('dashboards.finalizar_contrato',compact("reservas","id_contrato","url_salida"));
         return response(["finalizar"=>$id]);
     }
 
     public function fin(Request $request,$id){
+        
         $vehiculo=DB::table('registro_contratos')
-        ->select("vehiculo_id")
+        ->select()
         ->join("reservas","registro_contratos.id_de_reserva","=","reservas.id_reserva")
         ->where("registro_contratos.id","=",$id)
         ->first();
@@ -233,8 +253,6 @@ class RegistroContratoController extends Controller
         $data_entrada=self::convertir_array_string_entrada($request->all(),$vehiculo->vehiculo_id);
         $todo=$request->all();
         $actualizar_contrato=registro_contrato::findOrFail($id);
-        
-        
         $actualizar_contrato->fecha_entrada=$request->fecha_entrada;
         $actualizar_contrato->hora_entrada=$request->hora_entrada;
         $actualizar_contrato->km_entrada=$request->km_entrada;
@@ -258,21 +276,67 @@ class RegistroContratoController extends Controller
         $image_base64 = base64_decode($image_parts[1]);
         $nombres2=$id."-recibido_por_entrada.png";
         \Storage::disk('local')->put("/firmas/".$nombres2,  $image_base64);
-
         $actualizar_contrato->recibido_por_entrada=$nombres2;
+        $img = $request->inventario;
+        $image_parts = explode(";base64,", $img);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+        $nombres3=$id."-inventario_entrada.png";
+        \Storage::disk('local')->put("/firmas/".$nombres3,  $image_base64);
+        $actualizar_contrato->inventario_entrada=$nombres3;
+       
 
         $actualizar_contrato->estado_entrada=$data_entrada;
         $actualizar_contrato->observaciones_entregado_entrada=$request->observaciones_entregado_entrada;
         $actualizar_contrato->observaciones_recibido_entrada=$request->observaciones_recibido_entrada;
         $actualizar_contrato->Estado_contrato="Finalizado";
         $actualizar_contrato->save();
+        $actualizar_reserva=reserva::findOrFail($vehiculo->id_reserva);
+        $actualizar_reserva->estado_reserva="Finalizado";
+        $actualizar_reserva->save();
         return Redirect::to('/lista_contratos_finalizados')->with('correcto', 'El cliente se creo correctamente');
        
+    }
+
+    function crear_notificacion_estado($contador,$meta,$id,$nombre,$descripcion){
+        if($contador >= $meta){
+            $img="dash/images/revision.jpg";
+            $crear_noti=new NotificacionesController();
+            $crear_noti->create($nombre,$descripcion,$img,$id);
+        }
+           
     }
     public function convertir_array_string_entrada($objeto,$id_vehiculo){
         $id_estado=DB::table("estado_vehiculos")->select("id")->where("vehiculo_id","=",$id_vehiculo)->first();
         $id_estado=$id_estado->id;
+
+        $control=DB::table("control_kilometrajes")->select()->where("vehiculo_ids","=",$id_vehiculo)->first();
+        $contador=$objeto["km_entrada"]-$control->km_actuales;
+        $control=$control->id;
+        //incrimentar contador
+        
+        $cambio=control_kilometraje::find($control);
+        $cambio->km_actuales=$objeto["km_entrada"];
+        $cambio->contador=$contador;
+        $cambio->save();
+        self::crear_notificacion_estado($contador,$cambio->limite,$cambio->vehiculo_ids,"Alerta Cambio Aceite","El Vehículo Necesita cambio de aceite");
+
+        $cambio=control_kilometraje::find($control+1);
+        $cambio->km_actuales=$objeto["km_entrada"];
+        $cambio->contador=$contador;
+        $cambio->save();
+         self::crear_notificacion_estado($contador,$cambio->limite,$cambio->vehiculo_ids,"Alerta Cambio Correa","El Vehículo Necesita cambio de Correa");
+
+        $cambio=control_kilometraje::find($control+2);
+        $cambio->km_actuales=$objeto["km_entrada"];
+        $cambio->contador=$contador;
+        $cambio->save();
+        self::crear_notificacion_estado($contador,$cambio->limite,$cambio->vehiculo_ids,"Alerta Cambio Pastillas","El Vehículo Necesita cambio de pastillas");
+
         $actualizar_estado= estado_vehiculo::findOrFail($id_estado);
+
+
         $actualizar_estado->documento_dia=isset($objeto["documento_dia"])?1:0;
         $actualizar_estado->Luces_exteriores=isset($objeto["Luces_exteriores"])?1:0;
         $actualizar_estado->Luz_interior=isset($objeto["Luz_interior"])?1:0;
@@ -289,6 +353,7 @@ class RegistroContratoController extends Controller
         $actualizar_estado->Copas=isset($objeto["Copas"])?1:0;
         $actualizar_estado->mantenimiento=isset($objeto["mantenimiento"])?1:0;
         $actualizar_estado->lavado=isset($objeto["lavado"])?1:0;
+        $actualizar_estado->kilometraje=$objeto["km_entrada"];
         $actualizar_estado->save();
         $array_estado=array(
             "documento_dia"=>isset($objeto["documento_dia"])?1:0,

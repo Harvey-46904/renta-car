@@ -164,7 +164,7 @@ $("#desde").change(
        fechs=new Date(fecha_desde)
        fechs.setDate(fechs.getDate()+2)
        var formattedDate = moment(fechs).format('YYYY-MM-DD');
-        
+        asignar_saldo();
         $("#hasta").prop("min",formattedDate)
     }
 )
@@ -226,7 +226,10 @@ function borrar_datos_ticket_carro(){
         $("#name_car").val("Seleccione un vehículo")
         $("#t_vehiculo").val(0)
         $("#reserva").val(0)
-        
+        $('#exampleRadios1').prop("checked", false);
+        $('#exampleRadios2').prop("checked", false);
+        $('#exampleRadios3').prop("checked", false);
+        $('#nuevos_lugares').hide();
         $('#gridCheck2').prop("checked", false);
         $('#gridCheck1').prop("checked", false);
         asignar_saldo()
@@ -274,5 +277,5 @@ function confirmar_notificacion(id,id_vehiculo) {
 
   }
 
-
-
+  
+ 

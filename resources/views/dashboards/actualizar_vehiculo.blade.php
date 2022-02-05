@@ -250,8 +250,33 @@
                                     <textarea class="form-control bg-light" id="observaciones"  name="observaciones" rows="3"
                                         placeholder="Digite aquí las observaciones del vehículo">{{$vehiculo->observaciones}}</textarea>
                                 </div>
-
-
+                                <h3>Indicadores del vehículo</h3>
+                                <?php 
+                                $c=1;?>
+                                @foreach ($indicadores as $indicador)
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1"> Cambio de {{$indicador->tipo_vehi}}</label>
+                                        <label for="exampleFormControlTextarea1"> Acumulado {{$indicador->contador}}, Limite {{$indicador->limite}}</label>
+                                        
+                                        <div class="progress">
+                                            <?php 
+                                                $X=(100*$indicador->contador)/$indicador->limite;
+                                                $tamano="width: ".$X."%";
+                                                
+                                            ?>
+                                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="{{$tamano}}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="{{$indicador->id}}" id="defaultCheck1{{$indicador->id}}" name="cd{{$c++}}">
+                                            <label class="form-check-label" for="defaultCheck1{{$indicador->id}}">
+                                              Reiniciar Contador de kilometraje
+                                            </label>
+                                          </div>
+                                    </div>
+                                @endforeach
+                                
+                                
+                                
 
                                 <button type="submit" class="btn btn-primary">GUARDAR</button>
                             </form>

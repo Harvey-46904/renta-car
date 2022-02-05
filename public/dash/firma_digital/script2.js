@@ -30,11 +30,14 @@
 	}, false);
 		// Definimos que pasa cuando el boton draw-submitBtn es pulsado
 	submitBtn2.addEventListener("click", function (e) {
-	var dataUrl2 = canvas2.toDataURL();
+		pasar_dibujo2();
+	 }, false);
+	 function pasar_dibujo2(){
+		var dataUrl2 = canvas2.toDataURL();
 	drawText2.innerHTML = dataUrl2;
 	drawImage2.setAttribute("src", dataUrl2);
-	 }, false);
-
+		console.log("acabe de dibujar");
+	 }
 	// Activamos MouseEvent para nuestra pagina
 	var drawing = false;
 	var mousePos = { x:0, y:0 };
@@ -53,6 +56,7 @@
 	}, false);
 	canvas2.addEventListener("mouseup", function (e)
   {
+	  pasar_dibujo2();
 		drawing = false;
 	}, false);
 	canvas2.addEventListener("mousemove", function (e)

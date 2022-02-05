@@ -136,6 +136,10 @@
                              $fecha_prueba=strtotime($todo);
                              $desde=date('Y-m-d',$fecha_prueba);
                             ?>
+    
+                           
+
+
                             <label>Fecha de Salida</label>
                             <div class="form-group">
                                 <div class="form-line">
@@ -157,7 +161,10 @@
                             <label>KM Permitido</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="number" class="form-control" id="km_permitido" name="km_permitido">
+                                    <select class="form-control show-tick" id="km_permitido" name="km_permitido">
+                                        <option value="200 Km x Dia">200 Km x Dia</option>
+                                        <option value="Libre" >Libre</option>
+                                            </select>
                                 </div>
                             </div>
                             <label>Combustible de Salida</label>
@@ -175,9 +182,17 @@
 							<label>Destino</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="destino" name="destino">
+                                    <input type="text" class="form-control" id="destino" name="destino" placeholder="Lugar de destino">
                                 </div>
                             </div>
+                            <label>Voucher</label>
+                            
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control bg-ligth"  name="voucher" placeholder="Número o Efectivo" >
+                                </div>
+                            </div>
+              
                             
 							<br>
 
@@ -340,20 +355,55 @@
    
 
 <hr>
+<h3 class="text-center">Control Inventario</h3>
+<div class="container-fluid">
+    <div class="row ">
+      
+        <div class="col-md-8 text-center ">
+            <canvas id="draw-canvas3" class=""   width="390" height="340"   >       
+            </canvas>
+        </div>
+        <div class="col-md-4  text-center">
+            <label><h5>Color de pluma</h5></label><br><br>
+            <input  type="color" id="color3" value="#ff0000"><br><br>
+            <label><h5>Tamaño de pluma</h5></label><br><br>
+            <input  type="range" id="puntero3" min="1" default="1" max="5" width="10%">
+            <br>
+            <input type="button" class="button" id="draw-clearBtn3" value="Borrar Trazos">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" >
+            <input style="display:none;" type="button" class="button" id="draw-submitBtn3" value="Crear Firma" ></input>
+        </div>
+    </div>
+    <br/>
+    <div class="row" style="display:none;">
+        <div class="col-md-12">
+            <textarea id="draw-dataUrl3" name="inventario" class="form-control" rows="5">Base 64:</textarea>
+        </div>
+    </div>
+    <div class="contenedor" style="display:none;">
+        <div class="col-md-12">
+            <img id="draw-image3" src="" alt=" Firma" width="320" height="150"/>
+        </div>
+    </div>
+</div>
 
 <div class="contenedor">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 text-center" >
             <p>Entregado por</p>
             <div class="row">
                 <div class="col-md-12">
-                     <canvas id="draw-canvas" width="320" height="150">
+                     <canvas id="draw-canvas" width="320" height="150" >
+                        
                      </canvas>
                  </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <input type="button" class="button" id="draw-submitBtn" value="Crear Firma"></input>
+            <div class="row" >
+                <div class="col-md-12 text-center" >
+                    <input type="button" class="button" id="draw-submitBtn" value="Crear Firma" style="display:none;"></input>
                     <input type="button" class="button" id="draw-clearBtn" value="Borrar Firma"></input>
     
                             <label style="display:none;">Color</label>
@@ -366,19 +416,19 @@
             </div>
     
             <br/>
-            <div class="row">
+            <div class="row" style="display:none;">
                 <div class="col-md-12">
                     <textarea id="draw-dataUrl" name="entregado_por" class="form-control" rows="5">Base 64:</textarea>
                 </div>
             </div>
             <br/>
-            <div class="contenedor">
+            <div class="contenedor" style="display:none;">
                 <div class="col-md-12">
-                    <img id="draw-image" src="" alt=" Firma"/>
+                    <img id="draw-image" src="" alt=" Firma" width="320" height="150"/>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
             <p>Recibido por</p>
             <div class="row">
                 <div class="col-md-12">
@@ -387,12 +437,12 @@
                  </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <input type="button" class="button" id="draw-submitBtn2" value="Crear Firma"></input>
+                <div class="col-md-12 text-center" >
+                    <input type="button" class="button" id="draw-submitBtn2" value="Crear Firma" style="display:none;"></input>
                     <input type="button" class="button" id="draw-clearBtn2" value="Borrar Firma"></input>
     
                             <label style="display:none;">Color</label>
-                            <input style="display:none;" type="color" id="color2">
+                            <input style="display:none;" type="color" id="color2" >
                             <label style="display:none;">Tamaño Puntero</label>
                             <input style="display:none;" type="range" id="puntero2" min="1" default="1" max="5" width="10%">
     
@@ -402,13 +452,13 @@
             </div>
     
             <br/>
-            <div class="row">
+            <div class="row" style="display:none;">
                 <div class="col-md-12">
                     <textarea id="draw-dataUrl2" name="recibido_por" class="form-control" rows="5">Base 64:</textarea>
                 </div>
             </div>
             <br/>
-            <div class="contenedor">
+            <div class="contenedor" style="display:none;">
                 <div class="col-md-12">
                     <img id="draw-image2" src="" alt=" Firma"/>
                 </div>
@@ -426,4 +476,45 @@
         </div>
     </div>
 </section>
+<script type="text/javascript">
+    ims("carrito_plano.png");
+    var drawImage3 = document.getElementById("draw-image3");
+    var clearBtn3 = document.getElementById("draw-clearBtn3");
+        clearBtn3.addEventListener("click", function (e) {
+            // Definimos que pasa cuando el boton draw-clearBtn es pulsado
+            clearCanvas();
+            drawImage3.setAttribute("src", "");
+        }, false);
+    
+        function clearCanvas() {
+            var canvas3 = document.getElementById("draw-canvas3");
+            canvas3.width = canvas3.width;
+            ims("carrito_plano.png");
+           
+        }
+        function ims(a){
+            console.log(a)
+            var canvas4 = document.getElementById('draw-canvas3');
+            //Get a 2D drawing context for the canvas.
+            var context = canvas4.getContext('2d');
+            var urlmia=window.location.origin+"/renta_car/public/storage/"+a;
+            var imgPath = urlmia;
+            //Create a new Image object.
+            var imgObj = new Image();
+            //Set the src of this Image object.
+            imgObj.setAttribute('crossorigin', 'anonymous'); // works for me
+            imgObj.src = imgPath;
+            //the x coordinates
+            var x = 0;
+            
+            //the y coordinates
+            var y = 0;
+            
+            //When our image has loaded.
+            imgObj.onload = function(){
+                //Draw the image onto the canvas.
+                context.drawImage(imgObj,0, 0, 390,350);
+            }
+          }
+    </script>
 @endsection

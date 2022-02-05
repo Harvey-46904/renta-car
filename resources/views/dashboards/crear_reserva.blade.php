@@ -102,7 +102,7 @@
                                     </div>
                                         <div class="form-group row form_person">
                                             <hr>
-                                            <div class="col-md-5">Lugar</div>
+                                            <div class="col-md-5">Trayecto</div>
                                             <div class="col-sm-7">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="lugar" id="exampleRadios1" value="Pasto" >

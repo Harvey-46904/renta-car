@@ -173,13 +173,20 @@
                                     <h3>Encuentre los mejores autos aquí.</h3>
                                 </div>
                             </div>
+                            
                             <div class="col-md-8">
                                 <div class="find-form">
-                                    <form method="POST" action="{{ route('post_reserva_usuario') }}">
+                                    @if (\Session::has('error'))
+                                    <div class="alert alert-danger" role="alert">
+                                        ERROR:{!! \Session::get('error') !!}
+                                    </div>
+                                    @endif
+                                    <form method="POST" id="consulta_carros" action="{{ route('post_reserva_usuario') }}" >
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <p>
+                                                    
                                                 <select id="lugar-entrega" name="lugar_entrega">
                                                 <option disabled selected>Lugar de entrega</option>
                                                 <option value="Pasto">Pasto - Aeropuerto Antonio Nariño</option>
@@ -227,7 +234,7 @@
                                             </p>
                                             </div>
                                             <div class="col-md-4">
-                                                <p><button type="submit" class="gauto-theme-btn">BUSCAR</button></p>
+                                                <p><button type="submit" class="gauto-theme-btn" id="Buscar">BUSCAR</button></p>
                                             </div>
                                         </div>
                                     </form>
@@ -257,6 +264,23 @@
                             <!-- All Tab Start -->
                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                 <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spart_gt.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Spark GT</h3>
+                                                </a>
+                                                <h4>$150.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Spark GT')" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-beat.png')!!}"
@@ -340,23 +364,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/hb20.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Hyundai HB20</h3>
-                                                </a>
-                                                <h4>$210.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Hyundai HB20')" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="site-heading">
                                     <br>
@@ -383,19 +391,17 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster.png')!!}"
-                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/qashqai.png')!!}" alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Renault Duster</h3>
+                                                    <h3>Nissan Qashqai</h3>
                                                 </a>
-                                                <h4>$290.000<span>/ Día</span></h4>
+                                                <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
-                                                <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Renault Duster')" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Nissan Qashqai')" class="offer-btn-1">Reservar</a><a
+                                                        href="" class="offer-btn-2">Detalles</a>
                                                 </div>
-                                              
                                             </div>
                                         </div>
                                     </div>
@@ -421,24 +427,7 @@
 
                                     
                             </div>
-                            <div class="row justify-content-center">
-                            <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/qashqai.png')!!}" alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Nissan Qashqai</h3>
-                                                </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Nissan Qashqai')" class="offer-btn-1">Reservar</a><a
-                                                        href="" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            
                             </div>
                             <!-- All Tab End -->
                         </div>

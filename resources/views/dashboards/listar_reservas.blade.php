@@ -2,6 +2,7 @@
 @section('registro_clientes')
     <section class="content">
         <div class="container-fluid">
+           
             <div class="row clearfix">
                 @if (Session::get('correcto'))
                     <div class="alert alert-success">
@@ -21,12 +22,32 @@
                         <span><b>El cliente se actualizo correctamente</span>
                     </div>
                 @endif
+                @if (Session::get('error'))
+                <div class="alert alert-success">
+                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                    <span><b>Reserva Eliminada</span>
+                </div>
+            @endif
+            
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
                                 Lista de Reservas
                             </h2>
+                            <div class="row justify-content-center">
+                
+                                <form action="{{route('serial_buscar')}}" method="POST" >
+                                    @csrf
+                                <div class="col-md-8 bg-danger"> <input type="text" name="serial" class="form-control bg-light" placeholder="Serial Reserva"></div>
+                                <div class="col-md-4 text-center"> <button type="submit" class="btn btn-primary m-t-15 waves-effect">Buscar</button></div>
+                                                </form>
+                                            
+                            </div>
+                           
                             <div class="body table-responsive">
                                 <table class="table table-striped" >
                                     <thead>
@@ -40,12 +61,13 @@
                                             <th>VEHICULO</th>
                                             <th class="no_salto">FECHA DE INICIO</th>
                                             <th class="no_salto">FECHA DE ENTREGA</th>
-                                            <th class="text-center">DIAS DE ALQUILER</th>
+                                          
                                             <th>TRANSPORTE AEREOPUERTO</th>
                                             <th>LAVADO</th>
                                             <th>VALOR DE RESERVA</th>
                                             <th>VALOR TOTAL</th>
                                             <th>CONTRATO</th>
+                                            <th>ELIMINAR</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -55,12 +77,12 @@
                                            
                                             
                                             ?>
-                                              <td>{{$i++}}</td>
+                                              <td>{{$reserva->id_reserva}}</td>
                                               <td>{{$reserva->nombres}} {{$reserva->apellidos}} </td>
                                               <td>{{$reserva->nombre_vehiculo}} {{$reserva->modelo}} </td>
                                               <td class="text-center">{{ date('Y-m-d', strtotime($reserva->fecha_inicio))}}</td>
                                               <td class="text-center">{{ date('Y-m-d', strtotime($reserva->fecha_fin))}}</td>
-                                              <td class="text-center"> <b>{{$reserva->dias_reserva}}</b></td>
+                                            
                                               @if ($reserva->transporte==1)
                                                 <td class="bg-verde text-center ">{{$reserva->lugar}} </td>
                                                 @else
@@ -93,10 +115,27 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                            <td>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <a type="button"
+                                                                class="btn btn-danger btn-circle waves-effect waves-circle waves-float d-inline"
+                                                                href="{{ route('eliminar_reserva', $reserva->id_reserva) }}">
+                                                                <i class="material-icons">articleIcon</i>
+                                                            </a>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+                                <div class="d-flex justify-content-center">
+                                    {!! $reservas->links() !!}
+                                </div> 
                             </div>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\ReservaController;
 use App\Models\clientes;
 use Illuminate\Http\Request;
 use DB;
@@ -18,7 +18,7 @@ class ClientesController extends Controller
     {
         $clientes=DB::table('clientes')
         ->select()
-        ->get();
+        ->paginate(5);
         return view('dashboards.lista_clientes',compact("clientes"));
        
     }
@@ -41,19 +41,99 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
+        $todo=$request->all();
+        foreach ($todo as $key => $value) {
+          if($value=="")  return redirect()->back()->with('error', 'Debe Rellenar Todos los Campos');   
+        }
+        
+       $solicitud=$request->cliente_reserva;
         $crear_clientes=new clientes;
         $crear_clientes->tipo_documento=$request->tipo_documento;
         $crear_clientes->numero_documento= $request->numero_documento;
         $crear_clientes->nombres= $request->nombres;
         $crear_clientes->apellidos= $request->apellidos;
+        $crear_clientes->email=$request->email;
         $crear_clientes->direccion= $request->direccion;
         $crear_clientes->telefono= $request->telefono;
         $crear_clientes->conductor_adicional= $request->conductor_adicional;
         $crear_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
         $crear_clientes->save();
+        if($solicitud=="cliente"){
+            return response(["informacion"=>"el cliente se registro"]);
+        }
         return Redirect::to('/listar_cliente')->with('correcto', 'El cliente se creo correctamente');
       return response(["data"=>"usuario guardado"]);
     }
+    public function store1(Request $request,$id_vehiculo,$desde,$hasta)
+    {
+        
+        $existente=$request->yes;
+        if($existente==null){
+            if(
+            $request->tipo_documento ==""  AND
+            $request->numero_documento ==""  AND
+            $request->nombres ==""  AND
+            $request->apellidos ==""  AND
+            $request->email ==""  AND
+            $request->direccion ==""  AND
+            $request->telefono ==""  AND
+            $request->conductor_adicional ==""  AND
+            $request->documento_conductor_adicional
+            ){
+                return redirect()->back()->with('error', 'Debe Rellenar Todos los Campos'); 
+            }
+
+            $solicitud=$request->cliente_reserva;
+            $crear_clientes=new clientes;
+            $crear_clientes->tipo_documento=$request->tipo_documento;
+            $crear_clientes->numero_documento= $request->numero_documento;
+            $crear_clientes->nombres= $request->nombres;
+            $crear_clientes->apellidos= $request->apellidos;
+            $crear_clientes->email=$request->email;
+            $crear_clientes->direccion= $request->direccion;
+            $crear_clientes->telefono= $request->telefono;
+            $crear_clientes->conductor_adicional= $request->conductor_adicional;
+            $crear_clientes->documento_conductor_adicional=$request->documento_conductor_adicional;
+            $crear_clientes->save();
+            if($solicitud=="cliente" AND $crear_clientes->id_cliente!=""){
+                $reserva=new ReservaController();
+                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$crear_clientes->id_cliente,$desde,$hasta);
+               
+                return Redirect::to('/reserva_exitosa')->with(["clientes"=>$clientes,"vehiculo"=>$vehiculo,"reservas"=>$reservas]);
+            }
+            else{
+                return response(["data"=>"error"]);
+            }
+        }else{
+            $id_cliente=DB::table("clientes")->select("id_cliente")->where("numero_documento","=",$existente)->first();
+            $reserva=new ReservaController();
+            $carros_disponibles=$reserva->comprobar_vehiculos_disponibles($desde,$hasta);
+           
+            $respuesta= self::verificador_carro($carros_disponibles,$id_vehiculo);
+          
+           
+            if($id_cliente!=null AND $respuesta==1){
+               
+                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$id_cliente->id_cliente,$desde,$hasta);
+                return Redirect::to('/reserva_exitosa')->with(["clientes"=>$clientes,"vehiculo"=>$vehiculo,"reservas"=>$reservas]);
+            }else{
+                return response(["data"=>"error"]);
+            }
+            
+        }
+        
+    }
+    function verificador_carro($array,$carro){
+        $verificador=false;
+        for ($i=0; $i <= count($array)-1 ; $i++) { 
+        //  if($array[$i]->id_vehiculo==$carro)echo $i ;
+      
+        if($array[$i]->id_vehiculo==$carro)$verificador= true ;
+        }
+      return $verificador;
+        
+    }
+    
 
     /**
      * Display the specified resource.
@@ -107,6 +187,7 @@ class ClientesController extends Controller
         $actualizar_clientes->numero_documento= $request->numero_documento;
         $actualizar_clientes->nombres= $request->nombres;
         $actualizar_clientes->apellidos= $request->apellidos;
+        $actualizar_clientes->email=$request->email;
         $actualizar_clientes->direccion= $request->direccion;
         $actualizar_clientes->telefono= $request->telefono;
         $actualizar_clientes->conductor_adicional= $request->conductor_adicional;

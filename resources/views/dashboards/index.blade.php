@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Rent A Car Pasto - Dashboard</title>
-    <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Favicon <link rel="icon" href="favicon.ico" type="image/x-icon">-->
+    <link rel="icon" href="{!! asset('favicon.ico') !!}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
@@ -97,7 +97,7 @@ $data=$data["data"];
     </div>
     <div class="notifications" id="box" style="height: auto; opacity: 1;">
         
-        <h2>Notificationes - <span>{{ count($data) }}</span></h2>
+        <h2>Notificasiones - <span>{{ count($data) }}</span></h2>
         @foreach ($data as $item)
         <div class="notifications-item" onclick="confirmar_notificacion({{$item['id']}},{{$item['id_v']}})"> 
             <img src="{!! asset($item["img_notificacion"])!!}" alt="img">
@@ -294,6 +294,7 @@ $data=$data["data"];
     <!-- Firmas Digitales Js -->
     <script src="{!! asset('dash/firma_digital/script.js') !!}"></script>
     <script src="{!! asset('dash/firma_digital/script2.js') !!}"></script>
+    <script src="{!! asset('dash/firma_digital/script3.js') !!}"></script>
 
     <script src="{!! asset('dash/js/alertas.js') !!}"></script>
     <!-- Demo Js -->

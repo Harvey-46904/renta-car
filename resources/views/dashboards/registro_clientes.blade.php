@@ -3,6 +3,10 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
+            @if (\Session::has('error'))
+           
+            <h6 class="text-dark bg-danger"> ERROR:{!! \Session::get('error') !!}</h6>
+            @endif
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -31,7 +35,7 @@
                             <select class="form-control show-tick" id="tipo_documento" name="tipo_documento">
                                 <option value="">Seleccione...</option>
                                 <option value="Cédula de ciudadanía" >Cédula de ciudadanía</option>
-                                <option value="Registro Civil" >Registro Civil</option>
+                               
                                 <option value="Pasaporte" >Pasaporte</option>
                                 <option value="Documento Extranjero" >Documento Extranjero</option>
                                     </select>
@@ -56,6 +60,13 @@
                                     <input type="text" id="apellidos" name="apellidos" class="form-control">
                                 </div>
                             </div>
+                            <label for="email">Correo Electronico</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="email" id="email" name="email" class="form-control">
+                                </div>
+                            </div>
+                            
                             <label for="direccion">Dirección</label>
                             <div class="form-group">
                                 <div class="form-line">

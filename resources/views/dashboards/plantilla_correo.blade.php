@@ -22,7 +22,15 @@
 
     <div align=center>
         <table width=850>
+            <tr>
+                <td>
+                    <label>Serial Reserva</label>
+                </td>
 
+                <td>
+                    <b id="tipo_documento">{{$reservas->id_reserva}}</b>
+                </td>
+            </tr>
             <tr>
                 <td>
                     <label>Tipo de Documento</label>
@@ -304,6 +312,15 @@
                             <br><br>
                             Para la renta pedimos una garantía de 1.000.000 con tarjeta de crédito por vehículo,
                             y 1.500.000 por las camionetas.
+                            <br><br>
+                            <b>CONDICIONES DEL ALQUILER</b>
+                            <br><br>
+                            <ul>
+                                <li>Cubre 90%</li>
+                                <li>Deducible el 10% a responsabilidad del cliente deducible: $ 1.000.000</li>
+                                <li><b>Rent A Car Pasto no hace devolución del valor de la reserva, el valor puede ser utilizado para otra reserva.</b></li>
+                               <li>El valor bloqueado de su tarjeta de crédito permanecerá bloqueado durante la renta, al momento de finalizar el servicio, se solicita el desbloqueo a la franquicia correspondiente, por favor tener en cuenta que este tramite tarda entre 1 a 5 días hábiles dependiendo del del banco emisor.</li>
+                            </ul>
                             <br><br>
                             Quedo atenta a sus comentarios y solicitudes.
                         </p>

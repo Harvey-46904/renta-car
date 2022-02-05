@@ -30,10 +30,15 @@
 	}, false);
 		// Definimos que pasa cuando el boton draw-submitBtn es pulsado
 	submitBtn.addEventListener("click", function (e) {
-	var dataUrl = canvas.toDataURL();
-	drawText.innerHTML = dataUrl;
-	drawImage.setAttribute("src", dataUrl);
+		pasar_dibujo();
 	 }, false);
+
+	 function pasar_dibujo(){
+		var dataUrl = canvas.toDataURL();
+		drawText.innerHTML = dataUrl;
+		drawImage.setAttribute("src", dataUrl);
+		console.log("acabe de dibujar");
+	 }
 
 	// Activamos MouseEvent para nuestra pagina
 	var drawing = false;
@@ -53,6 +58,8 @@
 	}, false);
 	canvas.addEventListener("mouseup", function (e)
   {
+	  console.log("se levanto");
+	  pasar_dibujo();
 		drawing = false;
 	}, false);
 	canvas.addEventListener("mousemove", function (e)
@@ -110,6 +117,7 @@
 	function getTouchPos(canvasDom, touchEvent) {
 		var rect = canvasDom.getBoundingClientRect();
     console.log(touchEvent);
+	
     /*
       Devuelve el tamaño de un elemento y su posición relativa respecto
       a la ventana de visualización (viewport).
@@ -130,6 +138,7 @@
 			ctx.moveTo(lastPos.x, lastPos.y);
 			ctx.lineTo(mousePos.x, mousePos.y);
       console.log(punta.value);
+	  
     	ctx.lineWidth = punta.value;
 			ctx.stroke();
       ctx.closePath();

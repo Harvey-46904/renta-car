@@ -16,12 +16,14 @@ class CreateRegistroContratosTable extends Migration
         Schema::create('registro_contratos', function (Blueprint $table) {
             $table->id();
             $table->integer('id_de_reserva');
+            $table->string('voucher');
             $table->dateTime('fecha_salida');
             $table->integer('km_salida');
-            $table->integer('km_permitido');
+            $table->string('km_permitido');
             $table->string('hora_salida');
             $table->string('combustible_salida');
             $table->string('destino');
+            $table->string('inventario_salida');
             $table->string('entregado_por');
             $table->string('recibido_por');
             $table->string('observaciones_entregado')->nullable();
@@ -33,6 +35,7 @@ class CreateRegistroContratosTable extends Migration
             $table->integer('km_por_cobrar')->nullable();
             $table->string('combustible_entrada')->nullable();
             $table->integer('dias')->nullable();
+            $table->string('inventario_entrada')->nullable();
             $table->string('entregado_por_entrada')->nullable();
             $table->string('recibido_por_entrada')->nullable();
             $table->string('observaciones_entregado_entrada')->nullable();

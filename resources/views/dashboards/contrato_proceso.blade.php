@@ -50,9 +50,7 @@ footer {
 <body>
 
    
-    <footer>
-      RENT A CAR PASTO. Cel: 322 779 5422 www.rentacarpasto.com
-    </footer>
+    
 
    
     <div align="center">
@@ -101,7 +99,7 @@ footer {
 
             <tr>
                 <td><b>GARANTIA - VOUCHER</b></td>
-                <td>none</td>
+                <td>{{$contratos->voucher}}</td>
             </tr>
 
             <tr>
@@ -223,7 +221,7 @@ footer {
         <table >
             <tr>
                 <td>
-                    <img src="">
+                    <img src="{{url('storage/firmas/'.$contratos->inventario_salida)}}" width="" height=""/>
                 </td>
 
                 <td>

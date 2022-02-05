@@ -258,6 +258,7 @@
     <!--Main js-->
     <script src="{!! asset('webpage/js/main.js') !!}"></script>
     <!--WhatsappButton js-->
+    <script src="{!! asset('dash/js/sweetalert2.all.min.js') !!}"></script>
     <script src="{!! asset('webpage/js/whpbtn.js') !!}"></script>
     <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
     <script src="{!! asset('webpage/js/style_hache.js') !!}"></script>

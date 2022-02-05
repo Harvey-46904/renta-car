@@ -115,17 +115,37 @@ class NotificacionesController extends Controller
             ->orwhere('lavado','=',0)
             ->get();
             $contador=count($estados);
-       if($contador==0){
+
+            $control=DB::select("SELECT * FROM `control_kilometrajes` WHERE `contador` >= `limite` ");
+            $contador_control=count($control);
+
+       
+       if($contador==0 AND $contador_control==0){
             return response(["data"=>"ok"]);
        }
       // self::create("hola","mundo");
-      foreach ($estados as $estado ) {
-            $id=$estado->id_vehiculo;
-            $nombre= $estado->nombre_vehiculo;
-            $descripcion="El Vehículo Necesita Revisión";
+      if($contador!=0){
+            foreach ($estados as $estado ) {
+                $id=$estado->id_vehiculo;
+                $nombre= $estado->nombre_vehiculo;
+                $descripcion="El Vehículo Necesita Revisión";
+                $img="dash/images/revision.jpg";
+                self::create($nombre,$descripcion,$img,$id);
+            }
+      }
+      if($contador_control!=0){
+        foreach ($control as $contro ) {
+            $id=$contro->vehiculo_ids;
+            $nombre= $contro->tipo_vehi;
+            $descripcion="El Vehículo Necesita cambio de ".$nombre;
             $img="dash/images/revision.jpg";
             self::create($nombre,$descripcion,$img,$id);
-      }
+        }
+    }
+ 
+     
+
+      
     
        
     }

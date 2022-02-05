@@ -104,12 +104,18 @@ Route::get('contacto', function () {
 
 //VISTA LISTAR RESERVA
 Route::get('listar_reservas', "ReservaController@listar_reserva");
+Route::post('listar_reservas', "ReservaController@listar_reserva_id")->name("serial_buscar");
+Route::get('reserva_cliente/{data}/{fecha1}/{fecha2}', "ReservaController@reserva_cliente")->name("reserva_cliente");
 
 //vista registrar contrato
 Route::get('registrar_contrato', function () {
     return view('dashboards.registrar_contrato');
 });
+Route::get('reserva_exitosa', function () {
+    return view('webpage.confirmacion_reserva');
+});
 
+Route::get('eliminar_reserva/{id}',"ReservaController@destroy")->name("eliminar_reserva");
 Route::get('lista_vehiculos',"VehiculosController@index");
 Route::get('lista_contratos',"RegistroContratoController@index");
 Route::get('lista_contratos_finalizados',"RegistroContratoController@index_fin");
@@ -120,6 +126,8 @@ Route::get('obtener_carro/{id}',"VehiculosController@obtener_carro")->name("obte
 //metodos de envio en este caso post
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
+Route::post('crear_clientes1/{id_vehiculo}/{desde}/{hasta}','ClientesController@store1')->name('post_cliente1');
+
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
 Route::post('crear_reserva','ReservaController@store')->name('post_reserva');

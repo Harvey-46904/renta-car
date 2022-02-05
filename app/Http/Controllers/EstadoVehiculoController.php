@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\estado_vehiculo;
 use App\Models\vehiculos;
 use Illuminate\Http\Request;
+use App\Models\control_kilometraje;
+use App\Http\Controllers\ControlKilometrajeController;
 use DB;
 use Redirect;
 use Session;
@@ -110,6 +112,9 @@ class EstadoVehiculoController extends Controller
         $crear_estado->kilometraje=$request->kilometraje;
         $crear_estado->observaciones= $request->observaciones;
         $crear_estado->save();
+
+        $nuevo_tipo=new ControlKilometrajeController();
+        $nuevo_tipo=$nuevo_tipo->create($id,$request->kilometraje);
         return Redirect::to('/listar_vehiculo')->with('correcto', 'El vehículo se creo correctamente');
         return response(["datas"=>"datos agregados correctamente"]);
     }
@@ -135,7 +140,12 @@ class EstadoVehiculoController extends Controller
         ->select()
         ->where("id_vehiculo","=",$id)
         ->first();
-        return view('dashboards.actualizar_vehiculo',compact("vehiculo"));
+
+        $indicadores=DB::table("control_kilometrajes")
+        ->select()
+        ->where("vehiculo_ids","=",$id)
+        ->get();
+        return view('dashboards.actualizar_vehiculo',compact("vehiculo","indicadores"));
         
     }
 
@@ -159,6 +169,27 @@ class EstadoVehiculoController extends Controller
      */
     public function update(Request $request,$id_vehiculo)
     {
+        
+        if($request->cd1!=null){
+           $cambios=control_kilometraje::find($request->cd1);
+           $cambios->contador=0;
+           $cambios->save();
+          
+        }
+        if($request->cd2!=null){
+            $cambios=control_kilometraje::find($request->cd2);
+            $cambios->contador=0;
+            $cambios->save();
+           
+         }
+         if($request->cd3!=null){
+            $cambios=control_kilometraje::find($request->cd3);
+            $cambios->contador=0;
+            $cambios->save();
+           
+         }
+
+      
         //actualizar vehiculo
         $actualizar_vehiculo=vehiculos::findOrFail($id_vehiculo);
         $actualizar_vehiculo->nombre_vehiculo=$request->nombre_vehiculo;
@@ -195,6 +226,9 @@ class EstadoVehiculoController extends Controller
         $actualizar_estado->kilometraje=$request->kilometraje;
         $actualizar_estado->observaciones=$request->observaciones;
         $actualizar_estado->save();
+
+
+
         return Redirect::to('/listar_vehiculo')->with('correcto1', 'El cliente se creo correctamente');
         return response(["data"=>$request->all(),"id"=>$id_estado]);
         

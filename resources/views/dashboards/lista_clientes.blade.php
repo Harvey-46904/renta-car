@@ -77,9 +77,16 @@
                                                 </td>
                                             </tr>
                                         @endforeach
+                                      
                                     </tbody>
+                                  
                                 </table>
+                                <div class="d-flex justify-content-center">
+                                    {!! $clientes->links() !!}
+                                </div>  
+                               
                             </div>
+                           
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"

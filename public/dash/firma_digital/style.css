@@ -3,7 +3,7 @@ body {
   padding-bottom: 20px;
 }
 
-#draw-canvas,#draw-canvas2{
+#draw-canvas,#draw-canvas2,#draw-canvas3{
   border: 2px dotted #CCCCCC;
   border-radius: 5px;
   cursor: crosshair;
