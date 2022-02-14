@@ -97,7 +97,7 @@ $data=$data["data"];
     </div>
     <div class="notifications" id="box" style="height: auto; opacity: 1;">
         
-        <h2>Notificasiones - <span>{{ count($data) }}</span></h2>
+        <h2>Notificaciones - <span>{{ count($data) }}</span></h2>
         @foreach ($data as $item)
         <div class="notifications-item" onclick="confirmar_notificacion({{$item['id']}},{{$item['id_v']}})"> 
             <img src="{!! asset($item["img_notificacion"])!!}" alt="img">

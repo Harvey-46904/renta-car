@@ -483,7 +483,7 @@ var clearBtn3 = document.getElementById("draw-clearBtn3");
 		var canvas4 = document.getElementById('draw-canvas3');
 		//Get a 2D drawing context for the canvas.
 		var context = canvas4.getContext('2d');
-		var urlmia=window.location.origin+"/renta_car/public/storage/firmas/"+a;
+		var urlmia=window.location.origin+"/storage/firmas/"+a;
 		var imgPath = urlmia;
 		//Create a new Image object.
 		var imgObj = new Image();
