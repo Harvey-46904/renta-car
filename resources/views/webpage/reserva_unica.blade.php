@@ -31,8 +31,25 @@
                     <div class="row justify-content-center bg-black text-light mb-1 py-3">
                         <h5 >{{$disponible->nombre_vehiculo}}</h5>
                     </div>
+                           
+                            <div class="row pt-3">
+                                <img   class="rounded" src="{{ url('/storage/vehiculo/', $disponible->foto_vehiculo) }}">
+                            </div>
+                            <div class="row  pt-3 justify-content-center bg-grid text-light">
+                                <div class="col-md-3 col-3"><i class="fas fa-users"> 4</i></div>
+                                <div class="col-md-3 col-3"><i class="fas fa-door-open"> 4</i></div>
+                                
+                                <div class="col-md-4 col-4"><i class="fas fa-cash-register"> Mecánico </i></div>
+                                
+                            </div>
+                            <div class="row justify-content-center py-3">
+                                <div class="col-md-5 col-5 text-light bg-carmesy">Desde</div>
+                                <div class="col-md-5 col-5 text-light bg-carmesy">Hasta</div>
+                                <div class="col-md-5 col-5 text-light bg-black">{{$desdes}}</div>
+                                <div class="col-md-5 col-5 text-light  bg-black">{{$hastas}}</div>
+                            </div>
                             <div class="row  mb-1 text-center">
-                                <div class="col-md-6  col-4 bg-carmesy  text-light text-center">Total</div>
+                                <div class="col-md-6  col-4 bg-carmesy  text-light text-center">Total Dias</div>
                                 <div class="col-md-6  col-8  bg-black text-light ">
                                   <h5>  @if ($dia==1)
                                     {{$dia}} Día
@@ -42,39 +59,63 @@
                                 </h5></div>
                             </div>
                             <div class="row  mb-1">
-                                <div class="col-md-6 col-4 bg-carmesy  text-light">COP</div>
+                                <div class="col-md-6 col-4 bg-carmesy  text-light">Precio Alquiler</div>
                                 <?php 
                                 $valor=$dia*$disponible->precio_alquiler; 
+                                $valor_suma=$valor;
                                 $valor=  number_format($valor, 0);
                                 ?>
                                 <div class="col-md-6 col-8 bg-black text-light"><h5>${{$valor}}</h5></div>
                             </div>
-                            <div class="row  pt-3 justify-content-center bg-grid text-light">
-                                <div class="col-md-3 col-3"><i class="fas fa-users"> 4</i></div>
-                                <div class="col-md-3 col-3"><i class="fas fa-door-open"> 4</i></div>
-                                
-                                <div class="col-md-4 col-4"><i class="fas fa-cash-register"> Mecánico </i></div>
-                                
+                            <?php 
+                            function asignar_lugar_precio($a){
+                                $lugar="";
+                                $precio=0;
+                                switch ($a) {
+                                    case 1:
+                                        $lugar="Pasto";
+                                        $precio=0;
+                                        break;
+                                    case 2:
+                                        $lugar="Aeropuerto-Pasto";
+                                        $precio=35000;
+                                        break;
+                                    case 3:
+                                        $lugar="Aeropuerto-Ipiales";
+                                        $precio= 120000;
+                                        break;
+                                }
+                                return array($lugar,$precio);
+                            }
+                            $partes =explode("-", $transporte);
+                            $transporte_entrega=$partes[0]; 
+                            $transporte_recogida=$partes[1]; 
+                            list($transporte_entrega,$transporte_precio)=asignar_lugar_precio($transporte_entrega);
+                            list($transporte_recogida,$transporte_precio1)=asignar_lugar_precio($transporte_recogida);
+                            ?>
+                            <div class="row  mb-1">
+                                <div class="col-md-6 col-4 bg-carmesy  text-light">Lugar Entrega<br>{{$transporte_entrega }}</div>
+                                <div class="col-md-6 col-8 bg-black text-light align-items-center"><h5>${{$transporte_precio }}</h5></div>
                             </div>
-                            <div class="row pt-3">
-                                <img   class="rounded" src="{{ url('/storage/vehiculo/', $disponible->foto_vehiculo) }}">
+                            <div class="row  mb-1">
+                                <div class="col-md-6 col-4 bg-carmesy  text-light">Lugar Recogida<br>{{$transporte_recogida }} </div>
+                                <div class="col-md-6 col-8 bg-black text-light align-items-center"><h5>${{$transporte_precio1 }}</h5></div>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-md-5 col-5 text-light bg-carmesy">Desde</div>
-                                <div class="col-md-5 col-5 text-light bg-carmesy">Hasta</div>
-                                <div class="col-md-5 col-5 text-light bg-black">{{$desdes}}</div>
-                                <div class="col-md-5 col-5 text-light  bg-black">{{$hastas}}</div>
+                            <div class="row  mb-1">
+                                <div class="col-md-6 col-4 bg-carmesy  text-light">Total</div>
+                                <div class="col-md-6 col-8 bg-black text-light align-items-center"><h5>${{$valor_suma+$transporte_precio+$transporte_precio1}}</h5></div>
                             </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     @if (\Session::has('error'))
            
                     <h6 class="bg-danger text-light"> ERROR:{!! \Session::get('error') !!}</h6>
                     @endif
                     
-                    <form action="{{route('post_cliente1',['id_vehiculo'=>$disponible->id_vehiculo,'desde'=>$desdes,'hasta'=>$hastas])}}" method="POST" >
+                    <form action="{{route('post_cliente1',['id_vehiculo'=>$disponible->id_vehiculo,'desde'=>$desdes,'hasta'=>$hastas,'transporte'=>$transporte])}}" method="POST" >
                         @csrf
+                        
                         <div id="parte1" class="">
                             <label for="tipo_documento">Tipo de Documento</label>
                             <div class="form-group">

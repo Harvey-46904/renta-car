@@ -66,7 +66,7 @@
                     <img   class="rounded" src="{{ url('/storage/vehiculo/', $disponible->foto_vehiculo) }}">
                 </div>
                 <div class="col-md-3 align-self-center"><button type="button" class="btn btn-success btn-block" onclick="reserva_wasap('{{$disponible->nombre_vehiculo}}','{{$todo['desdes']}}','{{$todo['hastas']}}')"> <i class="fa fa-whatsapp icono"></i> Escríbenos</button>
-                    <button type="button" class="btn btn-danger btn-block" ><a class="text-light" href="{{ route('reserva_cliente',['data'=>$disponible->id_vehiculo,'fecha1'=>$todo['desdes'],'fecha2'=>$todo['hastas']])}}">Reservar Ahora</a></button></div>
+                    <button type="button" class="btn btn-danger btn-block" ><a class="text-light" href="{{ route('reserva_cliente',['data'=>$disponible->id_vehiculo,'fecha1'=>$todo['desdes'],'fecha2'=>$todo['hastas'],'transporte'=>$transporte ])}}">Reservar Ahora</a></button></div>
             </div>
             @endforeach
             

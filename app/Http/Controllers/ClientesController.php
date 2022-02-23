@@ -64,7 +64,7 @@ class ClientesController extends Controller
         return Redirect::to('/listar_cliente')->with('correcto', 'El cliente se creo correctamente');
       return response(["data"=>"usuario guardado"]);
     }
-    public function store1(Request $request,$id_vehiculo,$desde,$hasta)
+    public function store1(Request $request,$id_vehiculo,$desde,$hasta,$transporte)
     {
         
         $existente=$request->yes;
@@ -97,7 +97,7 @@ class ClientesController extends Controller
             $crear_clientes->save();
             if($solicitud=="cliente" AND $crear_clientes->id_cliente!=""){
                 $reserva=new ReservaController();
-                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$crear_clientes->id_cliente,$desde,$hasta);
+                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$crear_clientes->id_cliente,$desde,$hasta,$transporte);
                
                 return Redirect::to('/reserva_exitosa')->with(["clientes"=>$clientes,"vehiculo"=>$vehiculo,"reservas"=>$reservas]);
             }

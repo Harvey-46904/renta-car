@@ -136,8 +136,36 @@ class ReservaController extends Controller
         
         return response(["data"=>"ok"]);
     }
-    public function reserva_unica($id_vehiculo,$id_cliente,$desde,$hasta){
+
+    function asignar_lugar_precio_reserva($a){
+        $lugar="";
+        $precio=0;
+        switch ($a) {
+            case 1:
+                $lugar="Pasto";
+                $precio=0;
+                break;
+            case 2:
+                $lugar="Aeropuerto-Pasto";
+                $precio=35000;
+                break;
+            case 3:
+                $lugar="Aeropuerto-Ipiales";
+                $precio= 120000;
+                break;
+        }
+        return array($lugar,$precio);
+    }
+    public function reserva_unica($id_vehiculo,$id_cliente,$desde,$hasta,$transporte){
+        $partes =explode("-", $transporte);
+                            $transporte_entrega=$partes[0]; 
+                            $transporte_recogida=$partes[1]; 
+                            list($transporte_entrega,$transporte_precio)=self::asignar_lugar_precio_reserva($transporte_entrega);
+                            list($transporte_recogida,$transporte_precio1)=self::asignar_lugar_precio_reserva($transporte_recogida);
+       $text_lugar="Lugar de Entrega ".$transporte_entrega." Lugar de Recogida ".$transporte_recogida;
         //obtengo el cliente 
+
+
         $clientes=DB::table('clientes')
         ->select()
         ->where("id_cliente","=",$id_cliente)
@@ -160,12 +188,12 @@ class ReservaController extends Controller
         $reservas->fecha_fin=$hasta;
         $reservas->dias_reserva=$dias;
         $reservas->transporte=0;
-        $reservas->precio_transporte=0;
+        $reservas->precio_transporte=$transporte_precio+$transporte_precio1;
         $reservas->personas=0;
-        $reservas->lugar="No requiere transporte";
+        $reservas->lugar=$text_lugar;
         $reservas->lavado=0;
         $reservas->valor_reserva=$valor_reserva;
-        $reservas->saldo=$saldo;
+        $reservas->saldo=$saldo+$transporte_precio+$transporte_precio1;
         $reservas->descuento=0;
         $reservas->estado_reserva="Reserva";
         $reservas->save();
@@ -277,6 +305,24 @@ class ReservaController extends Controller
         ->get();
         return view('dashboards.registrar_contrato',compact("reservas"));
     }
+
+    public function codigo_transporte($a){
+       $validador_a=0;
+        switch ($a) {
+            case 'Pasto':
+              $validador_a=1;
+                break;
+            case 'Aeropuerto-Pasto':
+                $validador_a=2;
+                break;
+            case 'Aeropuerto-Ipiales':
+                $validador_a=3;
+                break;
+        }
+       return $validador_a;
+
+       
+    }
     public function consulta_clientes_reserva(Request $request)
     {
         if($request->lugar_entrega =="" AND
@@ -285,6 +331,10 @@ class ReservaController extends Controller
         $request->hastas =="" ){
             return redirect()->back()->with('error', 'Debe Rellenar Todos los Campos'); 
         }
+        $entrega=self::codigo_transporte($request->lugar_entrega);
+        $recogida=self::codigo_transporte($request->lugar_recogida);
+        $transporte=$entrega."-".$recogida;
+       
        
         $todo=$request->all();
        
@@ -306,7 +356,7 @@ class ReservaController extends Controller
         
        $dia=$diff->days;
       // return response(["data"=>$disponibles]);
-         return view('webpage.reserva',compact("todo","disponibles","dia"));
+         return view('webpage.reserva',compact("todo","disponibles","dia","transporte"));
         //return response(["data"=>$todo,"dias"=>$diff->days,"reseradv"=>$disponibles]);
     }
     public function comprobar_vehiculos_disponibles($desde,$hasta){
@@ -371,11 +421,11 @@ class ReservaController extends Controller
         return "OK";
     }
 
-    public function reserva_cliente($data,$fecha1,$fecha2){
+    public function reserva_cliente($data,$fecha1,$fecha2,$transporte){
         $disponible=DB::table('vehiculos')->select()->where("id_vehiculo",'=',$data)->first();
         $desdes=$fecha1;
         $hastas=$fecha2;
        $dia=self::diferencia_dias($desdes,$hastas);
-        return view("webpage.reserva_unica",compact("disponible","desdes","hastas","dia"));
+        return view("webpage.reserva_unica",compact("disponible","desdes","hastas","dia","transporte"));
     }
 }

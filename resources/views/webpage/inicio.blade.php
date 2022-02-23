@@ -189,17 +189,21 @@
                                                     
                                                 <select id="lugar-entrega" name="lugar_entrega">
                                                 <option disabled selected>Lugar de entrega</option>
-                                                <option value="Pasto">Pasto - Aeropuerto Antonio Nariño</option>
-                                                <option value="Ipiales">Ipiales - Aeropuerto San Luis</option>
-                                                </select>
+                                                <option value="Pasto">Pasto</option>
+                                                <option value="Aeropuerto-Pasto">Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option value="Aeropuerto-Ipiales">Ipiales - Aeropuerto San Luis</option>
+                                               
+                                            </select>
                                                 </p>
                                             </div>
                                             <div class="col-md-4">
                                                 <p>
                                                 <select id="lugar-recogida" name="lugar_recogida">
                                                 <option disabled selected>Lugar de recogida</option>
-                                                <option value="Pasto">Pasto - Aeropuerto Antonio Nariño</option>
-                                                <option value="Ipiales">Ipiales - Aeropuerto San Luis</option>
+                                                <option value="Pasto">Pasto</option>
+                                                <option value="Aeropuerto-Pasto">Pasto - Aeropuerto Antonio Nariño</option>
+                                                <option value="Aeropuerto-Ipiales">Ipiales - Aeropuerto San Luis</option>
+                                                
                                                 </select>
                                                 </p>
                                             </div>
