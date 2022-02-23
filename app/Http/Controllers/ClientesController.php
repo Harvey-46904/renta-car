@@ -114,7 +114,7 @@ class ClientesController extends Controller
            
             if($id_cliente!=null AND $respuesta==1){
                
-                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$id_cliente->id_cliente,$desde,$hasta);
+                list($reservas,$clientes,$vehiculo)= $reserva->reserva_unica($id_vehiculo,$id_cliente->id_cliente,$desde,$hasta,$transporte);
                 return Redirect::to('/reserva_exitosa')->with(["clientes"=>$clientes,"vehiculo"=>$vehiculo,"reservas"=>$reservas]);
             }else{
                 return response(["data"=>"error"]);

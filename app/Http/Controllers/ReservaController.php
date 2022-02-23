@@ -162,7 +162,7 @@ class ReservaController extends Controller
                             $transporte_recogida=$partes[1]; 
                             list($transporte_entrega,$transporte_precio)=self::asignar_lugar_precio_reserva($transporte_entrega);
                             list($transporte_recogida,$transporte_precio1)=self::asignar_lugar_precio_reserva($transporte_recogida);
-       $text_lugar="Lugar de Entrega ".$transporte_entrega." Lugar de Recogida ".$transporte_recogida;
+       $text_lugar="Lugar de Entrega ".$transporte_entrega.", Lugar de Recogida ".$transporte_recogida;
         //obtengo el cliente 
 
 
