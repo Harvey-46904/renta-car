@@ -80,7 +80,7 @@ $('#numero_documento').keyup(function() {
     var texto = $("#numero_documento").val();
     var tam=texto.length;
     if(tam>=6){
-    $.get( "../../../obtener_nombre/"+texto, function( data ) {
+    $.get( "../../obtener_nombre/"+texto, function( data ) {
        
         if(data.data =="error"){
           console.log("no aparece");
