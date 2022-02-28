@@ -303,22 +303,6 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renaultlogan.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Logan</h3>
-                                                </a>
-                                                <h4>$180.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
-                                                    href="#" class="offer-btn-2">Detalles</a></div>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/renault-sandero.png')!!}" alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
@@ -334,12 +318,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                   
+                                    
                                     <div class="col-lg-4">
                                         <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/sandero-stepway.png')!!}"
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/joy.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Sandero Stepway</h3>
+                                                    <h3>Chevrolet Joy</h3>
                                                 </a>
                                                 <h4>$200.000<span>/ Día</span></h4>
                                                 <ul>
@@ -366,6 +352,22 @@
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster_blanco.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$290.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
                                         </div>
                                     </div>
                                     
