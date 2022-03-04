@@ -187,7 +187,7 @@ class ReservaController extends Controller
         $reservas->fecha_inicio=$desde;
         $reservas->fecha_fin=$hasta;
         $reservas->dias_reserva=$dias;
-        $reservas->transporte=0;
+        $reservas->transporte=1;
         $reservas->precio_transporte=$transporte_precio+$transporte_precio1;
         $reservas->personas=0;
         $reservas->lugar=$text_lugar;
