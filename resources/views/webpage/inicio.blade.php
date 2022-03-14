@@ -354,22 +354,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster_blanco.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Duster</h3>
-                                                </a>
-                                                <h4>$290.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
-                                                    href="#" class="offer-btn-2">Detalles</a></div>
-                                                </div>
-                                        </div>
-                                    </div>
+                                  
                                     
                                 </div>
                                 <div class="site-heading">
@@ -393,6 +378,22 @@
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                      <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/duster_blanco.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Duster</h3>
+                                                </a>
+                                                <h4>$290.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -423,6 +424,24 @@
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                 </ul>
                                                 <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Hyundai Tucson')" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-sportge.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Kia Sportage</h3>
+                                                </a>
+                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Kia Sportage')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                               

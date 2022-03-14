@@ -66,7 +66,7 @@ footer {
             CONTRATO DE ALQUILER No:</b> <u>{{$contratos->id}}</u> <br>
             <b>FECHA:<?php echo date("d-m-Y");?> <br>
             VEHICULO<br>
-            {{$contratos->nombre_vehiculo}} || Marca: {{$contratos->marca}} || Modelo: {{$contratos->modelo}} || Color: {{$contratos->color}}<br><br>
+            {{$contratos->nombre_vehiculo}} || Marca: {{$contratos->marca}}  || Color: {{$contratos->color}}<br><br>
             ARRENDATARIO Y/O USUARIO<br>
             </b>
         </p>

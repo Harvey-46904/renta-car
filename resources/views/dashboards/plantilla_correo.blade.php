@@ -143,14 +143,7 @@
                 </td>
             </tr>
 
-            <tr>
-                <td>
-                    <label>Modelo Vehículo</label>
-                </td>
-                <td>
-                    <b id="modelo">{{$vehiculo->modelo}}</b>
-                </td>
-            </tr>
+            
             <tr>
                 <td>
                     <label>Color Vehículo</label>
