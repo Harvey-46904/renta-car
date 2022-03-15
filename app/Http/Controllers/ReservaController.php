@@ -279,7 +279,7 @@ class ReservaController extends Controller
         ->select()
         ->where("estado_reserva","!=","Contratado")
         ->where("estado_reserva","!=","Finalizado")
-        ->orderBy('fecha_inicio', 'desc')
+        ->orderBy('fecha_inicio', 'asc')
         ->paginate(5);
 
         return view('dashboards.listar_reservas',compact("reservas"));
