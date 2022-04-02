@@ -177,9 +177,15 @@ class ReservaController extends Controller
         ->select()
         ->where("id_vehiculo","=",$id_vehiculo)
         ->first();
+        $dias_temporal=$dias;
+        if($dias>=7){
+          
+            $dias=$dias-1;
+        }
         $saldo=$vehiculo->precio_alquiler*$dias;
         $valor_reserva=($saldo*30)/100;
         $saldo=$saldo-$valor_reserva;
+        $dias=$dias_temporal;
         //return response(["data"=>$saldo,"total"=>$precio_total,"trans"=>$precio_trasnporte,"reserva"=>$valor_reserva]);
         $reservas=new reserva;
         $reservas->vehiculo_id=$id_vehiculo;
@@ -191,7 +197,7 @@ class ReservaController extends Controller
         $reservas->precio_transporte=$transporte_precio+$transporte_precio1;
         $reservas->personas=0;
         $reservas->lugar=$text_lugar;
-        $reservas->lavado=0;
+        $reservas->lavado=1;
         $reservas->valor_reserva=$valor_reserva;
         $reservas->saldo=$saldo+$transporte_precio+$transporte_precio1;
         $reservas->descuento=0;
@@ -428,5 +434,14 @@ class ReservaController extends Controller
         $hastas=$fecha2;
        $dia=self::diferencia_dias($desdes,$hastas);
         return view("webpage.reserva_unica",compact("disponible","desdes","hastas","dia","transporte"));
+    }
+
+    public function actualizar_reserva($id){
+        $reservas=DB::table("reservas")->where('id_reserva',"=",$id)->first();
+        $vehiculos=DB::table("vehiculos")->get();
+        $persona=DB::table("clientes")->where("id_cliente","=",$reservas->cliente_id)->first();
+        $vehiculo=DB::table("vehiculos")->where("id_vehiculo","=",$reservas->vehiculo_id)->first();
+      //  return response(["data"=>$reservas]);
+        return view("dashboards.actualizar_reserva",compact("reservas","vehiculos","persona","vehiculo"));
     }
 }

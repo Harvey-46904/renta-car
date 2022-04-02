@@ -41,6 +41,7 @@ Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualiza
 
 Route::get('crear_contrato/{id}',"ReservaController@generar_contrato")->name("crear_contrato");
 
+Route::get('actualizar_reserva/{id}',"ReservaController@actualizar_reserva")->name("actualizar_reserva");
 //envuar correo purebas
 Route::get('correo',"ReservaController@enviar_correo")->name("correo");
 

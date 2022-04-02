@@ -68,6 +68,7 @@
                                             <th>VALOR TOTAL</th>
                                             <th>CONTRATO</th>
                                             <th>ELIMINAR</th>
+                                            <th>EDITAR</th>   
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -122,6 +123,20 @@
                                                             <a type="button"
                                                                 class="btn btn-danger btn-circle waves-effect waves-circle waves-float d-inline"
                                                                 href="{{ route('eliminar_reserva', $reserva->id_reserva) }}">
+                                                                <i class="material-icons">articleIcon</i>
+                                                            </a>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <a type="button"
+                                                                class="btn btn-warning btn-circle waves-effect waves-circle waves-float d-inline"
+                                                                href="{{ route('actualizar_reserva', $reserva->id_reserva) }}">
                                                                 <i class="material-icons">articleIcon</i>
                                                             </a>
                                                            
