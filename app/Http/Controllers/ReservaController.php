@@ -441,7 +441,12 @@ class ReservaController extends Controller
         $vehiculos=DB::table("vehiculos")->get();
         $persona=DB::table("clientes")->where("id_cliente","=",$reservas->cliente_id)->first();
         $vehiculo=DB::table("vehiculos")->where("id_vehiculo","=",$reservas->vehiculo_id)->first();
-      //  return response(["data"=>$reservas]);
+     //   return response(["data"=>$vehiculo->precio_alquiler]);
         return view("dashboards.actualizar_reserva",compact("reservas","vehiculos","persona","vehiculo"));
     }
+
+    public function actualizar(Request $request){
+        return response(["data"=>$request->all()]);
+    }
+
 }

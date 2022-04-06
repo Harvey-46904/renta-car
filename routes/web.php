@@ -132,6 +132,7 @@ Route::post('crear_clientes1/{id_vehiculo}/{desde}/{hasta}/{transporte}','Client
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
 Route::post('crear_reserva','ReservaController@store')->name('post_reserva');
+Route::post('actualizar_reserva','ReservaController@actualizar')->name('actualizar_reserva');
 Route::post('consulta_reserva','ReservaController@consulta_clientes_reserva')->name('post_reserva_usuario');
 Route::post('crear_contrato/{id}','RegistroContratoController@store')->name('post_registro_contrato');
 Route::post('finalizar_contrato/{id}','RegistroContratoController@fin')->name('post_finalizar_contrato');

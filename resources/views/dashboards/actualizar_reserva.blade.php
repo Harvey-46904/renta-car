@@ -7,7 +7,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                CREAR RESERVA
+                               ACTUALIZAR  RESERVA
                             
                             </h2>
                      
@@ -27,7 +27,7 @@
                         </div>
                         <div class="body">
 
-                            <form method="POST" action="{{ route('post_reserva') }}" accept-charset="UTF-8"
+                            <form method="POST" action="{{ route('actualizar_reserva') }}" accept-charset="UTF-8"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
@@ -88,7 +88,7 @@
                                     <hr>
                                     <div class="form-group">
                                       
-                                        <select class="form-control" id="vehiculo" name="vehiculo">
+                                        <select class="form-control" id="" name="vehiculo_cambio">
                                             <option id="0">Seleccione Un Vehículo</option>
                                             @foreach ($vehiculos as $vehiculo)
 
@@ -98,94 +98,17 @@
 
                                         </select>
                                     </div>
+                                   
+                                       
                                     
-                                    <div class="form-group row" id="trans" style="display: none;">
-                                        <div class="col-md-5">Transporte Aeropuerto</div>
-                                        <div class="col-sm-7">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                                <label class="form-check-label" for="gridCheck1">
-                                                    ¿Desea ser recogido en Aeropuerto?
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="form-group row form_person">
-                                            <hr>
-                                            <div class="col-md-5">Trayecto</div>
-                                            <div class="col-sm-7">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios1" value="Pasto" >
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                    Pasto
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios2" value="Ipiales">
-                                                    <label class="form-check-label" for="exampleRadios2">
-                                                     Ipiales
-                                                    </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="lugar" id="exampleRadios3" value="Otro">
-                                                    <label class="form-check-label" for="exampleRadios3">
-                                                     Otro Lugar
-                                                    </label>
-                                                  </div>
-                                                  <div id="nuevos_lugares" style="display: none;">
-                                                        <div class="form-group">
-                                                            <label for="nuevo_lugar">Lugar</label>
-                                                            <input type="text" class="form-control bg-light" id="nuevo_lugar" placeholder="Nuevo Lugar" name="nuevo_lugar">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="nuevo_lugar">Precio</label>
-                                                            <input type="number" class="form-control bg-light" id="nuevo_lugar_precio" placeholder="Precio" name="nuevo_lugar_precio">
-                                                        </div>
-                                                  </div>
 
-                                            </div>
-                                        </div>
-                                    <fieldset class="form-group lugar">
-                                        <div class="row">
-                                            <legend class="col-form-label col-sm-3 pt-0">Lugar</legend>
-                                            <div class="col-sm-9">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios"
-                                                        id="gridRadios1" value="Pasto">
-                                                    <label class="form-check-label" for="gridRadios1">
-                                                        Pasto
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios1"
-                                                        id="gridRadios2" value="Ipiales">
-                                                    <label class="form-check-label" for="gridRadios2">
-                                                        Ipiales
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </fieldset>
-
-                                    <div class="form-group row " id="lav" style="display: none;">
-                                        <div class="col-md-5">Lavado Vehiculo:</div>
-                                        <div class="col-sm-7">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="gridCheck2"
-                                                    name="lavados">
-                                                <label class="form-check-label" for="gridCheck2">
-                                                    ¿Desea Lavado de Vehiculo?
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 text-center border border-secondary py-2 ">
 
-                                        <h4 class="text-center">Informacion Alquiler</h4>
+                                        <h4 class="text-center">{{$vehiculo->precio_alquiler}}</h4>
                                         <hr>
                                         <div class="row justify-content-center align-items-center">
                                             <div class="col-md-3 ">
@@ -210,8 +133,8 @@
                                             <div class="col-md-7">
                                                 <div class="form-group">
                                                     <div class="form-line">
-                                                        <input type="text" id="t_vehiculo" name="t_vehiculo"
-                                                            class="form-control bg-light text-center" placeholder="" value="{{$reservas->saldo+$reservas->valor_reserva}}"
+                                                        <input type="text" id="" name=""
+                                                            class="form-control bg-light text-center" placeholder="" value="{{$vehiculo->precio_alquiler}}"
                                                           disabled  >
                                                     </div>
                                                 </div>
