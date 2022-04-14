@@ -22,6 +22,15 @@
                         <span><b>El cliente se actualizo correctamente</span>
                     </div>
                 @endif
+                @if (Session::get('actualizado'))
+                    <div class="alert alert-success">
+                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
+                            aria-label="Close">
+                            <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+                        <span><b>La reserva se actualizo correctamente</span>
+                    </div>
+                @endif
                 @if (Session::get('error'))
                 <div class="alert alert-success">
                     <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
@@ -136,7 +145,7 @@
                                                         <div class="col-md-2">
                                                             <a type="button"
                                                                 class="btn btn-warning btn-circle waves-effect waves-circle waves-float d-inline"
-                                                                href="{{ route('actualizar_reserva', $reserva->id_reserva) }}">
+                                                                href="{{ route('actualizar_reservas', $reserva->id_reserva) }}">
                                                                 <i class="material-icons">articleIcon</i>
                                                             </a>
                                                            

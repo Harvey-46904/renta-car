@@ -332,6 +332,7 @@ class ReservaController extends Controller
     }
     public function consulta_clientes_reserva(Request $request)
     {
+       
         if($request->lugar_entrega =="" AND
         $request->lugar_recogida =="" AND
         $request->desdes =="" AND
@@ -345,19 +346,24 @@ class ReservaController extends Controller
        
         $todo=$request->all();
        
-      
+       
+       
         $fecha_prueba=strtotime($todo["desdes"]);
-        $desde=date('Y-m-d  H:i:s',$fecha_prueba);
-
+       
+        $desde=date('Y-m-d',$fecha_prueba);
+        $desde=$desde." ".$todo["hora_entrega"];
     
         $fecha_prueba1=strtotime($todo["hastas"]);
-        $hasta=date('Y-m-d  H:i:s',$fecha_prueba1);
+        $hasta=date('Y-m-d',$fecha_prueba1);
+        $hasta=$hasta." ".$todo["hora_recogida"];
+
         $date1 = new DateTime($desde);
         $date2 = new DateTime($hasta);
         $diff = $date1->diff($date2);
-
+        
         $desde=$date1;
         $hasta=$date2;
+       
         // will output 2 days
         $disponibles=self::comprobar_vehiculos_disponibles($desde,$hasta);
         
@@ -440,13 +446,38 @@ class ReservaController extends Controller
         $reservas=DB::table("reservas")->where('id_reserva',"=",$id)->first();
         $vehiculos=DB::table("vehiculos")->get();
         $persona=DB::table("clientes")->where("id_cliente","=",$reservas->cliente_id)->first();
-        $vehiculo=DB::table("vehiculos")->where("id_vehiculo","=",$reservas->vehiculo_id)->first();
+        $vehiculo_unico=DB::table("vehiculos")->where("id_vehiculo","=",$reservas->vehiculo_id)->first();
      //   return response(["data"=>$vehiculo->precio_alquiler]);
-        return view("dashboards.actualizar_reserva",compact("reservas","vehiculos","persona","vehiculo"));
+        return view("dashboards.actualizar_reserva",compact("reservas","vehiculos","persona","vehiculo_unico"));
     }
 
-    public function actualizar(Request $request){
-        return response(["data"=>$request->all()]);
+    public function actualizar(Request $request,$id){
+
+        $cambios=reserva::find($id);
+       
+        $cambios->fecha_inicio=$request->desde." ".$request->hora_entrega;
+        $cambios->fecha_fin=$request->hasta." ".$request->hora_recogida;
+        $cambios->vehiculo_id=$request->vehiculo_cambio;
+        $cambios->dias_reserva=$request->dias;
+        $cambios->precio_transporte=$request->transporte_actualizacion;
+        $cambios->valor_reserva=$request->reserva_u;
+        $cambios->saldo=$request->saldo_u;
+        $cambios->descuento=$request->descuento;
+        $cambios->save();
+
+
+        $clientes=DB::table('clientes')
+        ->select()
+        ->where("id_cliente","=",$cambios->cliente_id)
+        ->first();
+        
+        $vehiculo=DB::table('vehiculos')
+        ->select()
+        ->where("id_vehiculo","=",$cambios->vehiculo_id)
+        ->first();
+        self::enviar_correo($clientes,$vehiculo,$cambios);
+        return Redirect::to('/listar_reservas')->with('actualizado', 'El cliente se creo correctamente');
+       
     }
 
 }

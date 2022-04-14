@@ -277,5 +277,57 @@ function confirmar_notificacion(id,id_vehiculo) {
 
   }
 
+
+
+  ///actualizar carrros
+
+  $("select#vehiculo_cambio").change(
+    function(){
+     var valor=this.value;
+     let values=data.find(x=> x.id_vehiculo == valor)
+     $("#dt").val(values.precio_alquiler)
+     let dia=$("#dias").val();
+     let ts=values.precio_alquiler*dia;
+     let saldo=((ts)*30)/100
+     $("#reserva_u").val(saldo)
+     let transporte=parseInt($("#transporte").val())
+     $("#saldo_u").val(ts-saldo+transporte)
+     console.log(values);
+     
+    }
+)
+
+
+$("#desde_u").change(
+    function(){
+       fecha_desde= $("#desde_u").val();
+       fechs=new Date(fecha_desde)
+       fechs.setDate(fechs.getDate()+2)
+       var formattedDate = moment(fechs).format('YYYY-MM-DD');
+        $("#hasta").prop("min",formattedDate)
+    }
+)
+$("#hasta_u").change(
+    function (){
+        fecha_desde= moment($("#desde_u").val());
+        fecha_hasta=moment($("#hasta_u").val());
+        diferencia=fecha_hasta.diff(fecha_desde,'days')
+        $("#dias").val(diferencia)
+        $("#des").text($("#desde_u").val())
+        $("#has").text($("#hasta_u").val())
+        let dia=$("#dias").val();
+      
+        let precio_al=$("#dt").val()
+        let ts=precio_al*dia;
+        let saldo=((ts)*30)/100
+        $("#reserva_u").val(saldo)
+        let transporte=parseInt($("#transporte").val())
+        $("#saldo_u").val(ts-saldo+transporte)
+    }
+)
+
+
+
+
   
  

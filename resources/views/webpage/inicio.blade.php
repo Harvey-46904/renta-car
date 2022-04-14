@@ -1,7 +1,12 @@
 @extends('webpage.index')
 @section('content')
 
-  
+  <style>
+ option{
+  height: 50px;
+  overflow: auto;
+}
+</style>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -197,6 +202,18 @@
                                                 </p>
                                             </div>
                                             <div class="col-md-4">
+                                                <p> <input class="form-control" type="date" id="desdes" name="desdes">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p>
+                                                    <input type="time" id="hora_entrega" name="hora_entrega"
+                                                    required placeholder="Hora de entrega">
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                        <div class="col-md-4">
                                                 <p>
                                                 <select id="lugar-recogida" name="lugar_recogida">
                                                 <option disabled selected>Lugar de recogida</option>
@@ -207,37 +224,18 @@
                                                 </select>
                                                 </p>
                                             </div>
-<!--
-                                            <div class="col-md-4">
-                                                <p>
-                                                <select>
-                                                <option disabled selected>Vehículo</option>
-                                                <option>Chevrolet Beat</option>
-                                                <option>Renault Logan</option>
-                                                <option>Renault Sandero</option>
-                                                <option>Sandero Stepway</option>
-                                                <option>Chevrolet Onix</option>
-                                                <option>Hyundai HB20</option>
-                                                <option disabled>CAMIONETAS</option>
-                                                <option>Chevrolet Tracker</option>
-                                                <option>Renault Duster</option>
-                                                <option>Hyundai Tucson</option>
-                                                <option>Nissan Qashqai</option>
-                                                </select>
-                                                </p>
-                                            </div>
-                                             -->
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p> <input class="form-control" type="date" id="desdes" name="desdes">
-                                                </p>
-                                            </div>
                                             <div class="col-md-4">
                                                 <p> <input class="form-control" type="date" id="hastas" name="hastas">
                                             </p>
                                             </div>
                                             <div class="col-md-4">
+                                                <p>
+                                                    
+                                                    <input type="time" id="hora_recogida" name="hora_recogida"
+                                                 required  placeholder="Hora de recogida">
+                                                </p>
+                                            </div>
+                                            <div class="col-md-4 text-center">
                                                 <p><button type="submit" class="gauto-theme-btn" id="Buscar">BUSCAR</button></p>
                                             </div>
                                         </div>

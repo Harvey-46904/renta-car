@@ -41,7 +41,10 @@ Route::get('actualizar_cliente/{id}',"ClientesController@show")->name("actualiza
 
 Route::get('crear_contrato/{id}',"ReservaController@generar_contrato")->name("crear_contrato");
 
-Route::get('actualizar_reserva/{id}',"ReservaController@actualizar_reserva")->name("actualizar_reserva");
+Route::get('actualizar_reserva/{id}',"ReservaController@actualizar_reserva")->name("actualizar_reservas");
+
+Route::post('u_actualizar/{id}',"ReservaController@actualizar")->name("u_actualizar");
+
 //envuar correo purebas
 Route::get('correo',"ReservaController@enviar_correo")->name("correo");
 
@@ -132,7 +135,6 @@ Route::post('crear_clientes1/{id_vehiculo}/{desde}/{hasta}/{transporte}','Client
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
 Route::post('crear_reserva','ReservaController@store')->name('post_reserva');
-Route::post('actualizar_reserva','ReservaController@actualizar')->name('actualizar_reserva');
 Route::post('consulta_reserva','ReservaController@consulta_clientes_reserva')->name('post_reserva_usuario');
 Route::post('crear_contrato/{id}','RegistroContratoController@store')->name('post_registro_contrato');
 Route::post('finalizar_contrato/{id}','RegistroContratoController@fin')->name('post_finalizar_contrato');

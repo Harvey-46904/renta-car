@@ -66,7 +66,23 @@
                     <img   class="rounded" src="{{ url('/storage/vehiculo/', $disponible->foto_vehiculo) }}">
                 </div>
                 <div class="col-md-3 align-self-center"><button type="button" class="btn btn-success btn-block" onclick="reserva_wasap('{{$disponible->nombre_vehiculo}}','{{$todo['desdes']}}','{{$todo['hastas']}}')"> <i class="fa fa-whatsapp icono"></i> Escríbenos</button>
-                    <button type="button" class="btn btn-danger btn-block" ><a class="text-light" href="{{ route('reserva_cliente',['data'=>$disponible->id_vehiculo,'fecha1'=>$todo['desdes'],'fecha2'=>$todo['hastas'],'transporte'=>$transporte ])}}">Reservar Ahora</a></button></div>
+
+                    <?php 
+                        $fecha_prueba=strtotime($todo["desdes"]);
+                        $desde=date('Y-m-d',$fecha_prueba);
+                        $desde=$desde." ".$todo["hora_entrega"];
+                    
+                        $fecha_prueba1=strtotime($todo["hastas"]);
+                        $hasta=date('Y-m-d',$fecha_prueba1);
+                        $hasta=$hasta." ".$todo["hora_recogida"];
+
+                        //$date1 = new DateTime($desde);
+                        //$date2 = new DateTime($hasta);
+                        
+                       
+                        
+                        ?>
+                    <button type="button" class="btn btn-danger btn-block" ><a class="text-light" href="{{ route('reserva_cliente',['data'=>$disponible->id_vehiculo,'fecha1'=>$desde,'fecha2'=>$hasta,'transporte'=>$transporte ])}}">Reservar Ahora</a></button></div>
             </div>
             @endforeach
             
