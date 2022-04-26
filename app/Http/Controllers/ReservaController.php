@@ -220,8 +220,10 @@ class ReservaController extends Controller
         }
     }
     public function diferencia_dias($inicio,$fin){
-        $f1= date_create($inicio);
-        $f2= date_create($fin);
+        $separar_inicio=explode(" ", $inicio);
+        $separar_fin=explode(" ", $fin);
+        $f1= date_create($separar_inicio[0]);
+        $f2= date_create($separar_fin[0]);
         $dias=date_diff($f1,$f2)->format('%a');
         return $dias;
     }
