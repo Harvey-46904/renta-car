@@ -283,6 +283,23 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers">
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/nisan-march.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Nissan March</h3>
+                                                </a>
+                                                <h4>$180.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                </ul>
+                                                <div class="offer-action"><a  href="" onclick="mensaje_wpp_carro('Nissan March')" class="offer-btn-1">Reservar</a><a
+                                                        href="#" class="offer-btn-2">Detalles</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-beat.png')!!}"
