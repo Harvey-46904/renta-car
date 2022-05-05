@@ -96,7 +96,7 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6">
-                                       {{$vehiculo_unico->nombre_vehiculo}}
+                                       {{$vehiculo_unico->nombre_vehiculo}} {{$vehiculo_unico->placa}} 
                                         </div>
                                         <div class="col-md-6">
                                         <img src="{{ url('/storage/vehiculo/', $vehiculo_unico->foto_vehiculo) }}"
@@ -109,10 +109,10 @@
                                     <div class="form-group">
                                       
                                         <select class="form-control" id="vehiculo_cambio" name="vehiculo_cambio">
-                                            <option value="{{$vehiculo_unico->id_vehiculo}}" selected><b>Actual</b>:{{$vehiculo_unico->nombre_vehiculo}}</option>
+                                            <option value="{{$vehiculo_unico->id_vehiculo}}" selected><b>Actual</b>:{{$vehiculo_unico->nombre_vehiculo}} || {{$vehiculo_unico->placa}} </option>
                                             @foreach ($vehiculos as $vehiculo)
 
-                                                <option value="{{ $vehiculo->id_vehiculo }}" data-thumbnail="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}">{{ $vehiculo->nombre_vehiculo }}</option>
+                                                <option value="{{ $vehiculo->id_vehiculo }}" data-thumbnail="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}">{{ $vehiculo->nombre_vehiculo }} || {{$vehiculo_unico->placa}} </option>
                                             @endforeach
 
 
