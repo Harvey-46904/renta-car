@@ -112,7 +112,7 @@
                                             <option value="{{$vehiculo_unico->id_vehiculo}}" selected><b>Actual</b>:{{$vehiculo_unico->nombre_vehiculo}} || {{$vehiculo_unico->placa}} </option>
                                             @foreach ($vehiculos as $vehiculo)
 
-                                                <option value="{{ $vehiculo->id_vehiculo }}" data-thumbnail="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}">{{ $vehiculo->nombre_vehiculo }} || {{$vehiculo_unico->placa}} </option>
+                                                <option value="{{ $vehiculo->id_vehiculo }}" data-thumbnail="{{ url('/storage/vehiculo/', $vehiculo->foto_vehiculo) }}">{{ $vehiculo->nombre_vehiculo }} || {{$vehiculo->placa}} </option>
                                             @endforeach
 
 
