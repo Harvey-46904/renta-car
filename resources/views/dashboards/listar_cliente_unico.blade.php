@@ -29,15 +29,7 @@
 
 
                             </h2>
-                            <div class="row justify-content-center">
-                
-                                <form action="{{route('serial_buscar_cliente')}}" method="POST" >
-                                    @csrf
-                                <div class="col-md-12 bg-danger"> <input type="text" name="serial" class="form-control bg-light" placeholder="Número de Cédula"></div>
-                                <div class="col-md-4 text-center"> <button type="submit" class="btn btn-primary m-t-15 waves-effect">Buscar</button></div>
-                                                </form>
-                                            
-                            </div>
+                     
                             <div class="body table-responsive">
                                 <table class="table table-striped">
                                     <thead>
@@ -55,7 +47,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($clientes as $cliente)
+                                        @if ($cliente!=null)
                                             <tr>
                                                 <th scope="row">{{ $cliente->id_cliente }}</th>
                                                 <td>{{ $cliente->tipo_documento }}</td>
@@ -85,14 +77,15 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                        @endforeach
+                                            @else
+                                            
+                                            @endif
+                                          
                                       
                                     </tbody>
                                   
                                 </table>
-                                <div class="d-flex justify-content-center">
-                                    {!! $clientes->links() !!}
-                                </div>  
+                              
                                
                             </div>
                            

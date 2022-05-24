@@ -51,6 +51,8 @@ Route::get('correo',"ReservaController@enviar_correo")->name("correo");
 Route::get('finalizar_contrato/{id}',"RegistroContratoController@finalizar_contrato")->name("finalizar_contrato");
 
 Route::get('listar_cliente',"ClientesController@index")->name("listar_cliente");
+Route::post('listar_cliente',"ClientesController@index_id")->name("serial_buscar_cliente");
+
 
 Route::get('listar_vehiculo',"VehiculosController@index")->name("listar_vehiculo");
 

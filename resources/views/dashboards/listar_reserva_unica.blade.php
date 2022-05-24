@@ -36,15 +36,7 @@
                             <h2>
                                 Lista de Reservas
                             </h2>
-                            <div class="row justify-content-center">
-                
-                                <form action="{{route('serial_buscar')}}" method="POST" >
-                                    @csrf
-                                <div class="col-md-8 bg-danger"> <input type="text" name="serial" class="form-control bg-light" placeholder="Serial Reserva"></div>
-                                <div class="col-md-4 "> <button type="submit" class="btn btn-primary m-t-15 waves-effect">Buscar</button></div>
-                                                </form>
-                                            
-                            </div>
+                           
                             <div class="body table-responsive">
                                 <table class="table table-striped" >
                                     <thead>
@@ -65,6 +57,7 @@
                                             <th>VALOR TOTAL</th>
                                             <th>CONTRATO</th>
                                             <th>ELIMINAR</th>
+                                            <th>EDITAR</th>   
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -130,6 +123,21 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                            <td>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <a type="button"
+                                                                class="btn btn-warning btn-circle waves-effect waves-circle waves-float d-inline"
+                                                                href="{{ route('actualizar_reservas', $reserva->id_reserva) }}">
+                                                                <i class="material-icons">articleIcon</i>
+                                                            </a>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
                                             </tr>
                                             @else
                                             

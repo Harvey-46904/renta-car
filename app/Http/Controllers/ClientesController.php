@@ -22,6 +22,13 @@ class ClientesController extends Controller
         return view('dashboards.lista_clientes',compact("clientes"));
        
     }
+    public function index_id(Request $request){
+        $cliente=DB::table('clientes')
+        ->select()
+        ->where("numero_documento","=",$request->serial)
+        ->first();
+        return view('dashboards.listar_cliente_unico',compact("cliente"));
+    }
 
     /**
      * Show the form for creating a new resource.
