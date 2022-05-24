@@ -55,10 +55,10 @@
                                 <div class="col-md-6 col-8 bg-black text-light"><h5>${{$valor}}</h5></div>
                             </div>
                             <div class="row  pt-3 justify-content-center bg-grid text-light">
-                                <div class="col-md-3 col-3"><i class="fas fa-users"> 4</i></div>
-                                <div class="col-md-3 col-3"><i class="fas fa-door-open"> 4</i></div>
+                                <div class="col-md-5 col-5"><i class="fas fa-users"> {{$disponible->pasajeros}} <br>pasajeros</i></div>
                                 
-                                <div class="col-md-4 col-4"><i class="fas fa-cash-register"> {{($disponible->nombre_vehiculo=="Nissan Qashqai" || $disponible->nombre_vehiculo=="Ford Fiesta")?"Automático":"Mecánico" }} </i></div>
+                                
+                                <div class="col-md-5 col-5"><i class="fas fa-cash-register"> {{$disponible->caja}} </i></div>
                                 
                             </div>
                 </div>

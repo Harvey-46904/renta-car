@@ -276,6 +276,7 @@
                                                 <h4>$150.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Spark GT')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -293,6 +294,7 @@
                                                 <h4>$160.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a  href="" onclick="mensaje_wpp_carro('Nissan March')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -310,6 +312,7 @@
                                                 <h4>$180.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a  href="" onclick="mensaje_wpp_carro('Chevrolet Beat')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -326,6 +329,7 @@
                                                 <h4>$190.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Sandero')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -345,6 +349,7 @@
                                                 <h4>$200.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Sandero Stepway')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
@@ -361,6 +366,7 @@
                                                 <h4>$210.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Onix')" class="offer-btn-1">Reservar</a><a
@@ -379,6 +385,7 @@
                                                 <h4>$220.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Ford Fiesta')" class="offer-btn-1">Reservar</a><a
@@ -406,6 +413,7 @@
                                                 <h4>$280.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Tracker')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -423,6 +431,7 @@
                                                 <h4>$290.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
@@ -438,6 +447,7 @@
                                                 <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Nissan Qashqai')" class="offer-btn-1">Reservar</a><a
                                                         href="" class="offer-btn-2">Detalles</a>
@@ -455,6 +465,7 @@
                                                 <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Hyundai Tucson')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -473,6 +484,7 @@
                                                 <h4>$300.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Kia Sportage')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
@@ -491,6 +503,7 @@
                                                 <h4>$400.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>7 Pasajeros</li>
                                                 </ul>
                                                 <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Dodge Jurney')" class="offer-btn-1">Reservar</a><a
                                                         href="#" class="offer-btn-2">Detalles</a>
