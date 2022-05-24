@@ -15,7 +15,7 @@
    
     <div align="center"> 
     <hr width=900 color=#C52121>
-   <a href="https://api.whatsapp.com/send?phone=573227795422&text=🚨🚗VALIDAR%20RESERVA🚗🚨%0AHola%20RENT%20A%20CAR%0Asoy%20{{$cliente->nombres}}%20{{$cliente->apellidos}}%0Adeseo%20validar%20mi%20reserva%20con%20serial%20%23{{$reservas->id_reserva}}%20🏁." style="background-color: #4CAF50;" >¡CLICK AQUI PARA VALIDAR TU RESERVA!</a>
+   <a href="https://api.whatsapp.com/send?phone=573227795422&text=🚨🚗VALIDAR%20RESERVA🚗🚨%0AHola%20RENT%20A%20CAR%0Asoy%20{{$cliente->nombres}}%20{{$cliente->apellidos}}%0Adeseo%20validar%20mi%20reserva%20con%20serial%20%23{{$reservas->id_reserva}}%20🏁." style="background-color: #4CAF50;" ><h3>¡CLICK AQUI PARA VALIDAR TU RESERVA!</h3></a>
     <hr width=900 color=#C52121>
     </div>
     
