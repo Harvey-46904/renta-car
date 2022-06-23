@@ -404,6 +404,7 @@ class ReservaController extends Controller
        $disponibles= self::obtener_id($reservas);
       
        $disponibles=DB::table("vehiculos")
+        ->where("disponibilidad","=",1)
         ->whereNotIn("id_vehiculo",$disponibles)
         ->get();
         return $disponibles;

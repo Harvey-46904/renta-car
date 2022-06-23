@@ -53,7 +53,12 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6"><b>Color:</b> {{ $vehiculo->color }} </div>
-                                                <div class="col-md-6"><b>Estado</b> {{ $vehiculo->disponibilidad }}
+                                                @if ( $vehiculo->disponibilidad ==1)
+                                                <div class="col-md-6 bg-success"><b>disponibilidad</b> Activado
+                                                @else
+                                                <div class="col-md-6 bg-danger"><b>disponibilidad</b> Desactivado
+                                                @endif
+                                               
                                                 </div>
                                             </div>
                                             <div class="row">

@@ -49,7 +49,19 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6"><b>Color:</b><input name="color" value="{{ $vehiculo->color }}">  </div>
-                                            <div class="col-md-6"><b>Estado</b><input name="disponibilidad" value="{{ $vehiculo->disponibilidad }}"> 
+                                            <div class="col-md-6"><b>disponibilidad</b>
+                                             
+                                                <select  id="disponibilidad" name="disponibilidad">
+                                                    @if ($vehiculo->disponibilidad==1)
+                                                        <option value="1" selected>Activado</option>
+                                                        <option value="0" >Desactivado</option>
+                                                    @else
+                                                    <option value="0" selected>Desactivado</option>
+                                                    <option value="1" >Activado</option>
+                                                    @endif
+                                                 
+                                        
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -64,6 +76,8 @@
                                             <div class="col-md-6"><b>Precio Alquiler:</b><input name="precio_alquiler" value="{{ $vehiculo->precio_alquiler }}">
                                                  </div>
                                         </div>
+
+                                      
                                       
                                     </div>
                                 </div>
