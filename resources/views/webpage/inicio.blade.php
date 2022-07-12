@@ -268,7 +268,7 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spart_gt.png')!!}"
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/spark-gt.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Spark GT</h3>
@@ -357,6 +357,57 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/onix-ltz.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Onix LTZ</h3>
+                                                </a>
+                                                <h4>$200.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Onix LTZ')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/logan-expresion.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Renault Logan Expresion</h3>
+                                                </a>
+                                                <h4>$200.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan Expresion')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/onix-hatchback.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Onix LTZ HATCHBACK</h3>
+                                                </a>
+                                                <h4>$200.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Onix LTZ HATCHBACK')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/chevrolet-onix.png')!!}"
                                                         alt="offer 1" /></a></div>
@@ -373,6 +424,40 @@
                                                         href="#" class="offer-btn-2">Detalles</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/joy-sedan.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Chevrolet Joy Sedán</h3>
+                                                </a>
+                                                <h4>$220.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Joy Sedan')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="single-offers" >
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/mazda-2.png')!!}"
+                                                        alt="offer 1" /></a></div>
+                                            <div class="offer-text"><a href="#">
+                                                    <h3>Mazda 2</h3>
+                                                </a>
+                                                <h4>$220.000<span>/ Día</span></h4>
+                                                <ul>
+                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
+                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
+                                                </ul>
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Mazda 2')" class="offer-btn-1">Reservar</a><a
+                                                    href="#" class="offer-btn-2">Detalles</a></div>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
