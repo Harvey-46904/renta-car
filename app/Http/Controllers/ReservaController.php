@@ -10,8 +10,12 @@ use Session;
 use DateTime;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReservaCorreo;
-class ReservaController extends Controller
+use App\Services\PayUService;
+use App\Services\MercadoPagoService;
+
+class ReservaController extends Controller 
 {
+  
     /**
      * Display a listing of the resource.
      *
@@ -482,5 +486,39 @@ class ReservaController extends Controller
         return Redirect::to('/listar_reservas')->with('actualizado', 'El cliente se creo correctamente');
        
     }
+
+    public function vista_pago($id){
+        $var=new MercadoPagoService();
+     
+     $lista_bancos= $var->get_bancos();
+     $reserva=DB::table("reservas")
+         ->join('clientes','reservas.cliente_id','=','clientes.id_cliente')
+        ->join('vehiculos','reservas.vehiculo_id','=','vehiculos.id_vehiculo')
+        ->select()
+     ->where("id_reserva","=",$id)->first();
+       //return response(["h"=>$lista_bancos]);
+        return view("webpage.pago",compact("lista_bancos","reserva"));
+    }
+
+    public function generar_pago(Request $request,$id){
+      
+       $id=base64_decode($id)/1996;
+        $reserva=DB::table("reservas")
+        ->join('clientes','reservas.cliente_id','=','clientes.id_cliente')
+       ->join('vehiculos','reservas.vehiculo_id','=','vehiculos.id_vehiculo')
+       ->select()
+        ->where("id_reserva","=",$id)->first();
+      
+        $var=new MercadoPagoService();
+     $precio=$request->flexRadioDefault=="porcentaje"?$reserva->valor_reserva:$reserva->valor_reserva+$reserva->saldo;
+     $respuesta_banco= $var->CreatePayment($precio,$reserva->nombre_vehiculo,$reserva->email,$request->T_documento,$request->no_cedula,$request->T_persona,$request->bank_code);
+     $url=$respuesta_banco->transaction_details->external_resource_url;
+     return    "<script> window.open('".$url."');</script>";
+     return response(["res"=>$respuesta_banco->transaction_details->external_resource_url]);
+      // return response(["h"=>$lista_bancos]);
+        return view("webpage.pago",compact("respuesta_banco"));
+    }
+  
+
 
 }

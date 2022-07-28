@@ -177,3 +177,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//pagos
+Route::get('pago/{id}',"ReservaController@vista_pago")->name("pago");
+Route::post('generar_pago/{id}',"ReservaController@generar_pago")->name("generar_pago");
