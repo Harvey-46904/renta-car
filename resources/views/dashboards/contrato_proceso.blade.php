@@ -225,7 +225,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
           </table>
     </div>
     <br>
-    <br><br><br><br><br> <br><br>
+    <br><br><br><br><br> <br><br><br><br> <br><br>
     <h2 align="center">INVENTARIO VEHÍCULO EN ALQUILER ANEXO AL CONTRATO No. </h2>
     <table >
         <tbody>
