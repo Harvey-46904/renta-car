@@ -153,7 +153,7 @@ En señal de reconocimiento y aceptación se firma la presente <b>CARTA DE INSTR
 <table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
             <tr align=left>
                 <td align=left>
-                    <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
+                <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
                   
                         <br>Arrendatario Y/O Usuario
                         <br>No.{{$contratos->numero_documento}}
@@ -193,7 +193,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
 <table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
             <tr align=left>
                 <td align=left>
-                    <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
+                <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
                   
                         <br>Arrendatario Y/O Usuario
                         <br>No.{{$contratos->numero_documento}}
