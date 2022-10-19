@@ -142,11 +142,73 @@ footer {
     <p class="texto-justificado"><b>14. MANEJO DE DATOS PERSONALES E INCUMPLIMIENTO:</b> El abajo firmante en su propio nombre o en nombre de la entidad que representa declara que la información suministrada es verídica y da consentimiento expreso al ARRENDADOR o a quien en un futuro haga sus veces como titular del servicio solicitado para, Realizar el tratamiento de sus datos personales y reportar el incumplimiento de este contrato reflejándose negativamente ante las centrales de riesgo según el artículo 12 de la ley 1266 del 2008.</p>
     
     <br>
+    <div align="center">
+        <h3>CARTA DE INSTRUCCIONES PARA DILIGENCIAR EL PAGARÉ EN BLANCO</h3>
+        <p class="texto-justificado">
+            Yo <b> {{$contratos->nombres}} {{$contratos->apellidos}}</b>, identificado(a) con C.C. No. {{$contratos->numero_documento}}, manifiesto que autorizó a la empresa <b>RENT A CAR PASTO</b>, con NIT 59.311.028-5 domiciliada en San Juan de Pasto y representada legalmente por la señora <b>AMANDA ELIZABETH BASTIDAS DELGADO</b> persona mayor de edad domiciliada y residenciada en la ciudad de San Juan de pasto identificada con C.C. No. 59.311.028, para que haciendo uso de las facultades conferidas por el artículo 622 del código de Comercio, sean llenados los espacios que se han dejado en blanco, antes de presentar el título para el ejercicio del derecho que en él se incorpora en el pagaré adjunto, para lo cual deberá ceñirse las siguientes instrucciones:<br>
+El monto será igual al valor de todas las obligaciones exigibles que a cargo nuestro y a favor de RENT A CAR PASTO existan al momento de ser llenados los espacios<br>
+Los espacios en blanco se llenarán cuando <b>EL DEUDOR</b> incumple cualquiera de las obligaciones adquiridas en el pagaré adjunto.<br>
+La fecha de vencimiento del pagaré adjunto, será aquella en que se llene los espacios dejados en blanco en este, a partir de la cual empezará a hacerse exigible.<br>
+En señal de reconocimiento y aceptación se firma la presente <b>CARTA DE INSTRUCCIONES</b> en pasto, a los {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[0]}} días del mes {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[1]}} del año {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[2]}}<br>
+<table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
+            <tr align=left>
+                <td align=left>
+                    <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
+                  
+                        <br>Arrendatario Y/O Usuario
+                        <br>No.{{$contratos->numero_documento}}
+                </td>
+            </tr>
+</table>
+        </p>
+        <h3>PAGARÉ A LA ORDEN</h3>
+        <p class="texto-justificado">VALOR:____________________________________<br>
+DEUDOR:                   {{$contratos->nombres}} {{$contratos->apellidos}}<br>
+ACREEDOR:              RENT A CAR PASTO<br>
+CIUDAD Y FECHA:    San Juan de Pasto, {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[0]}} días del mes {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[1]}} del año {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[2]}}<br>
+<br>
+
+Yo <b> {{$contratos->nombres}} {{$contratos->apellidos}} </b>, identificada con C.C. No. {{$contratos->numero_documento}}, obrando en nombre propio, quién para efectos del presente pagaré a la orden se denominará <b>EL DEUDOR</b> de las obligaciones contenidas en este documento.<br><br>
+Lugar donde debe efectuarse el pago: _________________________________<br>
+Fecha de vencimiento de la obligación: _________________________________<br>
+<br>
+<b>PRIMERA-OBJETO:</b> Que por virtud del presente título valor <b>EL DEUDOR</b> pagará incondicionalmente a favor de la empresa <b>RENT A CAR PASTO</b> con NIT 59.311.028-5 domiciliada en San Juan de pasto representada legalmente por la señora <b>AMANDA ELIZABETH BASTIDAS DELGADO</b> persona mayor de edad, domiciliada y residenciada en la ciudad de San Juan de Pasto, identificada con C.C. No. 59.311.028 o a quien está designe, la suma de ________________________________________________________ <b>pesos moneda legal y corriente ($__________________________).</b> <br><br>
+
+SEGUNDA-FORMA DE PAGO: En efectivo _________________________________________________ <b>pesos moneda legal y corriente ($__________________________).</b> <br><br>
+
+<b>TERCERA-INTERESES:</b> Que sobre la suma de vida reconoceré a la tasa máxima legal autorizado de conformidad con el certificado expedido por la superintendencia financiera de Colombia, desde la fecha en que se inicie la mora hasta cuándo se realiza el pago efectivo de lo adeudado.
+<br><br>
+<b>CUARTA-PLAZO:</b> Que pagaré, el capital indicado en la cláusula primera al tiempo del vencimiento.
+<br><br>
+<b>QUINTA-CLÁUSULA ACELERATORIA:</b> El tenedor podrá declarar vencida la obligación o el saldo de lo debido y exigir su pago inmediato, ya sea judicial o extrajudicialmente, cuando <b>EL DEUDOR</b> entra en mora en el pago de una o más cuotas o incumpla cualquiera de las obligaciones derivadas del presente documento.
+<br><br>
+<b>SEXTA:</b> <b>EL DEUDOR</b> renuncia al domicilio, a la presentación, al protesto, al aviso de haber sido desatendido este documento, a cualquier requerimiento futuro en caso de mora, y acepta que correrán por su cuenta todos los gastos y costos que ocasionan o motivo en dicha ejecución o juicio referente a esta obligación, ya sean judiciales o extrajudiciales, junto con los honorarios del abogado.
+<br><br>
+<b>SEPTIMA-IMPUESTO DE TIMBRE:</b> El impuesto de timbre de este documento, si se causare, será de cargo única y exclusivamente de <b>EL DEUDOR</b>.
+<br><br>
+En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA ORDEN</b> en la ciudad de San Juan de Pasto, a los {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[0]}} días del mes {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[1]}} del año {{explode('-',date('d-m-Y', strtotime($contratos->fecha_inicio)))[2]}}
+
+
+
+<table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
+            <tr align=left>
+                <td align=left>
+                    <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
+                  
+                        <br>Arrendatario Y/O Usuario
+                        <br>No.{{$contratos->numero_documento}}
+                </td>
+            </tr>
+</table>
+        </p>
+    </div>
+    <br><br>
     <div align=center>
         <table cellspacing="0" cellpadding="0" align="center" border="1" width="80%">
             <tr align=center>
                 <td align=center>
-                    <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
+                <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
+                 
                     <b>_______________________</b>
                         <br>Arrendatario Y/O Usuario
                         <br>No. C.C
@@ -154,7 +216,7 @@ footer {
                 
 
                 <td align=center>
-                    <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
+                <img src="{{url('storage/firmas/'.$contratos->entregado_por)}}" width="100px" height="100px"/>
                     <b>_______________________</b>
                     <br>Arrendador
                     <br>Asesor Comercial
@@ -163,7 +225,7 @@ footer {
           </table>
     </div>
     <br>
-
+    <br><br>
     <h2 align="center">INVENTARIO VEHÍCULO EN ALQUILER ANEXO AL CONTRATO No. </h2>
     <table >
         <tbody>
