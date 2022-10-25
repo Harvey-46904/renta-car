@@ -343,7 +343,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Volkswagen Gol</h3>
                                                 </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <h4>$170.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -575,6 +575,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-sportge.png')!!}"
@@ -594,6 +595,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    -->
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/Dodge.png')!!}"

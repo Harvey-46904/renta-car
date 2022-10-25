@@ -20,10 +20,22 @@ class VehiculosController extends Controller
         
         $vehiculos=DB::table('vehiculos')
         ->select()
+        ->where("disponibilidad","=","1")
         ->get();
         return view('dashboards.lista_vehiculos',compact("vehiculos"));
        
     }
+    public function index_delete()
+    {
+        
+        $vehiculos=DB::table('vehiculos')
+        ->select()
+        ->where("disponibilidad","=","0")
+        ->get();
+        return view('dashboards.lista_vehiculos',compact("vehiculos"));
+       
+    }
+
 
     /**
      * Show the form for creating a new resource.

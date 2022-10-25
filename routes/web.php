@@ -55,7 +55,7 @@ Route::post('listar_cliente',"ClientesController@index_id")->name("serial_buscar
 
 
 Route::get('listar_vehiculo',"VehiculosController@index")->name("listar_vehiculo");
-
+Route::get('listar_vehiculo_eliminado',"VehiculosController@index_delete")->name("listar_vehiculo_eliminado");
 Route::get('crear_vehiculos', function () {
     return view('dashboards.crear_vehiculos');
 })->name("crear_vehiculo");

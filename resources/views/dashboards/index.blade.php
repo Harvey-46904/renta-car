@@ -189,6 +189,10 @@ $data=$data["data"];
                             <li>
                                 <a href="{{ route('listar_vehiculo') }}">Listar Vehiculos</a>
                             </li>
+                            <li>
+                                <a href="{{ route('listar_vehiculo_eliminado') }}">Vehiculos no disponibles</a>
+                            </li>
+                           
                         </ul>
                     </li>
                     <li>
