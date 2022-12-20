@@ -466,7 +466,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Renault Stepway</h3>
                                                 </a>
-                                                <h4>$230.000<span>/ Día</span></h4>
+                                                <h4>$220.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
