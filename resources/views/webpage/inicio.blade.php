@@ -461,40 +461,22 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/mazda-2.png')!!}"
+                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/rs.png')!!}"
                                                         alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
-                                                    <h3>Mazda 2</h3>
+                                                    <h3>Renault Stepway</h3>
                                                 </a>
-                                                <h4>$220.000<span>/ Día</span></h4>
+                                                <h4>$230.000<span>/ Día</span></h4>
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Mazda 2')" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Sandero Stepway')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
                                                 </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/ford-fiesta.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Ford Fiesta</h3>
-                                                </a>
-                                                <h4>$220.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                    <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
-                                                </ul>
-                                                
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Ford Fiesta')" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/nk.png')!!}"
