@@ -338,7 +338,7 @@ class ReservaController extends Controller
     }
     public function consulta_clientes_reserva(Request $request)
     {
-       
+      
         if($request->lugar_entrega =="" AND
         $request->lugar_recogida =="" AND
         $request->desdes =="" AND
@@ -366,7 +366,7 @@ class ReservaController extends Controller
         $date1 = new DateTime($desde);
         $date2 = new DateTime($hasta);
         $diff = $date1->diff($date2);
-        
+        return response(["data"=>$diff]);
         $desde=$date1;
         $hasta=$date2;
        
