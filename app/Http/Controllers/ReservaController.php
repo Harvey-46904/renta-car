@@ -366,7 +366,7 @@ class ReservaController extends Controller
         $date1 = new DateTime($desde);
         $date2 = new DateTime($hasta);
         $diff = $date1->diff($date2);
-        return response(["data"=>$diff]);
+       // return response(["data"=>$diff]);
         $desde=$date1;
         $hasta=$date2;
        
