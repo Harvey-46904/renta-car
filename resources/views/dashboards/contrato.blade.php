@@ -388,10 +388,16 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
 
     <br><br><br><br>
     <div>
-        <p class="texto-justificado">* Recuerde devolver el vehículo con el mismo nivel combustible y en el mismo estado de limpieza o si lo prefiere puede pagar el lavado del vehículo con un costo de 20,000 para vehículo o 25,000 para camionetas.</p>
-        <p class="texto-justificado">* Recuerde verificar el pico y placa de acuerdo con su ciudad de destino la garantía del vehículo será de vuelta hasta 8 días hábiles después de haber regresado el vehículo mientras que se verifica que no haya ningún tipo de multas de tránsito o infracciones.</p>
-        <p class="texto-justificado"> * La garantía del vehículo será devuelta 8 días despues de haber regresado el vehículo mientras que se verifica que no haya ningún tipo de foto multa.</p>
-        <p class="texto-justificado">* Después de una de hora de retraso se cobran horas adicionales con un máximo de 4 horas pasado este lapso se cobrará el día completo de alquiler.</p>
+        <p class="texto-justificado">* Recuerde devolver el vehículo con el mismo nivel combustible y en el mismo estado de limpieza o si lo prefiere puede pagar el lavado con un costo de 20,000 para vehículo o 25,000 para camionetas
+        .</p>
+
+        <p class="texto-justificado">* Recuerde verificar el pico y placa de acuerdo con su ciudad de destino.</p>
+
+        <p class="texto-justificado">* La garantía del vehículo será de vuelta hasta 8 días hábiles después de haber regresado el vehículo mientras que se verifica que no haya ningún tipo de multas de tránsito o infracciones.</p>
+
+        <p class="texto-justificado">* Después de una de hora de retraso se cobran horas adicionales, con un máximo de 4 horas, pasado este lapso se cobrará el día completo de alquiler.</p>
+
+       
     </div>
     <br> <br> <br> <br>
     <div align=center>
