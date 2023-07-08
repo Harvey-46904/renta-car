@@ -70,11 +70,11 @@
                                                 <input class="form-control" type="date" id="desde_u" name="desde" value="<?php echo date('Y-m-d', strtotime($reservas->fecha_inicio)) ?>" >
                                             </div>
                                         </div>
-
+                                   
                                         <div class="col-md-12 ">
                                             <label for="nombre_vehiculo">Hora de entrega</label>
                                             <input type="time" id="hora_entrega" name="hora_entrega"
-                                            required  placeholder="Hora de recogida"  value="{{date('h:i', strtotime($reservas->fecha_inicio))}}">
+                                            required  placeholder="Hora de recogida"  value="{{date('H:i', strtotime($reservas->fecha_inicio))}}">
                                         </div>
 
                                         <div class="col-md-12 "> <label for="nombre_vehiculo">Hasta</label>
@@ -86,7 +86,7 @@
                                         <div class="col-md-12 ">
                                             <label for="nombre_vehiculo">Hora de recogida </label>
                                             <input type="time" id="hora_recogida" name="hora_recogida"
-                                            required  placeholder="Hora de recogida"  value="{{date('h:i', strtotime($reservas->fecha_fin))}}">
+                                            required  placeholder="Hora de recogida"  value="{{date('H:i', strtotime($reservas->fecha_fin))}}">
                                         </div>
                                     </div>
                                    </div>
