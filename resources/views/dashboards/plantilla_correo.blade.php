@@ -301,9 +301,10 @@
                             Si el vehículo lo necesita en el aeropuerto el costo adicional será de 35.000 por
                             trayecto.
                             <br><br>
-                            Recuerde que son días de 24 horas, a la hora de entrega el 1er día será la misma
-                            hora para la devolución el último día. Si lo dejan más tiempo del acordado, se
-                            hará un acuerdo de pago por el tiempo adicional.
+                            Recuerde que son días de 24 horas, a la hora de entrega el 1er día será la misma hora
+                             para la devolución el último día. Si lo entrega luego de ello se realiza un cobro de
+                              la siguiente manera: Con gusto le ofrecemos horas adicionales con un máximo de 4
+                               (cada una con un valor de $15.000) luego de eso se cobra el día completo de alquiler.
                             <br><br>
                             Los vehículos cuentan con los seguros correspondientes, incluidos en el precio. El
                             kilometraje es libre según a la zona que vayan, son 200 km por día.
