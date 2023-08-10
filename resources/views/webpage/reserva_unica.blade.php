@@ -82,7 +82,7 @@
                                         break;
                                     case 3:
                                         $lugar="Aeropuerto-Ipiales";
-                                        $precio= 120000;
+                                        $precio= 140000;
                                         break;
                                 }
                                 return array($lugar,$precio);

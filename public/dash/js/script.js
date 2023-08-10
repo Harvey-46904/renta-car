@@ -139,7 +139,7 @@ $('#exampleRadios1').change(
 $('#exampleRadios2').change(
     function(){
         $("#ubicacion").text("Ipiales")
-        var p_transporte=120000
+        var p_transporte=140000
         $("#transporte").val(p_transporte)
         asignar_saldo()
     }

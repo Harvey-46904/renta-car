@@ -65,7 +65,7 @@ class ReservaController extends Controller
                 $nuevo_precio_transporte=35000;
             }
             if($nuevo_lugar=="Ipiales"){
-                $nuevo_precio_transporte=120000;
+                $nuevo_precio_transporte=140000;
             }
         }
         $trans=0;
@@ -155,7 +155,7 @@ class ReservaController extends Controller
                 break;
             case 3:
                 $lugar="Aeropuerto-Ipiales";
-                $precio= 120000;
+                $precio= 140000;
                 break;
         }
         return array($lugar,$precio);
@@ -214,13 +214,13 @@ class ReservaController extends Controller
     }
     public function lugares($lugar,$cantidad){
        //pasto  35000
-        //ipiales 120000
+        //ipiales 140000
         
         if($lugar=="Pasto"){
             return 35000*$cantidad;
         }
         if($lugar=="Ipiales"){
-            return 120000*$cantidad;
+            return 140000*$cantidad;
         }
     }
     public function diferencia_dias($inicio,$fin){
