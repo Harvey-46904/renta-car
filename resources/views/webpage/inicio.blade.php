@@ -167,7 +167,7 @@
     </section>
     <!-- Slider Area End -->
      <!-- Find Area Start -->
-     <section class="gauto-find-area">
+     <section class="gauto-find-area" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -266,24 +266,7 @@
                             <!-- All Tab Start -->
                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                 <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/gt1.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Chevrolet Spark GT</h3>
-                                                </a>
-                                                <h4>$150.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Chevrolet Spark GT')" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/nisan-march.png')!!}"
@@ -291,7 +274,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Nissan March</h3>
                                                 </a>
-                                                <h4>$160.000<span>/ Día</span></h4>
+                                                 <!--  <h4>$160.000<span>/ Día</span></h4>-->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -309,7 +292,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Beat</h3>
                                                 </a>
-                                                <h4>$180.000<span>/ Día</span></h4>
+                                                 <!--  <h4>$180.000<span>/ Día</span></h4>-->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -326,7 +309,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Renault Sandero</h3>
                                                 </a>
-                                                <h4>$190.000<span>/ Día</span></h4>
+                                                <!--   <h4>$190.000<span>/ Día</span></h4>-->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -343,7 +326,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Volkswagen Gol</h3>
                                                 </a>
-                                                <h4>$170.000<span>/ Día</span></h4>
+                                                <!--   <h4>$170.000<span>/ Día</span></h4>-->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -362,7 +345,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Joy</h3>
                                                 </a>
-                                                <h4>$200.000<span>/ Día</span></h4>
+                                                <!--   <h4>$200.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -379,7 +362,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Onix LTZ</h3>
                                                 </a>
-                                                <h4>$200.000<span>/ Día</span></h4>
+                                                 <!--  <h4>$200.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -389,23 +372,7 @@
                                                 </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-offers" >
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/logan-expresion.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Renault Logan Expresion</h3>
-                                                </a>
-                                                <h4>$200.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                    <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
-                                                </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan Expresion')" class="offer-btn-1">Reservar</a><a
-                                                    href="#" class="offer-btn-2">Detalles</a></div>
-                                                </div>
-                                        </div>
-                                    </div>
+                                 
                                     <div class="col-lg-4">
                                         <div class="single-offers" >
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/onix-hatchback.png')!!}"
@@ -413,7 +380,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Onix LTZ HATCHBACK</h3>
                                                 </a>
-                                                <h4>$200.000<span>/ Día</span></h4>
+                                              <!--     <h4>$200.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -430,7 +397,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Onix</h3>
                                                 </a>
-                                                <h4>$210.000<span>/ Día</span></h4>
+                                                <!--   <h4>$210.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -449,7 +416,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Joy Sedán</h3>
                                                 </a>
-                                                <h4>$220.000<span>/ Día</span></h4>
+                                                <!--   <h4>$220.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -466,7 +433,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Renault Stepway</h3>
                                                 </a>
-                                                <h4>$220.000<span>/ Día</span></h4>
+                                                <!--   <h4>$220.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -484,7 +451,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Nissan Versa</h3>
                                                 </a>
-                                                <h4>$230.000<span>/ Día</span></h4>
+                                                <!--   <h4>$230.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -511,7 +478,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Chevrolet Tracker</h3>
                                                 </a>
-                                                <h4>$280.000<span>/ Día</span></h4>
+                                              <!--     <h4>$280.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -529,12 +496,12 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Renault Duster</h3>
                                                 </a>
-                                                <h4>$290.000<span>/ Día</span></h4>
+                                                <!--   <h4>$290.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
                                                 </ul>
-                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Logan')" class="offer-btn-1">Reservar</a><a
+                                                <div class="offer-action"><a href="" onclick="mensaje_wpp_carro('Renault Duster')" class="offer-btn-1">Reservar</a><a
                                                     href="#" class="offer-btn-2">Detalles</a></div>
                                                 </div>
                                         </div>
@@ -545,7 +512,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Nissan Qashqai</h3>
                                                 </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
+                                               <!--    <h4>$300.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -563,7 +530,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Hyundai Tucson</h3>
                                                 </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <!--   <h4>$300.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -596,25 +563,7 @@
                                         </div>
                                     </div>
                                     -->
-                                    <div class="col-lg-4">
-                                        <div class="single-offers">
-                                            <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/Dodge.png')!!}"
-                                                        alt="offer 1" /></a></div>
-                                            <div class="offer-text"><a href="#">
-                                                    <h3>Dodge Jurney</h3>
-                                                </a>
-                                                <h4>$400.000<span>/ Día</span></h4>
-                                                <ul>
-                                                    <li><i class="fa fa-car"></i>Full equipo AC</li>
-                                                    <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>7 Pasajeros</li>
-                                                </ul>
-                                                <div class="offer-action"><a href=""  onclick="mensaje_wpp_carro('Dodge Jurney')" class="offer-btn-1">Reservar</a><a
-                                                        href="#" class="offer-btn-2">Detalles</a>
-                                                </div>
-                                              
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
 
                                     
