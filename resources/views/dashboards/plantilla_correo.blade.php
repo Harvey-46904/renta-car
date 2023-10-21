@@ -318,7 +318,7 @@
                                 <li>Cubre 90%</li>
                                 <li>Deducible el 10% a responsabilidad del cliente deducible: $ 1.000.000</li>
                                 <li><b>Rent A Car Pasto no hace devolución del valor de la reserva, el valor puede ser utilizado para otra reserva.</b></li>
-                               <li>El valor bloqueado de la tarjeta de crédito permanecerá bloqueado durante la renta, una vez el vehículo sea lavado y revisado, se solicita el desbloqueo a la franquicia correspondiente, por favor tener en cuenta que este tramite tarda entre 1 a 5 días hábiles dependiendo del del banco emisor.</li>
+                               <li>Es indispensable dejar un depósito en efectivo o por transferencia, para alquiler de vehículos de 1.000.000 y alquiler de camionetas 1.500.000 como respaldo de seguridad, dinero que será reintegrado hasta 2 días hábiles después de la revisión del vehículo en caso de no presentarse novedades.</li>
                             </ul>
                             <br><br>
                             Quedo atenta a sus comentarios y solicitudes.
