@@ -306,8 +306,9 @@
                               la siguiente manera: Con gusto le ofrecemos horas adicionales con un máximo de 4
                                (cada una con un valor de $15.000) luego de eso se cobra el día completo de alquiler.
                             <br><br>
-                            Los vehículos cuentan con los seguros correspondientes, incluidos en el precio. El
-                            kilometraje es libre según a la zona que vayan, son 200 km por día.
+                            Los vehículos cuentan con los seguros correspondientes, incluidos en el precio. 
+                            se tiene un kilometraje limitado a 220 km por día, cada Km adcional tiene un valor 
+                            de $1.000 o depende del destino.
                             <br><br>
                             Para la renta pedimos una garantía de 1.000.000 con tarjeta de crédito por vehículo,
                             y 1.500.000 por las camionetas.
