@@ -162,7 +162,7 @@
                             <div class="form-group">
                                 <div class="form-line">
                                     <select class="form-control show-tick" id="km_permitido" name="km_permitido">
-                                        <option value="200 Km x Dia">200 Km x Dia</option>
+                                        <option value="220 Km x Dia">220 Km x Dia</option>
                                         <option value="Libre" >Libre</option>
                                             </select>
                                 </div>
