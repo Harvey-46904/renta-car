@@ -524,13 +524,14 @@
                                                 </div>
                                         </div>
                                     </div>
+                                        <!-- 
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/qashqai.png')!!}" alt="offer 1" /></a></div>
                                             <div class="offer-text"><a href="#">
                                                     <h3>Nissan Qashqai</h3>
                                                 </a>
-                                               <!--    <h4>$300.000<span>/ Día</span></h4> -->
+                                               <h4>$300.000<span>/ Día</span></h4> 
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>AUTOMÁTICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -541,6 +542,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    -->
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/tucson.png')!!}"
@@ -560,7 +562,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 
+                                   
                                     <div class="col-lg-4">
                                         <div class="single-offers">
                                             <div class="offer-image"><a href="#"><img src="{!! asset('webpage/img/kia-sportge.png')!!}"
@@ -568,7 +570,7 @@
                                             <div class="offer-text"><a href="#">
                                                     <h3>Kia Sportage</h3>
                                                 </a>
-                                                <h4>$300.000<span>/ Día</span></h4>
+                                                <!--  <h4>$300.000<span>/ Día</span></h4> -->
                                                 <ul>
                                                     <li><i class="fa fa-car"></i>Full equipo AC</li>
                                                     <li><i class="fa fa-car"></i>MECÁNICO <i class="fa fa-user"></i>5 Pasajeros</li>
@@ -580,7 +582,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    -->
+                                   
                                     
                                 </div>
 
