@@ -26,6 +26,7 @@ class ReservaController extends Controller
 
         $vehiculos=DB::table('vehiculos')
         ->select()
+        ->where('disponibilidad',"=",1)
         ->get();
 
         $clientes=DB::table('clientes')
