@@ -171,7 +171,7 @@
                     <div class="col-lg-6">
                         <div class="single-footer">
                             <div class="footer-logo"><a href="#"><img src="{!! asset('webpage/img/logo.png')!!}"
-                                        alt="footer-logo" /></a></div>
+                                        alt="footer-logo" width="180px" height="180px"/></a></div>
                             <div class="footer-address">
                                 <h3>RENTACAR PASTO</h3>
                                 <p>Carrera 22B #11 Sur 61</p>
@@ -213,7 +213,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="copyright">
-                            <p>COPYRIGHT © 2021 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS</p>
+                            <p>COPYRIGHT © 2024 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS</p>
                         </div>
                     </div>
                     <div class="col-md-6">

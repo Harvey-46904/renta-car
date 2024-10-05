@@ -83,7 +83,7 @@
 
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="porcentaje"checked/>
-                            <label class="form-check-label" for="flexRadioDefault1"><h4>  30% de reserva {{$reserva->valor_reserva}}</h4> </label>
+                            <label class="form-check-label" for="flexRadioDefault1"><h4>  15% de reserva {{$reserva->valor_reserva}}</h4> </label>
                           </div>
                           
                           <!-- Default checked radio -->

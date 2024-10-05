@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                        <p>Autos desde $150.000 por día</p>
+                                        <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2> 
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>

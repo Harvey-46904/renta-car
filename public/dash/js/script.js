@@ -197,8 +197,12 @@ $("select#vehiculo").change(
                 $("#name_car").val(vehiculo_solo.marca)
                 var dias=  $("#dias").val();
                 var reserva=vehiculo_solo.precio_alquiler;
-                var total_reserva=((reserva*dias)*30)/100
+                //valor de reserva
+                var total_reserva=((reserva*dias)*15)/100
                 var t_vehiculo=dias*vehiculo_solo.precio_alquiler
+
+                console.log("precio vehiculo",vehiculo_solo.precio_alquiler);
+                
                 $("#t_vehiculo").val(t_vehiculo)
                 $("#reserva").val(total_reserva);
                 asignar_saldo()
@@ -288,7 +292,7 @@ function confirmar_notificacion(id,id_vehiculo) {
      $("#dt").val(values.precio_alquiler)
      let dia=$("#dias").val();
      let ts=values.precio_alquiler*dia;
-     let saldo=((ts)*30)/100
+     let saldo=((ts)*15)/100
      $("#reserva_u").val(saldo)
      let transporte=parseInt($("#transporte").val())
      $("#saldo_u").val(ts-saldo+transporte)
@@ -319,7 +323,7 @@ $("#hasta_u").change(
       
         let precio_al=$("#dt").val()
         let ts=precio_al*dia;
-        let saldo=((ts)*30)/100
+        let saldo=((ts)*15)/100
         $("#reserva_u").val(saldo)
         let transporte=parseInt($("#transporte").val())
         $("#saldo_u").val(ts-saldo+transporte)

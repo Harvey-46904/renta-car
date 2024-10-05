@@ -10,7 +10,7 @@
     <font style = "font-family:arial;">
     <div align="center">
         
-        <img src="https://rentacarpasto.com/dash/images/banner-correo.png" alt="Logo" width="100%" height="250">
+        <img src="https://v2.rentacarpasto.com/dash/images/banner-correo.png" alt="Logo" width="100%" height="250">
     </div>
    
     <div align="center"> 
@@ -245,7 +245,7 @@
                 <tr>
                     <td>RESERVA</td>
                     <td>
-                        <b id="">30% </b>
+                        <b id="">15% </b>
                     </td>
                     <td>
                         <b>
