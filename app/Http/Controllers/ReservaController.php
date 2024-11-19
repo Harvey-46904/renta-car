@@ -95,7 +95,7 @@ class ReservaController extends Controller
         
         //calcular reservas
         $precio_total=$vehiculo->precio_alquiler*$dias;
-        $valor_reserva=(($precio_total)*30)/100;
+        $valor_reserva=(($precio_total)*15)/100;
         
        
         //calcular opciones de trasnporte y lavado
@@ -123,8 +123,10 @@ class ReservaController extends Controller
         $reservas=new reserva;
         $reservas->vehiculo_id=$request->vehiculo;
         $reservas->cliente_id=$clientes->id_cliente;
-        $reservas->fecha_inicio=$request->desde;
-        $reservas->fecha_fin=$request->hasta;
+        //$reservas->fecha_inicio=$request->desde;
+        //$reservas->fecha_fin=$request->hasta;
+        $reservas->fecha_inicio=$request->desde." ".$request->hora_entrega;
+        $reservas->fecha_fin=$request->hasta." ".$request->hora_recogida;
         $reservas->dias_reserva=$dias;
         $reservas->transporte=$trans;
         $reservas->precio_transporte=$nuevo_precio_transporte;
@@ -188,7 +190,7 @@ class ReservaController extends Controller
             $dias=$dias-1;
         }
         $saldo=$vehiculo->precio_alquiler*$dias;
-        $valor_reserva=($saldo*30)/100;
+        $valor_reserva=($saldo*15)/100;
         $saldo=$saldo-$valor_reserva;
         $dias=$dias_temporal;
         //return response(["data"=>$saldo,"total"=>$precio_total,"trans"=>$precio_trasnporte,"reserva"=>$valor_reserva]);

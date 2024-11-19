@@ -90,8 +90,8 @@
                                               <td>{{$reserva->id_reserva}}</td>
                                               <td>{{$reserva->nombres}} {{$reserva->apellidos}} </td>
                                               <td>{{$reserva->nombre_vehiculo}} {{$reserva->modelo}} </td>
-                                              <td class="text-center">{{ date('Y-m-d', strtotime($reserva->fecha_inicio))}}</td>
-                                              <td class="text-center">{{ date('Y-m-d', strtotime($reserva->fecha_fin))}}</td>
+                                              <td class="text-center">{{ date('Y-m-d h:i A', strtotime($reserva->fecha_inicio))}}</td>
+                                              <td class="text-center">{{ date('Y-m-d h:i A', strtotime($reserva->fecha_fin))}}</td>
                                             
                                               @if ($reserva->transporte==1)
                                                 <td class="bg-verde text-center ">{{$reserva->lugar}} </td>

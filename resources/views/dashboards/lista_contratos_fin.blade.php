@@ -59,8 +59,8 @@
                                        <td>{{$contrato->nombres}} {{$contrato->apellidos}} </td>
                                        <td>{{$contrato->nombre_vehiculo}} {{$contrato->modelo}} </td>
                                        
-                                       <td class="text-center">{{ date('Y-m-d', strtotime($contrato->fecha_inicio))}}</td>
-                                       <td class="text-center">{{ date('Y-m-d', strtotime($contrato->fecha_fin))}}</td>
+                                       <td class="text-center">{{ date('Y-m-d h:i A', strtotime($contrato->fecha_inicio))}}</td>
+                                       <td class="text-center">{{ date('Y-m-d h:i A', strtotime($contrato->fecha_fin))}}</td>
                                        <td class="text-center"> <b>{{$contrato->dias_reserva}}</b></td>
                                        <td>{{$contrato->valor_reserva}}</td>
                                        <td>{{$contrato->saldo}}</td>
