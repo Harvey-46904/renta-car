@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                        <p>Autos desde $150.000 por día</p>
+                                        <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2> 
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slider-text">
-                                    <p>Autos desde $150.000 por día</p>
+                                    <p>Autos desde $170.000 por día</p>
                                         <h2>Reserva Hoy Mismo</h2>
                                     </div>
                                 </div>
@@ -248,8 +248,11 @@
             </div>
         </div>
     </section><!-- Find Area End -->
+    <div class="marquee">
+        <span><h3>🚗 ¡Explora Pasto con estilo! Rent a Car Pasto te ofrece los mejores precios, vehículos modernos y un servicio de calidad. 🚘 ¡Reserva ahora y empieza tu aventura! 🌟</h3></span>
+    </div>
     <!-- Offers Area Start -->
-    <section class="gauto-offers-area section_70">
+    <section class="gauto-offers-area section_70 img_cars_fond">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -600,9 +603,9 @@
         </div>
     </section>
     <!-- Offers Area End -->
-    
+   
     <!-- About Area Start -->
-    <section class="gauto-about-area section_70">
+    <section class="gauto-about-area section_70 gradient-black-red">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -642,7 +645,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="service-slider owl-carousel">
-                        <div class="single-service"><span class="service-number">01</span>
+                        <div class="single-service"><span class="service-number text-light">01</span>
                             <div class="service-icon"><img src="{!! asset('webpage/img/service-1.png')!!}" alt="city trasport" />
                             </div>
                             <div class="service-text"><a href="#">
@@ -651,7 +654,7 @@
                                 <p>Precios comodos en gamas baja,media y alta</p>
                             </div>
                         </div>
-                        <div class="single-service"><span class="service-number">02</span>
+                        <div class="single-service"><span class="service-number text-light text-light">02</span>
                             <div class="service-icon"><img src="{!! asset('webpage/img/airport-transport.png')!!}"
                                     alt="airport trasport" /></div>
                             <div class="service-text"><a href="#">
@@ -662,7 +665,7 @@
                         </div>
                       
                        
-                        <div class="single-service"><span class="service-number">03</span>
+                        <div class="single-service"><span class="service-number text-light">03</span>
                             <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
                                     alt="wedding trasport" /></div>
                             <div class="service-text"><a href="#">
@@ -671,7 +674,7 @@
                                 <p>Entregas a domicilio dentro de la ciudad sin ningun costo</p>
                             </div>
                         </div>
-                        <div class="single-service"><span class="service-number">04</span>
+                        <div class="single-service"><span class="service-number text-light">04</span>
                             <div class="service-icon"><img src="{!! asset('webpage/img/domicilio.png')!!}"
                                     alt="wedding trasport" /></div>
                             <div class="service-text"><a href="#">
