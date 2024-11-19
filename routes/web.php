@@ -69,7 +69,7 @@ Route::get('plantilla', function () {
     return view('dashboards.plantilla_correo');
 });
 //vista crear reserva
-Route::get('crear_reserva', "ReservaController@index");
+Route::get('crear_reserva/{location}', "ReservaController@index");
 
 
 //VISTAS PAGINA WEB

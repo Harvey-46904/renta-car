@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            CREAR RESERVA
+                            CREAR RESERVA 
 
                         </h2>
 
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <h5 class="text-center py-4  ">Vehículo</h5>
+                                    <h5 class="text-center py-4  ">Vehículos {{$lugar}}</h5>
                                     <hr>
                                     <div class="form-group">
 

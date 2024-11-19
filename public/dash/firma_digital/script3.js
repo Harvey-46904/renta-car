@@ -15,7 +15,10 @@
 
 	// Traer el canvas3 mediante el id del elemento html
 	var canvas3 = document.getElementById("draw-canvas3");
-	var ctx3 = canvas3.getContext("2d");
+	if (canvas3) {
+    var ctx = canvas3.getContext("2d");
+    console.log("Canvas encontrado y contexto inicializado.");
+} 
 
 
 	// Mandamos llamar a los Elemetos interactivos de la Interfaz HTML
