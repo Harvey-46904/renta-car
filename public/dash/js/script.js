@@ -1,4 +1,5 @@
-﻿window.onload=function() {
+﻿
+window.onload=function() {
    $(".dropdown-toggle").hide();
    $(".lugar").hide();
    $(".form_person").hide();
@@ -324,3 +325,9 @@ $("#hasta_u").change(
         $("#saldo_u").val(ts-saldo+transporte)
     }
 )
+
+
+
+
+  
+ 
