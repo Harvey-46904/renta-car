@@ -202,20 +202,7 @@ $data=$data["data"];
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <li>
-                                    <a href="javascript:void(0);" class="menu-toggle">
-                                        <i class="material-icons">assignment_ind</i>
-                                        <span>Crear Reserva</span>
-                                    </a>
-                                    <ul class="ml-menu">
-                                        <li>
-                                            <a href="{{ url('crear_reserva/CO') }}">Colombia</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ url('crear_reserva/EC') }}">Ecuador</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <a href="{{ url('crear_reserva') }}">Crear Reserva</a>
                             </li>
                             <li>
                                 <a href="{{ url('listar_reservas') }}">Listar Reserva</a>

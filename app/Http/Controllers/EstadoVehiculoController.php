@@ -200,6 +200,7 @@ class EstadoVehiculoController extends Controller
         $actualizar_vehiculo->vigencia_soat=$request->vigencia_soat;
         $actualizar_vehiculo->vigencia_tecnomecanica=$request->vigencia_tecnomecanica;
         $actualizar_vehiculo->precio_alquiler=$request->precio_alquiler;
+        $actualizar_vehiculo->Precio_Variante=$request->precio_variante;
         $actualizar_vehiculo->precio_lavado=$request->precio_lavado;
         $actualizar_vehiculo->disponibilidad=$request->disponibilidad;
         $actualizar_vehiculo->save();

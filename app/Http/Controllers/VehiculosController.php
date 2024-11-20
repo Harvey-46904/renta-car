@@ -128,11 +128,18 @@ class VehiculosController extends Controller
         //
     }
 
-    public function obtener_carro($id){
+    public function obtener_carro($id,$lugar){
         $carro=DB::table('vehiculos')
         ->select()
         ->where("id_vehiculo","=",$id)
         ->first();
+        // Modificar los datos según $location
+        if ($lugar == "EC") {
+            $carro->precio_alquiler = $carro->Precio_Variante; // Reemplaza precio_alquiler con Precio Variante
+            unset($carro->Precio_Variante); // Opcional: elimina Precio Variante del objeto
+        }
+
+
 
         if(!empty($carro)){
             return response(["data"=>$carro]);

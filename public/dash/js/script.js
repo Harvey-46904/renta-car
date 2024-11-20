@@ -1,5 +1,4 @@
-﻿
-window.onload=function() {
+﻿window.onload=function() {
    $(".dropdown-toggle").hide();
    $(".lugar").hide();
    $(".form_person").hide();
@@ -14,7 +13,7 @@ $('#cedula_usuario').keyup(function() {
 
     
 
-    $.get( "obtener_nombre/"+texto, function( data ) {
+    $.get( "../obtener_nombre/"+texto, function( data ) {
        
         if(data.data =="error"){
             $("#mensaje").val("Cliente No Encontrado");
@@ -186,9 +185,10 @@ $("select#vehiculo").change(
     function(){
      var valor=this.value;
      console.log(valor);
+     
      borrar_datos_ticket_carro()
     if(valor!=0){
-        $.get( "obtener_carro/"+valor, function( data ) {
+        $.get( "../obtener_carro/"+valor+"/"+lugar, function( data ) {
        console.log(data);
                 $("#trans").show()
                 $("#lav").show()
@@ -264,7 +264,7 @@ function confirmar_notificacion(id,id_vehiculo) {
     
 
     var URLdomain = window.location.host;
-    var nombreruta="/notificacionesupdate/"
+    var nombreruta="../notificacionesupdate/"
     url=nombreruta+id;
     $.get( url, function( data ) {
         console.log(data);
@@ -325,9 +325,3 @@ $("#hasta_u").change(
         $("#saldo_u").val(ts-saldo+transporte)
     }
 )
-
-
-
-
-  
- 

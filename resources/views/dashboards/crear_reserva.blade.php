@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            CREAR RESERVA 
+                            CREAR RESERVA
 
                         </h2>
 
@@ -27,7 +27,7 @@
                     </div>
                     <div class="body">
 
-                        <form method="POST" action="{{ route('post_reserva') }}" accept-charset="UTF-8"
+                        <form method="POST" action="{{ route('post_reserva',['lugar_po'=>$datalugar]) }}" accept-charset="UTF-8"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row">
@@ -90,8 +90,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <h5 class="text-center py-4  ">Vehículos {{$lugar}}</h5>
-                                    <hr>
+                                    <h5 class="text-center py-4  ">Vehículo  {{$lugar}}</h5>
+                                    <hr> 
                                     <div class="form-group">
 
                                         <select class="form-control" id="vehiculo" name="vehiculo">
@@ -413,4 +413,8 @@
         </div>
     </div>
 </section>
+<script>
+    var lugar = "{{ $datalugar }}";
+   
+</script>
 @endsection

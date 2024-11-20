@@ -31,21 +31,14 @@ class ReservaController extends Controller
             ->where('disponibilidad', '=', 1)
             ->get();
 
-// Modificar los datos según $location
-        $vehiculos->transform(function ($vehiculo) use ($location) {
-            if ($location == "EC") {
-                $vehiculo->precio_alquiler = $vehiculo->{'Precio_Variante'}; // Reemplaza precio_alquiler con Precio Variante
-                unset($vehiculo->{'Precio Variante'}); // Opcional: elimina Precio Variante del objeto
-            }
-            return $vehiculo;
-        });
+
 
 // Establecer el lugar
         $lugar = $location == "EC" ? "Ecuador" : "Colombia";
-
+        $datalugar = $location == "EC" ? "EC" : "CO";
         //return response(["data"=>$location]);
 
-        return view('dashboards.crear_reserva', compact("vehiculos", "clientes", 'lugar'));
+        return view('dashboards.crear_reserva', compact("vehiculos", "clientes", 'lugar','datalugar'));
     }
 
     /**
@@ -64,8 +57,9 @@ class ReservaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$lugar_po)
     {
+      
         $todo = $request->all();
 
         $nuevo_lugar = $request->lugar;
@@ -102,10 +96,17 @@ class ReservaController extends Controller
             ->select()
             ->where("id_vehiculo", "=", $request->vehiculo)
             ->first();
-
+        if ($lugar_po == "EC") {
+                $vehiculo->precio_alquiler = $vehiculo->Precio_Variante; // Reemplaza precio_alquiler con Precio Variante
+                unset($vehiculo->Precio_Variante); // Opcional: elimina Precio Variante del objeto
+        }
         //calcular reservas
-        $precio_total = $vehiculo->precio_alquiler * $dias;
-        $valor_reserva = (($precio_total) * 15) / 100;
+        //insidencia
+        
+        $resultado = $vehiculo->precio_alquiler;
+     
+        $precio_total = $resultado * $dias;
+        $valor_reserva = (($precio_total) * 30) / 100;
 
         //calcular opciones de trasnporte y lavado
         $transporte = 0;

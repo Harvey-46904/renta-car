@@ -128,7 +128,7 @@ Route::get('lista_contratos_finalizados',"RegistroContratoController@index_fin")
 Route::get('pdf_contrato/{data}',"RegistroContratoController@generar_pdf")->name("pdf_contrato");
 
 Route::get('obtener_nombre/{id}',"ClientesController@obtener_nombre")->name("obtener_nombre");
-Route::get('obtener_carro/{id}',"VehiculosController@obtener_carro")->name("obtener_carro");
+Route::get('obtener_carro/{id}/{lugar}',"VehiculosController@obtener_carro")->name("obtener_carro");
 //metodos de envio en este caso post
 
 Route::post('crear_clientes','ClientesController@store')->name('post_cliente');
@@ -136,7 +136,7 @@ Route::post('crear_clientes1/{id_vehiculo}/{desde}/{hasta}/{transporte}','Client
 
 Route::post('crear_vehiculos','VehiculosController@store')->name('post_vehiculo');
 Route::post('crear_estado/{id}','EstadoVehiculoController@store')->name('post_estado');
-Route::post('crear_reserva','ReservaController@store')->name('post_reserva');
+Route::post('crear_reserva/{lugar_po}','ReservaController@store')->name('post_reserva');
 Route::post('consulta_reserva','ReservaController@consulta_clientes_reserva')->name('post_reserva_usuario');
 Route::post('crear_contrato/{id}','RegistroContratoController@store')->name('post_registro_contrato');
 Route::post('finalizar_contrato/{id}','RegistroContratoController@fin')->name('post_finalizar_contrato');
