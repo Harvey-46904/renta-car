@@ -101,7 +101,7 @@
                                             <option value="{{ $vehiculo->id_vehiculo }}">
                                                 {{ $vehiculo->nombre_vehiculo }}
                                                 {{ $vehiculo->modelo }}
-                                                Color {{ $vehiculo->color }}
+                                                Color {{ $vehiculo->color }} || {{ $vehiculo->placa }}
                                             </option>
                                             @endforeach
 
