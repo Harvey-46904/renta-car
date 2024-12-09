@@ -16,8 +16,8 @@
 	// Traer el canvas2 mediante el id del elemento html
 	var canvas2 = document.getElementById("draw-canvas2");
 	if (canvas2) {
-		var ctx = canvas2.getContext("2d");
-		console.log("Canvas encontrado y contexto inicializado.");
+		var ctx2 = canvas2.getContext("2d");
+		//console.log("Canvas encontrado y contexto inicializado.");
 	} 
 
 
@@ -39,7 +39,7 @@
 		var dataUrl2 = canvas2.toDataURL();
 	drawText2.innerHTML = dataUrl2;
 	drawImage2.setAttribute("src", dataUrl2);
-		console.log("acabe de dibujar");
+		//console.log("acabe de dibujar");
 	 }
 	// Activamos MouseEvent para nuestra pagina
 	var drawing = false;
@@ -53,7 +53,7 @@
     */
 		var tint = document.getElementById("color2");
 		var punta = document.getElementById("puntero2");
-		console.log(e);
+		//console.log(e);
 		drawing = true;
 		lastPos = getMousePos(canvas2, e);
 	}, false);
@@ -70,7 +70,7 @@
 	// Activamos touchEvent para nuestra pagina
 	canvas2.addEventListener("touchstart", function (e) {
 		mousePos = getTouchPos(canvas2, e);
-    console.log(mousePos);
+    //console.log(mousePos);
     e.preventDefault(); // Prevent scrolling when touching the canvas2
 		var touch = e.touches[0];
 		var mouseEvent = new MouseEvent("mousedown", {
@@ -116,7 +116,7 @@
 	// Get the position of a touch relative to the canvas2
 	function getTouchPos(canvasDom, touchEvent) {
 		var rect = canvasDom.getBoundingClientRect();
-    console.log(touchEvent);
+    //console.log(touchEvent);
     /*
       Devuelve el tamaño de un elemento y su posición relativa respecto
       a la ventana de visualización (viewport).
@@ -136,7 +136,7 @@
       ctx2.beginPath();
 			ctx2.moveTo(lastPos.x, lastPos.y);
 			ctx2.lineTo(mousePos.x, mousePos.y);
-      console.log(punta.value);
+      //console.log(punta.value);
     	ctx2.lineWidth = punta.value;
 			ctx2.stroke();
       ctx2.closePath();

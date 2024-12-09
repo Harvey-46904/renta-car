@@ -17,7 +17,7 @@
 	var canvas = document.getElementById("draw-canvas");
 	if (canvas) {
 		var ctx = canvas.getContext("2d");
-		console.log("Canvas encontrado y contexto inicializado.");
+		//console.log("Canvas encontrado y contexto inicializado.");
 	} 
 
 
@@ -40,7 +40,7 @@
 		var dataUrl = canvas.toDataURL();
 		drawText.innerHTML = dataUrl;
 		drawImage.setAttribute("src", dataUrl);
-		console.log("acabe de dibujar");
+		//console.log("acabe de dibujar");
 	 }
 
 	// Activamos MouseEvent para nuestra pagina
@@ -55,13 +55,13 @@
     */
 		var tint = document.getElementById("color");
 		var punta = document.getElementById("puntero");
-		console.log(e);
+		//console.log(e);
 		drawing = true;
 		lastPos = getMousePos(canvas, e);
 	}, false);
 	canvas.addEventListener("mouseup", function (e)
   {
-	  console.log("se levanto");
+	 // console.log("se levanto");
 	  pasar_dibujo();
 		drawing = false;
 	}, false);
@@ -73,7 +73,7 @@
 	// Activamos touchEvent para nuestra pagina
 	canvas.addEventListener("touchstart", function (e) {
 		mousePos = getTouchPos(canvas, e);
-    console.log(mousePos);
+   // console.log(mousePos);
     e.preventDefault(); // Prevent scrolling when touching the canvas
 		var touch = e.touches[0];
 		var mouseEvent = new MouseEvent("mousedown", {
@@ -119,7 +119,7 @@
 	// Get the position of a touch relative to the canvas
 	function getTouchPos(canvasDom, touchEvent) {
 		var rect = canvasDom.getBoundingClientRect();
-    console.log(touchEvent);
+    //console.log(touchEvent);
 	
     /*
       Devuelve el tamaño de un elemento y su posición relativa respecto
@@ -140,7 +140,7 @@
       ctx.beginPath();
 			ctx.moveTo(lastPos.x, lastPos.y);
 			ctx.lineTo(mousePos.x, mousePos.y);
-      console.log(punta.value);
+      //console.log(punta.value);
 	  
     	ctx.lineWidth = punta.value;
 			ctx.stroke();
