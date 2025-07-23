@@ -294,7 +294,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="copyright">
-                            <p>COPYRIGHT © 2025 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS  DESIGN AND DEVELOPEMENT BY <a href="http://www.mdaengine.com">MDAENGINE.COM</a></p>
+                            <p>COPYRIGHT © 2025 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS  
+DESARROLLO Y DISEÑO ORIGINAL: HACHE - CONTRIBUCIONES: MDAENGINE.COM</p>
                         </div>
                     </div>
                     <div class="col-md-6">
