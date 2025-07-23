@@ -64,9 +64,9 @@
                     <div class="contact-right">
                         <h3>Información de Contacto</h3>
                         <div class="contact-details">
-                            <p><i class="fa fa-map-marker"></i>Cra 22B #11 sur 61 Condominio Alto Bello casa 1</p>
+                            <p><i class="fa fa-map-marker"></i>Cra 36 #10-21, Avenida Panamericana, Pasto, Nariño</p>
                             <div class="single-contact-btn">
-                                <h4>Escríbenos</h4><a href="#">rentacarpasto@gmail.com</a>
+                                <h4>Escríbenos</h4><a href="#">sistemas@rentacarpasto.com</a>
                             </div>
                             <div class="single-contact-btn">
                                 <h4>Llámanos</h4><a href="#">3227795422</a>

@@ -69,10 +69,91 @@
                 line-height: 66px;
             }
         }
+        
+        /* Estilos para el banner de cookies */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            padding: 15px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cookie-banner.hidden {
+            display: none;
+        }
+        
+        .cookie-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-accept {
+            background-color: #22c25c;
+            color: white;
+        }
+        
+        .cookie-accept:hover {
+            background-color: #1ca94f;
+        }
+        
+        .cookie-reject {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .cookie-reject:hover {
+            background-color: #d32f2f;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-content {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
         </style>
         <a href="https://api.whatsapp.com/send?phone=573227795422&text=Hola%20Rent%20A%20Car%20necesito%20ayuda%20para%20alquilar%20un%20veh%C3%ADculo." class="btn-wsp" target="_blank">
                 <i class="fa fa-whatsapp icono"></i>
         </a>
+        
+        <!-- Banner de Cookies -->
+        <div id="cookieBanner" class="cookie-banner">
+            <div class="cookie-content">
+                <h4>Política de Cookies</h4>
+                <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn cookie-accept">Aceptar</button>
+                <button id="rejectCookies" class="cookie-btn cookie-reject">Rechazar</button>
+            </div>
+        </div>
     <!-- Header Top Area Start -->
     <section class="gauto-header-top-area">
         <div class="container">
@@ -170,14 +251,14 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="single-footer">
-                            <div class="footer-logo"><a href="#"><img src="{!! asset('webpage/img/logo.png')!!}"
-                                        alt="footer-logo" width="180px" height="180px"/></a></div>
+                           <!-- <div class="footer-logo"><a href="#"><img src="{!! asset('webpage/img/logo.png')!!}"
+                                        alt="footer-logo" width="180px" height="180px"/></a></div>-->
                             <div class="footer-address">
                                 <h3>RENTACAR PASTO</h3>
-                                <p>Carrera 22B #11 Sur 61</p>
+                                <p>Cra 36 #10-21, Avenida Panamericana, Pasto, Nariño</p>
                                 <ul>
                                     <li>Telefono: 3227795422</li>
-                                    <li>Email: rentacarpasto@gmail.com</li>
+                                    <li>Email: sistemas@rentacarpasto.com</li>
                                     <li>Horarios: 7AM a 7PM</li>
                                 </ul>
                             </div>
@@ -213,7 +294,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="copyright">
-                            <p>COPYRIGHT © 2024 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS</p>
+                            <p>COPYRIGHT © 2025 RENTA CAR PASTO - TODOS LOS DERECHOS RESERVADOS  DESIGN AND DEVELOPEMENT BY <a href="http://www.mdaengine.com">MDAENGINE.COM</a></p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -262,6 +343,36 @@
     <script src="{!! asset('webpage/js/whpbtn.js') !!}"></script>
     <script src="{!! asset('dash/js/moment.min.js') !!}"></script>
     <script src="{!! asset('webpage/js/style_hache.js') !!}"></script>
+
+    <!-- Script para el banner de cookies -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('acceptCookies');
+            const rejectBtn = document.getElementById('rejectCookies');
+            
+            // Comprobar si ya se ha tomado una decisión sobre las cookies
+            if (!localStorage.getItem('cookiesAccepted') && !localStorage.getItem('cookiesRejected')) {
+                cookieBanner.classList.remove('hidden');
+            } else {
+                cookieBanner.classList.add('hidden');
+            }
+            
+            // Función para aceptar cookies
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.add('hidden');
+                // Aquí puedes añadir código para habilitar todas las cookies
+            });
+            
+            // Función para rechazar cookies
+            rejectBtn.addEventListener('click', function() {
+                localStorage.setItem('cookiesRejected', 'true');
+                cookieBanner.classList.add('hidden');
+                // Aquí puedes añadir código para deshabilitar cookies no esenciales
+            });
+        });
+    </script>
 </body>
 
 </html>
