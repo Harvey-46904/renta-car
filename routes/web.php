@@ -79,9 +79,13 @@ Route::get('rentacar-index', function () {
     return view('webpage.index');
 });
 
-Route::get('/', function () {
-    return view('webpage.inicio');
-})->name("inicio");
+/*Route::get('/', function () {
+    return view('neweb.inicio');
+})->name("inicio");*/
+Route::get('/', "InicioController@inicio_web")->name('inicio');
+
+
+
 
 Route::get('site1', function () {
     return view('webpage.base-completa');
@@ -96,16 +100,26 @@ Route::get('vehiculos', function () {
     return view('webpage.vehiculos');
 })->name("vehiculos");
 
-Route::get('informacion', function () {
-    return view('webpage.info');
+Route::get('nosotros', function () {
+    return view('neweb.nosotros');
 })->name("info");
 
-Route::get('galeria', function () {
-    return view('webpage.gallery');
-})->name("gallery");
+Route::get('galeria', "InicioController@galeria_nueva")->name("gallery");
 
-Route::get('contacto', function () {
-    return view('webpage.contact');
+Route::get('terminos-y-condiciones', function () {
+    return view('neweb.terminos');
+})->name("terminos");
+
+Route::get('politica-Cookies', function () {
+    return view('neweb.cookies');
+})->name("cookies");
+
+Route::get('politicas', function () {
+    return view('neweb.politicas');
+})->name("politicas");
+
+Route::get('contactos', function () {
+    return view('neweb.contactos');
 })->name("contact");
 
 //VISTA LISTAR RESERVA

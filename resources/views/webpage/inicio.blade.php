@@ -29,7 +29,7 @@
         <div class="modal-footer bg-black text-center" style="
         border-top-width: 0px;
     ">
-          <button type="button" class="btn btn-secondary bg-carmesy" data-dismiss="modal">Visita Nuestro Portal</button>
+          <button type="button" class="btn btn-secondary bg-carmesy" data-dismiss="modal">Continuar en Rent A Car Pasto</button>
         </div>
       </div>
     </div>

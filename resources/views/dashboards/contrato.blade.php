@@ -167,6 +167,7 @@ En señal de reconocimiento y aceptación se firma la presente <b>CARTA DE INSTR
             </tr>
 </table>
         </p>
+   <div style="page-break-before: always;"></div>
         <h3>PAGARÉ A LA ORDEN</h3>
         <p class="texto-justificado">VALOR:____________________________________<br>
 DEUDOR:                   {{$contratos->nombres}} {{$contratos->apellidos}}<br>
@@ -196,7 +197,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
 
 
 
-<table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
+<table cellspacing="0" cellpadding="0" align="center"  width="80%" style=" border: 1px solid red;">
             <tr align=left>
                 <td align=left>
                 <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
@@ -232,6 +233,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
     </div>
     <br>
     <br><br>
+    <div style="page-break-before: always;"></div>
     <h2 align="center">INVENTARIO VEHÍCULO EN ALQUILER ANEXO AL CONTRATO No. </h2>
     <table >
         <tbody>

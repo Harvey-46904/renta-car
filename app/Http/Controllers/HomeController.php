@@ -30,4 +30,6 @@ class HomeController extends Controller
         $contratos = DB::table('registro_contratos')->count();
         return view('dashboards.inicio',compact("clientes","vehiculos","reservas","contratos"));
     }
+
+   
 }
