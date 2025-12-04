@@ -200,6 +200,7 @@ class RegistroContratoController extends Controller
        if($contratos->estado_entrada==null){
         $estado=json_decode($contratos->estado_salida,TRUE);  
         $dompdf = App::make("dompdf.wrapper");
+        $dompdf->setPaper('legal', 'portrait');
         $dompdf->loadView("dashboards.contrato_proceso",compact("contratos","estado"));
         $nombres_completos=$contratos->nombres."-".$contratos->apellidos;
         $nombre_archivo="Contrato-".$nombres_completos.".pdf";
@@ -209,14 +210,12 @@ class RegistroContratoController extends Controller
         $finalizado=json_decode($contratos->estado_entrada,TRUE); 
         $estado=json_decode($contratos->estado_salida,TRUE);  
         $dompdf = App::make("dompdf.wrapper");
+        $dompdf->setPaper('legal', 'portrait');
         $dompdf->loadView("dashboards.contrato",compact("contratos","estado","finalizado"));
         $nombres_completos=$contratos->nombres."-".$contratos->apellidos;
         $nombre_archivo="Contrato-".$nombres_completos.".pdf";
         return $dompdf->download($nombre_archivo); 
        }
-        
-        
-        
     }
 
     public function finalizar_contrato($id){

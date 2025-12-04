@@ -149,6 +149,7 @@ footer {
     <p class="texto-justificado"><b>17. EL ARRENDATARIO:</b> Acepta el cobro no presencial en la tarjeta de crédito que respalda este contrato  por deducibles que no están amparados por el seguro estipulados en este contrato.</p>
 
     <br>
+    <div style="page-break-before: always;"></div>
     <div align="center">
         <h3>CARTA DE INSTRUCCIONES PARA DILIGENCIAR EL PAGARÉ EN BLANCO</h3>
         <p class="texto-justificado">
@@ -197,7 +198,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
 
 
 
-<table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
+<!-- <table cellspacing="0" cellpadding="0" align="left"  width="80%" style=" border: 1px solid red;">
             <tr align=left>
                 <td align=left>
                 <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
@@ -206,7 +207,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
                         <br>No.{{$contratos->numero_documento}}
                 </td>
             </tr>
-</table>
+</table>--> 
         </p>
     </div>
     <br><br>
@@ -218,7 +219,16 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
                  
                     <b>_______________________</b>
                         <br>Arrendatario Y/O Usuario
-                        <br>No. C.C
+                        <br><table cellspacing="0" cellpadding="0" align="center"  width="80%" style=" border: 1px solid red;">
+            <tr align=left>
+                <td align=left>
+                <img src="{{url('storage/firmas/'.$contratos->recibido_por)}}" width="100px" height="100px"/>
+                  
+                        <br>Arrendatario Y/O Usuario
+                        <br>No.{{$contratos->numero_documento}}
+                </td>
+            </tr>
+</table>
                 </td>
                 
 
@@ -401,6 +411,7 @@ En señal de reconocimiento y aceptación se otorga el presente <b>PAGARÉ A LA 
        
     </div>
     <br> <br> <br> <br>
+    <div style="page-break-before: always;"></div>
     <div align=center>
         
         <p style="color:#949493" ><b>SALIDA</b></p>
